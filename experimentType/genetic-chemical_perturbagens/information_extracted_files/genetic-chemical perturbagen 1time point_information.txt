@@ -1,0 +1,286 @@
+File name: genetic-chemical perturbagen 1time point
+
+The following information was obtained from the file header 
+
+Information about standard deviation: Std Dev
+
+Information about compounds: 
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugA
+	 Number of Concentration tested: 11
+	 Concentration range: 	100 	5 	34 	3 	15 	1 	13 	0.64 	11 	9 	7 
+	 Number of Units tested: 11
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugB
+	 Number of Concentration tested: 10
+	 Concentration range: 	965 	661 	453 	310 	3000 	212 	2055 	145 	1408 	100 
+	 Number of Units tested: 10
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugC
+	 Number of Concentration tested: 7
+	 Concentration range: 	30 	25 	20 	15 	10 	5.4 	0.5 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugD
+	 Number of Concentration tested: 7
+	 Concentration range: 	572 	510 	448 	386 	324 	262 	200 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugE
+	 Number of Concentration tested: 7
+	 Concentration range: 	70 	43 	27 	16 	10 	6 	4 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugF
+	 Number of Concentration tested: 7
+	 Concentration range: 	1e5 	52100 	27144 	14142 	7368 	3838 	2000 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugG
+	 Number of Concentration tested: 14
+	 Concentration range: 	1e5 	339 	44392 	150 	19706 	66 	8748 	30 	3883 	13 	1723 	5.8 	765 	2.6 
+	 Number of Units tested: 14
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DrugA_DoxP
+	 Number of Concentration tested: 11
+	 Concentration range: 	100 	5 	34 	3 	15 	1 	13 	0.64 	11 	9 	7 
+	 Number of Units tested: 11
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DrugB_DoxP
+	 Number of Concentration tested: 10
+	 Concentration range: 	965 	661 	453 	310 	3000 	212 	2055 	145 	1408 	100 
+	 Number of Units tested: 10
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DrugC_DoxP
+	 Number of Concentration tested: 7
+	 Concentration range: 	30 	25 	20 	15 	10 	5.4 	0.5 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DrugD_DoxP
+	 Number of Concentration tested: 7
+	 Concentration range: 	572 	510 	448 	386 	324 	262 	200 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DrugE_DoxP
+	 Number of Concentration tested: 7
+	 Concentration range: 	70 	43 	27 	16 	10 	6 	4 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DrugF_DoxP
+	 Number of Concentration tested: 7
+	 Concentration range: 	1e5 	52100 	27144 	14142 	7368 	3838 	2000 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DrugG_DoxP
+	 Number of Concentration tested: 14
+	 Concentration range: 	1e5 	339 	44392 	150 	19706 	66 	8748 	30 	3883 	13 	1723 	5.8 	765 	2.6 
+	 Number of Units tested: 14
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DMSO_DrugA_DoxP
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: Tween_DrugB_DoxP
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DMSO_DrugC_DoxP
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DMSO_DrugD_DoxP
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DMSO_DrugE_DoxP
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DMSO_DrugF_DoxP
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: DMSO_DrugG_DoxP
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+Information about control: 
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_DrugA
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_Tween_DrugB
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_DrugC
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_DrugD
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_DrugE
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_DrugF
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_DrugG
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+Information about medium: 
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: OnlyCells
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: OnlyCells_DoxP
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: OnlyCells
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: DoxP
+	 Compound: OnlyCells_DoxP
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+HTSplotter Categorizes the experiments as follows: 
+	 drug => Concentration >3; Condition = "Condition"; Combination = 0 
+	 drug combination => Condition = "Condition"; Combination != 0 
+	 genetic perturbagen => Concentration = 1; Condition = "Condition" ; Combination = 0 
+	 genetic-chemical perturbagen => Condition != "Condition"; Combination !=0 
+
+Based on the input file the categorization is : genetic-chemical_perturbagen
+
+	 number of concentration for each compound: 11;10;7;7;7;7;14;11;10;7;7;7;7;14;1;1;1;1;1;1;1;
+	 combination: OnlyCells_DoxP DrugA_DoxP DrugB_DoxP DrugC_DoxP DrugD_DoxP DrugE_DoxP DrugF_DoxP DrugG_DoxP DMSO_DrugA_DoxP Tween_DrugB_DoxP DMSO_DrugC_DoxP DMSO_DrugD_DoxP DMSO_DrugE_DoxP DMSO_DrugF_DoxP DMSO_DrugG_DoxP 
+	 control: Control_DMSO_DrugA Control_Tween_DrugB Control_DMSO_DrugC Control_DMSO_DrugD Control_DMSO_DrugE Control_DMSO_DrugF Control_DMSO_DrugG 
+	 condition: Condition DoxP 
+	 the number of time points is: 1	120.0	
+
+HTSplotter categorized the experiment as: genetic-chemical_perturbagen
+Define the experiment read out (e.g. confluency, cell viability, apoptosis, cell index) : 
+Please, indicate the read-out units (e.g. %) : 
+Confirm your experiment type, according to the options above: 

@@ -1,0 +1,87 @@
+File name: drugscreen_1timepoint
+
+HTSplotter Categorizes the experiments as follows: 
+	 drug => Concentration >= 2; Condition = "Condition"; Combination = 0 
+	 drug combination => Condition = "Condition"; Combination != 0 
+	 genetic perturbagen => Concentration = 1; Condition = "Condition" ; Combination = 0 
+	 genetic-chemical perturbagen => Condition != "Condition"; Combination !=0 
+
+Based on the input file the categorization is : drug_screen
+
+	 number of concentration for each compound: 14;14;14;
+
+	 combination: 
+
+	 control: Control_DMSO_Prexasertib Control_DMSO_BAY1895344 Control_DMSO_MK-1775 
+
+	 condition: Condition 
+
+	 the number of time points is: 1	72.0	
+
+
+The following information was obtained from the file header 
+
+Information about standard deviation: Std Dev Img
+
+Information about compounds: 
+
+	 Cell line: MCF7
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: MK-1775
+	 Number of Concentration tested: 14
+	 Concentration range: 	1590.41 	45.7 	2640.81 	75.88 	4384.95 	126 	7281.01 	209.22 	12089.8 	347.4 	20074.6 	576.84 	33333 	957.81 
+	 Number of Units tested: 14
+
+	 Cell line: MCF7
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: BAY1895344
+	 Number of Concentration tested: 14
+	 Concentration range: 	40.88 	0.15 	91.08 	0.33 	202.92 	0.74 	452.09 	1.66 	1007.26 	3.7 	2244.17 	8.23 	5000 	18.35 
+	 Number of Units tested: 14
+
+	 Cell line: MCF7
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: Prexasertib
+	 Number of Concentration tested: 14
+	 Concentration range: 	114.6 	1.4 	215.03 	2.63 	403.45 	4.93 	756.98 	9.25 	1420.3 	17.35 	2664.86 	32.55 	5000 	61.08 
+	 Number of Units tested: 14
+
+Information about control: 
+
+	 Cell line: MCF7
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_Prexasertib
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.09 
+	 Number of Units tested: 1
+
+	 Cell line: MCF7
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_BAY1895344
+	 Number of Concentration tested: 1
+	 Concentration range: 	1 
+	 Number of Units tested: 1
+
+	 Cell line: MCF7
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_MK-1775
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.33 
+	 Number of Units tested: 1
+
+Information about medium: 
+
+	 Cell line: MCF7
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: CellsOnly
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+

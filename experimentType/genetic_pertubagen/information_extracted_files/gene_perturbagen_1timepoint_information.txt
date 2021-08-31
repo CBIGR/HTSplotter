@@ -1,0 +1,662 @@
+File name: gene_perturbagen_1timepoint
+
+The following information was obtained from the file header 
+
+Information about standard deviation: STD computed by HTSplotter
+
+Information about compounds: 
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneA
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneB
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneD
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneE
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneG
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneH
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneJ
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneK
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneM
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneN
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneP
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneQ
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneR
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneS
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneT
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneU
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneV
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneW
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneX
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneY
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneZ
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAA
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAB
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAC
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAD
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAE
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAF
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAG
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAH
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAI
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAJ
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAK
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAL
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAM
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAN
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAO
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAP
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAQ
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAR
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAS
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAT
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAU
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAV
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAX
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAZ
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneAY
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBA
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBB
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBC
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBD
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBE
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBF
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBG
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBH
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBI
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBJ
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBK
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBL
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBM
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBN
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBO
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBP
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBQ
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBR
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBS
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBT
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBU
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBV
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBX
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBY
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneBZ
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: GeneCA
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+Information about control: 
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: Control_GeneC
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: Control_GeneF
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: Control_GeneI
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: Control_GeneL
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: Control_GeneO
+	 Number of Concentration tested: 1
+	 Concentration range: 	40 
+	 Number of Units tested: 1
+
+Information about medium: 
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: OnlyCells
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLineName
+	 Seeding: 12Kperwell
+	 Condition: Condition
+	 Compound: OnlyCells
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+HTSplotter Categorizes the experiments as follows: 
+	 drug => Concentration >3; Condition = "Condition"; Combination = 0 
+	 drug combination => Condition = "Condition"; Combination != 0 
+	 genetic perturbagen => Concentration = 1; Condition = "Condition" ; Combination = 0 
+	 genetic-chemical perturbagen => Condition != "Condition"; Combination !=0 
+
+Based on the input file the categorization is : Genetic_perturbagen
+
+	 number of concentration for each compound: 1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;
+	 combination: 
+	 control: Control_GeneC Control_GeneF Control_GeneI Control_GeneL Control_GeneO 
+	 condition: Condition 
+	 the number of time points is: 1	48.0	
+
+HTSplotter categorized the experiment as: Genetic_perturbagen
+Define the experiment read out (e.g. confluency, cell viability, apoptosis, cell index) : 
+Please, indicate the read-out units (e.g. %) : 
+Confirm your experiment type, according to the options above: 

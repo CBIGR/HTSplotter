@@ -1,0 +1,117 @@
+File name: JGL060821Triple3AP
+
+HTSplotter Categorizes the experiments as follows: 
+	 drug => Concentration >= 2; Condition = "Condition"; Combination = 0 
+	 drug combination => Condition = "Condition"; Combination != 0 
+	 genetic perturbagen => Concentration = 1; Condition = "Condition" ; Combination = 0 
+	 genetic-chemical perturbagen => Condition != "Condition"; Combination !=0 
+
+Based on the input file the categorization is : drug_combination
+
+	 number of concentration for each compound: 4;4;20;80;20;16;5;1;1;1;
+
+	 combination: 3AP_WEE1 3AP_WEE1_CHK1 3AP_CHK1 WEE1_CHK1 
+
+	 control: Control_DMSO_CHK1 
+
+	 condition: Condition 
+
+	 the number of time points is: 17	0.0	6.0	12.0	18.0	24.0	30.0	36.0	42.0	48.0	54.0	60.0	66.0	72.0	78.0	84.0	90.0	96.0	
+
+
+The following information was obtained from the file header 
+
+Information about standard deviation: Std Err Img
+
+Information about compounds: 
+
+	 Cell line: IMR32
+	 Seeding: 2Kperwell
+	 Condition: Condition
+	 Compound: WEE1
+	 Number of Concentration tested: 4
+	 Concentration range: 	50 	35 	20 	5 
+	 Number of Units tested: 4
+
+	 Cell line: IMR32
+	 Seeding: 2Kperwell
+	 Condition: Condition
+	 Compound: CHK1
+	 Number of Concentration tested: 4
+	 Concentration range: 	0.33 	0.46 	0.19 	0.6 
+	 Number of Units tested: 4
+
+	 Cell line: IMR32
+	 Seeding: 2Kperwell
+	 Condition: Condition
+	 Compound: 3AP_WEE1
+	 Number of Concentration tested: 20
+	 Concentration range: 	40_5 	250_35 	250_20 	197.5_50 	250_5 	197.5_35 	197.5_20 	145_50 	197.5_5 	145_35 	145_20 	92.5_50 	145_5 	92.5_35 	92.5_20 	40_50 	92.5_5 	40_35 	40_20 	250_50 
+	 Number of Units tested: 20
+
+	 Cell line: IMR32
+	 Seeding: 2Kperwell
+	 Condition: Condition
+	 Compound: 3AP_WEE1_CHK1
+	 Number of Concentration tested: 80
+	 Concentration range: 	40_20_0.46 	92.5_35_0.19 	92.5_50_0.6 	145_5_0.6 	197.5_20_0.33 	250_50_0.46 	40_5_0.46 	92.5_20_0.19 	92.5_35_0.6 	145_50_0.33 	197.5_5_0.33 	250_35_0.46 	40_50_0.19 	92.5_5_0.19 	92.5_20_0.6 	145_35_0.33 	250_20_0.46 	40_35_0.19 	40_50_0.6 	92.5_5_0.6 	145_20_0.33 	197.5_50_0.46 	250_5_0.46 	40_20_0.19 	40_35_0.6 	92.5_50_0.33 	145_5_0.33 	197.5_35_0.46 	250_50_0.19 	40_5_0.19 	40_20_0.6 	92.5_35_0.33 	197.5_20_0.46 	250_35_0.19 	250_50_0.6 	40_5_0.6 	92.5_20_0.33 	145_50_0.46 	197.5_5_0.46 	250_20_0.19 	250_35_0.6 	40_50_0.33 	92.5_5_0.33 	145_35_0.46 	197.5_50_0.19 	250_5_0.19 	250_20_0.6 	40_35_0.33 	145_20_0.46 	197.5_35_0.19 	197.5_50_0.6 	250_5_0.6 	40_20_0.33 	92.5_50_0.46 	145_5_0.46 	197.5_20_0.19 	197.5_35_0.6 	250_50_0.33 	40_5_0.33 	92.5_35_0.46 	145_50_0.19 	197.5_5_0.19 	197.5_20_0.6 	250_35_0.33 	92.5_20_0.46 	145_35_0.19 	145_50_0.6 	197.5_5_0.6 	250_20_0.33 	40_50_0.46 	92.5_5_0.46 	145_20_0.19 	145_35_0.6 	197.5_50_0.33 	250_5_0.33 	40_35_0.46 	92.5_50_0.19 	145_5_0.19 	145_20_0.6 	197.5_35_0.33 
+	 Number of Units tested: 80
+
+	 Cell line: IMR32
+	 Seeding: 2Kperwell
+	 Condition: Condition
+	 Compound: 3AP_CHK1
+	 Number of Concentration tested: 20
+	 Concentration range: 	145_0.19 	145_0.6 	40_0.46 	197.5_0.33 	92.5_0.19 	92.5_0.6 	250_0.46 	145_0.33 	40_0.19 	40_0.6 	197.5_0.46 	92.5_0.33 	250_0.19 	250_0.6 	145_0.46 	40_0.33 	197.5_0.19 	197.5_0.6 	92.5_0.46 	250_0.33 
+	 Number of Units tested: 20
+
+	 Cell line: IMR32
+	 Seeding: 2Kperwell
+	 Condition: Condition
+	 Compound: WEE1_CHK1
+	 Number of Concentration tested: 16
+	 Concentration range: 	50_0.46 	35_0.46 	20_0.46 	5_0.46 	50_0.19 	35_0.19 	50_0.6 	20_0.19 	35_0.6 	5_0.19 	20_0.6 	5_0.6 	50_0.33 	35_0.33 	20_0.33 	5_0.33 
+	 Number of Units tested: 16
+
+	 Cell line: IMR32
+	 Seeding: 2Kperwell
+	 Condition: Condition
+	 Compound: 3AP
+	 Number of Concentration tested: 5
+	 Concentration range: 	40 	250 	197.5 	145 	92.5 
+	 Number of Units tested: 5
+
+	 Cell line: IMR32
+	 Seeding: 2Kperwell
+	 Condition: Condition
+	 Compound: DMSO-3AP
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: IMR32
+	 Seeding: 2Kperwell
+	 Condition: Condition
+	 Compound: DMSO-WEE1
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: IMR32
+	 Seeding: 2Kperwell
+	 Condition: Condition
+	 Compound: Only-Cells
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+Information about control: 
+
+	 Cell line: IMR32
+	 Seeding: 2Kperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_CHK1
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+

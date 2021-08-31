@@ -1,0 +1,286 @@
+File name: genetic-chemical perturbagen several time points
+
+The following information was obtained from the file header 
+
+Information about standard deviation: Std Dev
+
+Information about compounds: 
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: drug-A
+	 Number of Concentration tested: 11
+	 Concentration range: 	100 	5 	34 	3 	15 	1 	13 	0.64 	11 	9 	7 
+	 Number of Units tested: 11
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugB
+	 Number of Concentration tested: 10
+	 Concentration range: 	965 	661 	453 	310 	3000 	212 	2055 	145 	1408 	100 
+	 Number of Units tested: 10
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugC
+	 Number of Concentration tested: 7
+	 Concentration range: 	30 	25 	20 	15 	10 	5.4 	0.5 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugD
+	 Number of Concentration tested: 7
+	 Concentration range: 	572 	510 	448 	386 	324 	262 	200 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugE
+	 Number of Concentration tested: 7
+	 Concentration range: 	70 	43 	27 	16 	10 	6 	4 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugF
+	 Number of Concentration tested: 7
+	 Concentration range: 	1e5 	52100 	27144 	14142 	7368 	3838 	2000 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: DrugG
+	 Number of Concentration tested: 14
+	 Concentration range: 	1e5 	339 	44392 	150 	19706 	66 	8748 	30 	3883 	13 	1723 	5.8 	765 	2.6 
+	 Number of Units tested: 14
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: drug-A_GeneOn
+	 Number of Concentration tested: 11
+	 Concentration range: 	100 	5 	34 	3 	15 	1 	13 	0.64 	11 	9 	7 
+	 Number of Units tested: 11
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DrugB_GeneOn
+	 Number of Concentration tested: 10
+	 Concentration range: 	965 	661 	453 	310 	3000 	212 	2055 	145 	1408 	100 
+	 Number of Units tested: 10
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DrugC_GeneOn
+	 Number of Concentration tested: 7
+	 Concentration range: 	30 	25 	20 	15 	10 	5.4 	0.5 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DrugD_GeneOn
+	 Number of Concentration tested: 7
+	 Concentration range: 	572 	510 	448 	386 	324 	262 	200 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DrugE_GeneOn
+	 Number of Concentration tested: 7
+	 Concentration range: 	70 	43 	27 	16 	10 	6 	4 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DrugF_GeneOn
+	 Number of Concentration tested: 7
+	 Concentration range: 	1e5 	52100 	27144 	14142 	7368 	3838 	2000 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DrugG_GeneOn
+	 Number of Concentration tested: 14
+	 Concentration range: 	1e5 	339 	44392 	150 	19706 	66 	8748 	30 	3883 	13 	1723 	5.8 	765 	2.6 
+	 Number of Units tested: 14
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DMSO_drug-A_GeneOn
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: Tween_DrugB_GeneOn
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DMSO_DrugC_GeneOn
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DMSO_DrugD_GeneOn
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DMSO_DrugE_GeneOn
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DMSO_DrugF_GeneOn
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine2Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: DMSO_DrugG_GeneOn
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+Information about control: 
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_drug-A
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_Tween_DrugB
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_DrugC
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_DrugD
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_DrugE
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_DrugF
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_DrugG
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+Information about medium: 
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: OnlyCells
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: OnlyCells_GeneOn
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: Condition
+	 Compound: OnlyCells
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1Inducible
+	 Seeding: 4.5Kcellsperwell
+	 Condition: GeneOn
+	 Compound: OnlyCells_GeneOn
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+HTSplotter Categorizes the experiments as follows: 
+	 drug => Concentration >3; Condition = "Condition"; Combination = 0 
+	 drug combination => Condition = "Condition"; Combination != 0 
+	 genetic perturbagen => Concentration = 1; Condition = "Condition" ; Combination = 0 
+	 genetic-chemical perturbagen => Condition != "Condition"; Combination !=0 
+
+Based on the input file the categorization is : genetic-chemical_perturbagen
+
+	 number of concentration for each compound: 11;10;7;7;7;7;14;11;10;7;7;7;7;14;1;1;1;1;1;1;1;
+	 combination: OnlyCells_GeneOn drug-A_GeneOn DrugB_GeneOn DrugC_GeneOn DrugD_GeneOn DrugE_GeneOn DrugF_GeneOn DrugG_GeneOn DMSO_drug-A_GeneOn Tween_DrugB_GeneOn DMSO_DrugC_GeneOn DMSO_DrugD_GeneOn DMSO_DrugE_GeneOn DMSO_DrugF_GeneOn DMSO_DrugG_GeneOn 
+	 control: Control_DMSO_drug-A Control_Tween_DrugB Control_DMSO_DrugC Control_DMSO_DrugD Control_DMSO_DrugE Control_DMSO_DrugF Control_DMSO_DrugG 
+	 condition: Condition GeneOn 
+	 the number of time points is: 39	0.0	3.0	6.0	9.0	12.0	15.0	18.0	22.0	25.0	28.0	31.0	34.0	37.0	40.0	43.0	46.0	49.0	52.0	55.0	58.0	62.0	65.0	68.0	71.0	74.0	77.0	80.0	83.0	86.0	89.0	92.0	95.0	98.0	102.0	105.0	108.0	111.0	114.0	120.0	
+
+HTSplotter categorized the experiment as: genetic-chemical_perturbagen
+Define the experiment read out (e.g. confluency, cell viability, apoptosis, cell index) : 
+Please, indicate the read-out units (e.g. %) : 
+Confirm your experiment type, according to the options above: 

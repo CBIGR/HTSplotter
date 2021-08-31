@@ -1,0 +1,2926 @@
+
+file name: drugscreen_severaltimepoint_1control
+2021-07-08 18:39:42
+cpu_times, user= 	6.296875
+cpu_times, system = 	0.40625
+cpu_percent= 	0.0
+ppid= 	25108
+status =	running
+memory_info, rss= 	132411392
+memory_info, vms = 	652484608
+io_counters, read_count = 	46013
+io_counters, write_count = 	463
+io_counters, read_bytes = 	376256254
+io_counters, write_bytes = 	374896
+
+file name: drug combination several time points repetitive conditions
+2021-07-08 18:41:29
+cpu_times, user= 	105.9375
+cpu_times, system = 	5.328125
+cpu_percent= 	0.0
+ppid= 	5620
+status =	running
+memory_info, rss= 	1614008320
+memory_info, vms = 	2140667904
+io_counters, read_count = 	1162046
+io_counters, write_count = 	2472
+io_counters, read_bytes = 	9508961617
+io_counters, write_bytes = 	6156587
+
+file name: drug combination several time points
+2021-07-08 18:44:01
+cpu_times, user= 	95.59375
+cpu_times, system = 	4.734375
+cpu_percent= 	0.0
+ppid= 	19980
+status =	running
+memory_info, rss= 	1272573952
+memory_info, vms = 	1797931008
+io_counters, read_count = 	999284
+io_counters, write_count = 	1842
+io_counters, read_bytes = 	8178033043
+io_counters, write_bytes = 	4678622
+
+file name: genetic-chemical perturbagen several time points
+2021-07-08 18:49:14
+cpu_times, user= 	187.09375
+cpu_times, system = 	7.375
+cpu_percent= 	0.0
+ppid= 	13764
+status =	running
+memory_info, rss= 	963399680
+memory_info, vms = 	1488437248
+io_counters, read_count = 	1050707
+io_counters, write_count = 	3145
+io_counters, read_bytes = 	8586182969
+io_counters, write_bytes = 	4481496
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-08 18:54:44
+cpu_times, user= 	21.4375
+cpu_times, system = 	1.5
+cpu_percent= 	0.0
+ppid= 	23264
+status =	running
+memory_info, rss= 	302395392
+memory_info, vms = 	789536768
+io_counters, read_count = 	294639
+io_counters, write_count = 	1272
+io_counters, read_bytes = 	2406889344
+io_counters, write_bytes = 	1121398
+
+file name: file_name_brdrug combination several time points
+2021-07-08 18:58:28
+cpu_times, user= 	112.40625
+cpu_times, system = 	5.453125
+cpu_percent= 	0.0
+ppid= 	5084
+status =	running
+memory_info, rss= 	1360658432
+memory_info, vms = 	1886945280
+io_counters, read_count = 	954072
+io_counters, write_count = 	3025
+io_counters, read_bytes = 	7751501017
+io_counters, write_bytes = 	11170129
+
+file name: drug combination several time points
+2021-07-08 19:11:12
+cpu_times, user= 	260.109375
+cpu_times, system = 	12.5
+cpu_percent= 	0.0
+ppid= 	5860
+status =	running
+memory_info, rss= 	1275006976
+memory_info, vms = 	1803214848
+io_counters, read_count = 	3020010
+io_counters, write_count = 	5484
+io_counters, read_bytes = 	24709573147
+io_counters, write_bytes = 	14121633
+
+file name: drugscreen_severaltimepoint_1control_enhanced
+2021-07-09 11:26:52
+cpu_times, user= 	8.03125
+cpu_times, system = 	0.671875
+cpu_percent= 	0.0
+ppid= 	20324
+status =	running
+memory_info, rss= 	131158016
+memory_info, vms = 	651055104
+io_counters, read_count = 	46661
+io_counters, write_count = 	463
+io_counters, read_bytes = 	381564872
+io_counters, write_bytes = 	375160
+
+file name: drugscreen_severaltimepoint_1control_enhanced
+2021-07-09 11:34:40
+cpu_times, user= 	5.59375
+cpu_times, system = 	0.59375
+cpu_percent= 	0.0
+ppid= 	5360
+status =	running
+memory_info, rss= 	130396160
+memory_info, vms = 	651042816
+io_counters, read_count = 	47349
+io_counters, write_count = 	464
+io_counters, read_bytes = 	387250742
+io_counters, write_bytes = 	409111
+
+file name: drugscreen_severaltimepoint_1control_enhanced
+2021-07-09 11:34:51
+cpu_times, user= 	4.546875
+cpu_times, system = 	0.4375
+cpu_percent= 	0.0
+ppid= 	4624
+status =	running
+memory_info, rss= 	131235840
+memory_info, vms = 	652152832
+io_counters, read_count = 	47347
+io_counters, write_count = 	463
+io_counters, read_bytes = 	387184722
+io_counters, write_bytes = 	375420
+
+file name: drugscreen_severaltimepoint_1control_enhanced
+2021-07-09 11:35:24
+cpu_times, user= 	5.71875
+cpu_times, system = 	0.328125
+cpu_percent= 	0.0
+ppid= 	22676
+status =	running
+memory_info, rss= 	131735552
+memory_info, vms = 	651730944
+io_counters, read_count = 	47385
+io_counters, write_count = 	464
+io_counters, read_bytes = 	387545798
+io_counters, write_bytes = 	409121
+
+file name: drugscreen_severaltimepoint_1control_enhanced
+2021-07-09 11:36:41
+cpu_times, user= 	6.0625
+cpu_times, system = 	0.484375
+cpu_percent= 	0.0
+ppid= 	18600
+status =	running
+memory_info, rss= 	130301952
+memory_info, vms = 	650743808
+io_counters, read_count = 	47243
+io_counters, write_count = 	464
+io_counters, read_bytes = 	386382560
+io_counters, write_bytes = 	409316
+
+file name: drugscreen_severaltimepoint_1control_enhanced
+2021-07-09 11:37:08
+cpu_times, user= 	5.640625
+cpu_times, system = 	0.453125
+cpu_percent= 	0.0
+ppid= 	9928
+status =	running
+memory_info, rss= 	131678208
+memory_info, vms = 	653017088
+io_counters, read_count = 	47207
+io_counters, write_count = 	464
+io_counters, read_bytes = 	386087675
+io_counters, write_bytes = 	409524
+
+file name: drug combination several time points
+2021-07-09 11:51:28
+cpu_times, user= 	75.9375
+cpu_times, system = 	3.375
+cpu_percent= 	0.0
+ppid= 	25848
+status =	running
+memory_info, rss= 	1271791616
+memory_info, vms = 	1797111808
+io_counters, read_count = 	1005985
+io_counters, write_count = 	1843
+io_counters, read_bytes = 	8232978729
+io_counters, write_bytes = 	4713709
+
+file name: drug combination several time points
+2021-07-09 11:54:16
+cpu_times, user= 	74.640625
+cpu_times, system = 	3.71875
+cpu_percent= 	0.0
+ppid= 	21220
+status =	running
+memory_info, rss= 	1250955264
+memory_info, vms = 	1776070656
+io_counters, read_count = 	869435
+io_counters, write_count = 	1847
+io_counters, read_bytes = 	7114367907
+io_counters, write_bytes = 	4689759
+
+file name: drug combination several time points
+2021-07-09 12:34:09
+cpu_times, user= 	103.359375
+cpu_times, system = 	4.625
+cpu_percent= 	0.0
+ppid= 	11716
+status =	running
+memory_info, rss= 	1260515328
+memory_info, vms = 	1785462784
+io_counters, read_count = 	876899
+io_counters, write_count = 	1847
+io_counters, read_bytes = 	7175511511
+io_counters, write_bytes = 	4690231
+
+file name: drug combination several time points
+2021-07-09 12:38:00
+cpu_times, user= 	114.65625
+cpu_times, system = 	5.046875
+cpu_percent= 	0.0
+ppid= 	26260
+status =	running
+memory_info, rss= 	1250992128
+memory_info, vms = 	1776447488
+io_counters, read_count = 	876897
+io_counters, write_count = 	1846
+io_counters, read_bytes = 	7175484804
+io_counters, write_bytes = 	4671184
+
+file name: drug combination several time points
+2021-07-09 12:41:12
+cpu_times, user= 	110.609375
+cpu_times, system = 	5.5625
+cpu_percent= 	0.0
+ppid= 	19492
+status =	running
+memory_info, rss= 	1272672256
+memory_info, vms = 	1798541312
+io_counters, read_count = 	1005986
+io_counters, write_count = 	1844
+io_counters, read_bytes = 	8232976639
+io_counters, write_bytes = 	4721139
+
+file name: drug combination screen 1timepoint
+2021-07-09 12:45:26
+cpu_times, user= 	22.359375
+cpu_times, system = 	1.265625
+cpu_percent= 	0.0
+ppid= 	15980
+status =	running
+memory_info, rss= 	359251968
+memory_info, vms = 	879280128
+io_counters, read_count = 	156972
+io_counters, write_count = 	1340
+io_counters, read_bytes = 	1277608133
+io_counters, write_bytes = 	1476097
+
+file name: drug combination screen 1timepoint
+2021-07-09 12:47:12
+cpu_times, user= 	20.203125
+cpu_times, system = 	0.859375
+cpu_percent= 	0.0
+ppid= 	20220
+status =	running
+memory_info, rss= 	353923072
+memory_info, vms = 	873955328
+io_counters, read_count = 	125550
+io_counters, write_count = 	1340
+io_counters, read_bytes = 	1020199109
+io_counters, write_bytes = 	1471642
+
+file name: drugscreen_severaltimepoint_1control
+2021-07-09 12:58:04
+cpu_times, user= 	8.390625
+cpu_times, system = 	0.6875
+cpu_percent= 	0.0
+ppid= 	22780
+status =	running
+memory_info, rss= 	142376960
+memory_info, vms = 	662982656
+io_counters, read_count = 	54042
+io_counters, write_count = 	870
+io_counters, read_bytes = 	438092249
+io_counters, write_bytes = 	574169
+
+file name: drugscreen_severaltimepoint_1control_enhanced
+2021-07-09 12:58:54
+cpu_times, user= 	9.0625
+cpu_times, system = 	0.859375
+cpu_percent= 	0.0
+ppid= 	14920
+status =	running
+memory_info, rss= 	130621440
+memory_info, vms = 	650596352
+io_counters, read_count = 	47223
+io_counters, write_count = 	463
+io_counters, read_bytes = 	386161527
+io_counters, write_bytes = 	375796
+
+file name: drugscreen_severaltimepoint_1control_enhanced
+2021-07-09 13:00:44
+cpu_times, user= 	7.109375
+cpu_times, system = 	0.796875
+cpu_percent= 	0.0
+ppid= 	5496
+status =	running
+memory_info, rss= 	130400256
+memory_info, vms = 	650612736
+io_counters, read_count = 	47225
+io_counters, write_count = 	464
+io_counters, read_bytes = 	386219260
+io_counters, write_bytes = 	402241
+
+file name: drugscreen_1timepoint
+2021-07-09 13:09:11
+cpu_times, user= 	22.1875
+cpu_times, system = 	1.0
+cpu_percent= 	0.0
+ppid= 	7320
+status =	running
+memory_info, rss= 	135610368
+memory_info, vms = 	656220160
+io_counters, read_count = 	97052
+io_counters, write_count = 	1341
+io_counters, read_bytes = 	786624521
+io_counters, write_bytes = 	975128
+
+file name: drugscreen_severaltimepoint_1control
+2021-07-09 13:22:48
+cpu_times, user= 	7.0625
+cpu_times, system = 	0.4375
+cpu_percent= 	0.0
+ppid= 	10380
+status =	running
+memory_info, rss= 	131387392
+memory_info, vms = 	651419648
+io_counters, read_count = 	46575
+io_counters, write_count = 	463
+io_counters, read_bytes = 	380853167
+io_counters, write_bytes = 	375682
+
+file name: drugscreen_severaltimepoint_1control
+2021-07-09 13:26:30
+cpu_times, user= 	7.484375
+cpu_times, system = 	0.75
+cpu_percent= 	0.0
+ppid= 	24012
+status =	running
+memory_info, rss= 	130691072
+memory_info, vms = 	650637312
+io_counters, read_count = 	46361
+io_counters, write_count = 	464
+io_counters, read_bytes = 	379099719
+io_counters, write_bytes = 	386683
+
+file name: drugscreen_severaltimepoint_1control
+2021-07-09 13:27:48
+cpu_times, user= 	7.15625
+cpu_times, system = 	0.46875
+cpu_percent= 	0.0
+ppid= 	20548
+status =	running
+memory_info, rss= 	129613824
+memory_info, vms = 	650121216
+io_counters, read_count = 	46359
+io_counters, write_count = 	463
+io_counters, read_bytes = 	379083690
+io_counters, write_bytes = 	375637
+
+file name: drugscreen_severaltimepoint_1control
+2021-07-09 13:29:11
+cpu_times, user= 	12.9375
+cpu_times, system = 	0.59375
+cpu_percent= 	0.0
+ppid= 	2584
+status =	running
+memory_info, rss= 	130203648
+memory_info, vms = 	651014144
+io_counters, read_count = 	46575
+io_counters, write_count = 	463
+io_counters, read_bytes = 	380853162
+io_counters, write_bytes = 	375540
+
+file name: drugscreen_severaltimepoint_1control
+2021-07-09 13:31:05
+cpu_times, user= 	6.796875
+cpu_times, system = 	0.609375
+cpu_percent= 	0.0
+ppid= 	10124
+status =	running
+memory_info, rss= 	130854912
+memory_info, vms = 	651501568
+io_counters, read_count = 	46235
+io_counters, write_count = 	464
+io_counters, read_bytes = 	378109471
+io_counters, write_bytes = 	402125
+
+file name: drugscreen_severaltimepoint_1control
+2021-07-09 13:57:48
+cpu_times, user= 	5.90625
+cpu_times, system = 	0.46875
+cpu_percent= 	0.0
+ppid= 	22604
+status =	running
+memory_info, rss= 	131588096
+memory_info, vms = 	652419072
+io_counters, read_count = 	46575
+io_counters, write_count = 	463
+io_counters, read_bytes = 	380853152
+io_counters, write_bytes = 	375540
+
+file name: drug combination screen 1timepoint
+2021-07-09 13:58:48
+cpu_times, user= 	18.796875
+cpu_times, system = 	0.96875
+cpu_percent= 	0.0
+ppid= 	22692
+status =	running
+memory_info, rss= 	359170048
+memory_info, vms = 	879185920
+io_counters, read_count = 	156972
+io_counters, write_count = 	1340
+io_counters, read_bytes = 	1277608437
+io_counters, write_bytes = 	1476097
+
+file name: drug combination screen 1timepoint
+2021-07-09 14:05:30
+cpu_times, user= 	18.796875
+cpu_times, system = 	0.953125
+cpu_percent= 	0.0
+ppid= 	1184
+status =	running
+memory_info, rss= 	395411456
+memory_info, vms = 	915353600
+io_counters, read_count = 	156974
+io_counters, write_count = 	1341
+io_counters, read_bytes = 	1277666410
+io_counters, write_bytes = 	1501673
+
+file name: drug combination screen 1timepoint
+2021-07-09 14:06:20
+cpu_times, user= 	17.984375
+cpu_times, system = 	0.921875
+cpu_percent= 	0.0
+ppid= 	27292
+status =	running
+memory_info, rss= 	337674240
+memory_info, vms = 	857870336
+io_counters, read_count = 	156974
+io_counters, write_count = 	1339
+io_counters, read_bytes = 	1277666403
+io_counters, write_bytes = 	1444987
+
+file name: drug combination several time points repetitive conditions
+2021-07-09 14:18:38
+cpu_times, user= 	89.03125
+cpu_times, system = 	4.15625
+cpu_percent= 	0.0
+ppid= 	3428
+status =	running
+memory_info, rss= 	1595744256
+memory_info, vms = 	2122842112
+io_counters, read_count = 	1157535
+io_counters, write_count = 	2425
+io_counters, read_bytes = 	9472000823
+io_counters, write_bytes = 	5887376
+
+file name: drug combination several time points repetitive conditions
+2021-07-09 14:22:18
+cpu_times, user= 	88.234375
+cpu_times, system = 	4.109375
+cpu_percent= 	0.0
+ppid= 	20684
+status =	running
+memory_info, rss= 	1596837888
+memory_info, vms = 	2124058624
+io_counters, read_count = 	1154011
+io_counters, write_count = 	2426
+io_counters, read_bytes = 	9443173804
+io_counters, write_bytes = 	5863864
+
+file name: drug combination several time points repetitive conditions
+2021-07-09 14:25:14
+cpu_times, user= 	88.75
+cpu_times, system = 	3.8125
+cpu_percent= 	0.0
+ppid= 	27384
+status =	running
+memory_info, rss= 	1592045568
+memory_info, vms = 	2119340032
+io_counters, read_count = 	1151453
+io_counters, write_count = 	2426
+io_counters, read_bytes = 	9422218673
+io_counters, write_bytes = 	5911882
+
+file name: drug combination several time points repetitive conditions
+2021-07-09 14:27:18
+cpu_times, user= 	100.15625
+cpu_times, system = 	4.765625
+cpu_percent= 	0.0
+ppid= 	13068
+status =	running
+memory_info, rss= 	1593249792
+memory_info, vms = 	2120540160
+io_counters, read_count = 	1152909
+io_counters, write_count = 	2426
+io_counters, read_bytes = 	9434146229
+io_counters, write_bytes = 	5911943
+
+file name: drug combination several time points repetitive conditions
+2021-07-09 14:30:47
+cpu_times, user= 	89.3125
+cpu_times, system = 	4.265625
+cpu_percent= 	0.0
+ppid= 	19400
+status =	running
+memory_info, rss= 	1594683392
+memory_info, vms = 	2121990144
+io_counters, read_count = 	1155951
+io_counters, write_count = 	2426
+io_counters, read_bytes = 	9459066501
+io_counters, write_bytes = 	5910726
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 14:51:18
+cpu_times, user= 	3.015625
+cpu_times, system = 	0.515625
+cpu_percent= 	0.0
+ppid= 	6240
+status =	running
+memory_info, rss= 	97005568
+memory_info, vms = 	583663616
+io_counters, read_count = 	48123
+io_counters, write_count = 	1025
+io_counters, read_bytes = 	388447036
+io_counters, write_bytes = 	499687
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 14:52:34
+cpu_times, user= 	2.40625
+cpu_times, system = 	0.453125
+cpu_percent= 	0.0
+ppid= 	14048
+status =	running
+memory_info, rss= 	97411072
+memory_info, vms = 	583667712
+io_counters, read_count = 	46805
+io_counters, write_count = 	1025
+io_counters, read_bytes = 	377649980
+io_counters, write_bytes = 	499297
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:06:56
+cpu_times, user= 	3.671875
+cpu_times, system = 	0.5625
+cpu_percent= 	0.0
+ppid= 	24556
+status =	running
+memory_info, rss= 	97169408
+memory_info, vms = 	583872512
+io_counters, read_count = 	46807
+io_counters, write_count = 	1026
+io_counters, read_bytes = 	377708234
+io_counters, write_bytes = 	526050
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:07:27
+cpu_times, user= 	3.015625
+cpu_times, system = 	0.765625
+cpu_percent= 	0.0
+ppid= 	21904
+status =	running
+memory_info, rss= 	97193984
+memory_info, vms = 	583610368
+io_counters, read_count = 	46807
+io_counters, write_count = 	1026
+io_counters, read_bytes = 	377708442
+io_counters, write_bytes = 	526057
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:12:28
+cpu_times, user= 	3.875
+cpu_times, system = 	0.484375
+cpu_percent= 	0.0
+ppid= 	25100
+status =	running
+memory_info, rss= 	97488896
+memory_info, vms = 	583708672
+io_counters, read_count = 	46807
+io_counters, write_count = 	1026
+io_counters, read_bytes = 	377708451
+io_counters, write_bytes = 	526026
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:13:41
+cpu_times, user= 	3.21875
+cpu_times, system = 	0.5625
+cpu_percent= 	0.0
+ppid= 	22072
+status =	running
+memory_info, rss= 	97177600
+memory_info, vms = 	583626752
+io_counters, read_count = 	46807
+io_counters, write_count = 	1026
+io_counters, read_bytes = 	377708444
+io_counters, write_bytes = 	526041
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:16:08
+cpu_times, user= 	3.25
+cpu_times, system = 	0.609375
+cpu_percent= 	0.0
+ppid= 	18968
+status =	running
+memory_info, rss= 	97468416
+memory_info, vms = 	583905280
+io_counters, read_count = 	46807
+io_counters, write_count = 	1026
+io_counters, read_bytes = 	377708444
+io_counters, write_bytes = 	525808
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:17:37
+cpu_times, user= 	2.9375
+cpu_times, system = 	0.546875
+cpu_percent= 	0.0
+ppid= 	15348
+status =	running
+memory_info, rss= 	97386496
+memory_info, vms = 	583761920
+io_counters, read_count = 	46807
+io_counters, write_count = 	1026
+io_counters, read_bytes = 	377708444
+io_counters, write_bytes = 	526041
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:18:22
+cpu_times, user= 	3.234375
+cpu_times, system = 	0.453125
+cpu_percent= 	0.0
+ppid= 	22780
+status =	running
+memory_info, rss= 	97628160
+memory_info, vms = 	584081408
+io_counters, read_count = 	46807
+io_counters, write_count = 	1026
+io_counters, read_bytes = 	377708444
+io_counters, write_bytes = 	526083
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:18:42
+cpu_times, user= 	4.703125
+cpu_times, system = 	0.671875
+cpu_percent= 	0.0
+ppid= 	18984
+status =	running
+memory_info, rss= 	97259520
+memory_info, vms = 	583761920
+io_counters, read_count = 	46807
+io_counters, write_count = 	1026
+io_counters, read_bytes = 	377708452
+io_counters, write_bytes = 	526011
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:21:24
+cpu_times, user= 	3.421875
+cpu_times, system = 	0.5625
+cpu_percent= 	0.0
+ppid= 	21236
+status =	running
+memory_info, rss= 	97185792
+memory_info, vms = 	583954432
+io_counters, read_count = 	46807
+io_counters, write_count = 	1322
+io_counters, read_bytes = 	377708482
+io_counters, write_bytes = 	530712
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:21:48
+cpu_times, user= 	3.078125
+cpu_times, system = 	0.640625
+cpu_percent= 	0.0
+ppid= 	1528
+status =	running
+memory_info, rss= 	97255424
+memory_info, vms = 	583585792
+io_counters, read_count = 	46807
+io_counters, write_count = 	1322
+io_counters, read_bytes = 	377708678
+io_counters, write_bytes = 	530704
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:23:12
+cpu_times, user= 	4.328125
+cpu_times, system = 	0.6875
+cpu_percent= 	0.0
+ppid= 	9656
+status =	running
+memory_info, rss= 	97452032
+memory_info, vms = 	584048640
+io_counters, read_count = 	46807
+io_counters, write_count = 	1322
+io_counters, read_bytes = 	377708682
+io_counters, write_bytes = 	530712
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:31:11
+cpu_times, user= 	4.765625
+cpu_times, system = 	0.625
+cpu_percent= 	0.0
+ppid= 	17052
+status =	running
+memory_info, rss= 	97574912
+memory_info, vms = 	584032256
+io_counters, read_count = 	46807
+io_counters, write_count = 	1322
+io_counters, read_bytes = 	377708677
+io_counters, write_bytes = 	530712
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 15:34:16
+cpu_times, user= 	3.1875
+cpu_times, system = 	0.40625
+cpu_percent= 	0.0
+ppid= 	4440
+status =	running
+memory_info, rss= 	96505856
+memory_info, vms = 	582823936
+io_counters, read_count = 	46805
+io_counters, write_count = 	1322
+io_counters, read_bytes = 	377650391
+io_counters, write_bytes = 	505105
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:16:26
+cpu_times, user= 	3.171875
+cpu_times, system = 	0.6875
+cpu_percent= 	0.0
+ppid= 	18140
+status =	running
+memory_info, rss= 	97120256
+memory_info, vms = 	583536640
+io_counters, read_count = 	46807
+io_counters, write_count = 	1323
+io_counters, read_bytes = 	377709104
+io_counters, write_bytes = 	535439
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:17:40
+cpu_times, user= 	5.3125
+cpu_times, system = 	0.921875
+cpu_percent= 	0.0
+ppid= 	4328
+status =	running
+memory_info, rss= 	97488896
+memory_info, vms = 	583770112
+io_counters, read_count = 	46807
+io_counters, write_count = 	1323
+io_counters, read_bytes = 	377709116
+io_counters, write_bytes = 	535450
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:18:31
+cpu_times, user= 	5.375
+cpu_times, system = 	0.796875
+cpu_percent= 	0.0
+ppid= 	24612
+status =	running
+memory_info, rss= 	96874496
+memory_info, vms = 	583131136
+io_counters, read_count = 	46805
+io_counters, write_count = 	1322
+io_counters, read_bytes = 	377650533
+io_counters, write_bytes = 	508370
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:20:29
+cpu_times, user= 	3.0
+cpu_times, system = 	0.625
+cpu_percent= 	0.0
+ppid= 	19700
+status =	running
+memory_info, rss= 	97038336
+memory_info, vms = 	583417856
+io_counters, read_count = 	46805
+io_counters, write_count = 	1322
+io_counters, read_bytes = 	377650533
+io_counters, write_bytes = 	508389
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:29:44
+cpu_times, user= 	4.796875
+cpu_times, system = 	0.53125
+cpu_percent= 	0.0
+ppid= 	13092
+status =	running
+memory_info, rss= 	105394176
+memory_info, vms = 	592297984
+io_counters, read_count = 	46645
+io_counters, write_count = 	1321
+io_counters, read_bytes = 	376382067
+io_counters, write_bytes = 	528754
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:37:05
+cpu_times, user= 	6.828125
+cpu_times, system = 	0.6875
+cpu_percent= 	0.0
+ppid= 	24680
+status =	running
+memory_info, rss= 	105390080
+memory_info, vms = 	592416768
+io_counters, read_count = 	46645
+io_counters, write_count = 	1321
+io_counters, read_bytes = 	376382053
+io_counters, write_bytes = 	528764
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:37:25
+cpu_times, user= 	2.5
+cpu_times, system = 	0.5625
+cpu_percent= 	0.0
+ppid= 	26596
+status =	running
+memory_info, rss= 	93831168
+memory_info, vms = 	580280320
+io_counters, read_count = 	6299
+io_counters, write_count = 	1320
+io_counters, read_bytes = 	45867608
+io_counters, write_bytes = 	521085
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:38:53
+cpu_times, user= 	5.890625
+cpu_times, system = 	0.734375
+cpu_percent= 	0.0
+ppid= 	22492
+status =	running
+memory_info, rss= 	105062400
+memory_info, vms = 	592011264
+io_counters, read_count = 	46645
+io_counters, write_count = 	1321
+io_counters, read_bytes = 	376382093
+io_counters, write_bytes = 	528768
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:42:41
+cpu_times, user= 	2.578125
+cpu_times, system = 	0.5
+cpu_percent= 	0.0
+ppid= 	8400
+status =	running
+memory_info, rss= 	94105600
+memory_info, vms = 	581206016
+io_counters, read_count = 	5267
+io_counters, write_count = 	1320
+io_counters, read_bytes = 	37413679
+io_counters, write_bytes = 	519225
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:44:32
+cpu_times, user= 	2.46875
+cpu_times, system = 	0.5
+cpu_percent= 	0.0
+ppid= 	19020
+status =	running
+memory_info, rss= 	94089216
+memory_info, vms = 	581033984
+io_counters, read_count = 	6299
+io_counters, write_count = 	1320
+io_counters, read_bytes = 	45867849
+io_counters, write_bytes = 	521408
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:45:34
+cpu_times, user= 	3.421875
+cpu_times, system = 	0.828125
+cpu_percent= 	0.0
+ppid= 	23052
+status =	running
+memory_info, rss= 	107601920
+memory_info, vms = 	593666048
+io_counters, read_count = 	6647
+io_counters, write_count = 	1319
+io_counters, read_bytes = 	48077831
+io_counters, write_bytes = 	494294
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:47:37
+cpu_times, user= 	5.9375
+cpu_times, system = 	1.03125
+cpu_percent= 	0.0
+ppid= 	27236
+status =	running
+memory_info, rss= 	105357312
+memory_info, vms = 	592154624
+io_counters, read_count = 	53633
+io_counters, write_count = 	1323
+io_counters, read_bytes = 	433627979
+io_counters, write_bytes = 	534907
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:48:16
+cpu_times, user= 	6.109375
+cpu_times, system = 	0.75
+cpu_percent= 	0.0
+ppid= 	24896
+status =	running
+memory_info, rss= 	105086976
+memory_info, vms = 	591970304
+io_counters, read_count = 	53633
+io_counters, write_count = 	1323
+io_counters, read_bytes = 	433627983
+io_counters, write_bytes = 	534843
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:49:13
+cpu_times, user= 	6.09375
+cpu_times, system = 	0.984375
+cpu_percent= 	0.0
+ppid= 	13516
+status =	running
+memory_info, rss= 	97136640
+memory_info, vms = 	583864320
+io_counters, read_count = 	46807
+io_counters, write_count = 	1323
+io_counters, read_bytes = 	377709361
+io_counters, write_bytes = 	535539
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:50:43
+cpu_times, user= 	3.921875
+cpu_times, system = 	0.71875
+cpu_percent= 	0.0
+ppid= 	17324
+status =	running
+memory_info, rss= 	97202176
+memory_info, vms = 	583626752
+io_counters, read_count = 	46807
+io_counters, write_count = 	1323
+io_counters, read_bytes = 	377709433
+io_counters, write_bytes = 	535456
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:51:27
+cpu_times, user= 	5.59375
+cpu_times, system = 	0.875
+cpu_percent= 	0.0
+ppid= 	18992
+status =	running
+memory_info, rss= 	97366016
+memory_info, vms = 	583958528
+io_counters, read_count = 	46807
+io_counters, write_count = 	1323
+io_counters, read_bytes = 	377709230
+io_counters, write_bytes = 	535421
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 16:59:07
+cpu_times, user= 	6.171875
+cpu_times, system = 	1.09375
+cpu_percent= 	0.0
+ppid= 	21908
+status =	running
+memory_info, rss= 	97292288
+memory_info, vms = 	583757824
+io_counters, read_count = 	47513
+io_counters, write_count = 	1420
+io_counters, read_bytes = 	382277231
+io_counters, write_bytes = 	578892
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:00:52
+cpu_times, user= 	5.046875
+cpu_times, system = 	0.875
+cpu_percent= 	0.0
+ppid= 	18820
+status =	running
+memory_info, rss= 	97767424
+memory_info, vms = 	584298496
+io_counters, read_count = 	47509
+io_counters, write_count = 	1122
+io_counters, read_bytes = 	382189982
+io_counters, write_bytes = 	528357
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:06:34
+cpu_times, user= 	4.4375
+cpu_times, system = 	0.59375
+cpu_percent= 	0.0
+ppid= 	8180
+status =	running
+memory_info, rss= 	97394688
+memory_info, vms = 	583938048
+io_counters, read_count = 	48273
+io_counters, write_count = 	1122
+io_counters, read_bytes = 	388449259
+io_counters, write_bytes = 	528619
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:15:29
+cpu_times, user= 	3.453125
+cpu_times, system = 	0.484375
+cpu_percent= 	0.0
+ppid= 	14732
+status =	running
+memory_info, rss= 	97824768
+memory_info, vms = 	584900608
+io_counters, read_count = 	48275
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388521944
+io_counters, write_bytes = 	561399
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:16:21
+cpu_times, user= 	5.59375
+cpu_times, system = 	0.65625
+cpu_percent= 	0.0
+ppid= 	22192
+status =	running
+memory_info, rss= 	97673216
+memory_info, vms = 	584019968
+io_counters, read_count = 	47509
+io_counters, write_count = 	1122
+io_counters, read_bytes = 	382196334
+io_counters, write_bytes = 	528338
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:45:18
+cpu_times, user= 	4.40625
+cpu_times, system = 	0.71875
+cpu_percent= 	0.0
+ppid= 	21416
+status =	running
+memory_info, rss= 	98103296
+memory_info, vms = 	584568832
+io_counters, read_count = 	47513
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	382374806
+io_counters, write_bytes = 	586800
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:47:04
+cpu_times, user= 	3.171875
+cpu_times, system = 	0.6875
+cpu_percent= 	0.0
+ppid= 	19108
+status =	running
+memory_info, rss= 	98516992
+memory_info, vms = 	585027584
+io_counters, read_count = 	47513
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	382374813
+io_counters, write_bytes = 	586800
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:51:44
+cpu_times, user= 	3.171875
+cpu_times, system = 	0.5
+cpu_percent= 	0.0
+ppid= 	2584
+status =	running
+memory_info, rss= 	98025472
+memory_info, vms = 	584589312
+io_counters, read_count = 	47513
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	382374932
+io_counters, write_bytes = 	586800
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:53:10
+cpu_times, user= 	4.828125
+cpu_times, system = 	0.75
+cpu_percent= 	0.0
+ppid= 	15656
+status =	running
+memory_info, rss= 	98013184
+memory_info, vms = 	584339456
+io_counters, read_count = 	47513
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	382394830
+io_counters, write_bytes = 	586815
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:54:38
+cpu_times, user= 	4.703125
+cpu_times, system = 	0.75
+cpu_percent= 	0.0
+ppid= 	23176
+status =	running
+memory_info, rss= 	98160640
+memory_info, vms = 	584556544
+io_counters, read_count = 	47513
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	382394718
+io_counters, write_bytes = 	586810
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:55:42
+cpu_times, user= 	4.5625
+cpu_times, system = 	0.71875
+cpu_percent= 	0.0
+ppid= 	27140
+status =	running
+memory_info, rss= 	97779712
+memory_info, vms = 	584519680
+io_counters, read_count = 	48275
+io_counters, write_count = 	1122
+io_counters, read_bytes = 	388507764
+io_counters, write_bytes = 	528620
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:57:08
+cpu_times, user= 	6.28125
+cpu_times, system = 	1.21875
+cpu_percent= 	0.0
+ppid= 	27032
+status =	running
+memory_info, rss= 	97591296
+memory_info, vms = 	584028160
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388653406
+io_counters, write_bytes = 	587089
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:57:43
+cpu_times, user= 	7.328125
+cpu_times, system = 	1.28125
+cpu_percent= 	0.0
+ppid= 	27292
+status =	running
+memory_info, rss= 	97943552
+memory_info, vms = 	584441856
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388653406
+io_counters, write_bytes = 	587090
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:58:05
+cpu_times, user= 	6.328125
+cpu_times, system = 	1.359375
+cpu_percent= 	0.0
+ppid= 	16168
+status =	running
+memory_info, rss= 	97742848
+memory_info, vms = 	584187904
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388653406
+io_counters, write_bytes = 	587090
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:58:26
+cpu_times, user= 	6.234375
+cpu_times, system = 	0.84375
+cpu_percent= 	0.0
+ppid= 	26944
+status =	running
+memory_info, rss= 	97771520
+memory_info, vms = 	584384512
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388653406
+io_counters, write_bytes = 	587090
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:58:50
+cpu_times, user= 	6.5
+cpu_times, system = 	0.984375
+cpu_percent= 	0.0
+ppid= 	5676
+status =	running
+memory_info, rss= 	97722368
+memory_info, vms = 	584421376
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388653406
+io_counters, write_bytes = 	587090
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 17:59:12
+cpu_times, user= 	6.4375
+cpu_times, system = 	1.015625
+cpu_percent= 	0.0
+ppid= 	27040
+status =	running
+memory_info, rss= 	98103296
+memory_info, vms = 	584548352
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388653405
+io_counters, write_bytes = 	587091
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:04:39
+cpu_times, user= 	5.75
+cpu_times, system = 	1.140625
+cpu_percent= 	0.0
+ppid= 	27244
+status =	running
+memory_info, rss= 	98308096
+memory_info, vms = 	585203712
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388657902
+io_counters, write_bytes = 	563829
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:17:25
+cpu_times, user= 	6.28125
+cpu_times, system = 	1.265625
+cpu_percent= 	0.0
+ppid= 	27028
+status =	running
+memory_info, rss= 	97726464
+memory_info, vms = 	584564736
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388635959
+io_counters, write_bytes = 	564300
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:24:59
+cpu_times, user= 	5.046875
+cpu_times, system = 	0.84375
+cpu_percent= 	0.0
+ppid= 	27284
+status =	running
+memory_info, rss= 	97562624
+memory_info, vms = 	583839744
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388508279
+io_counters, write_bytes = 	552818
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:27:48
+cpu_times, user= 	4.078125
+cpu_times, system = 	0.609375
+cpu_percent= 	0.0
+ppid= 	18860
+status =	running
+memory_info, rss= 	97533952
+memory_info, vms = 	584286208
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388450660
+io_counters, write_bytes = 	526584
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:37:33
+cpu_times, user= 	4.5
+cpu_times, system = 	0.765625
+cpu_percent= 	0.0
+ppid= 	26352
+status =	running
+memory_info, rss= 	97652736
+memory_info, vms = 	584081408
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388451190
+io_counters, write_bytes = 	526700
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:38:39
+cpu_times, user= 	4.578125
+cpu_times, system = 	0.703125
+cpu_percent= 	0.0
+ppid= 	27100
+status =	running
+memory_info, rss= 	97296384
+memory_info, vms = 	583557120
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388451190
+io_counters, write_bytes = 	526657
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:39:12
+cpu_times, user= 	6.296875
+cpu_times, system = 	0.84375
+cpu_percent= 	0.0
+ppid= 	21924
+status =	running
+memory_info, rss= 	97095680
+memory_info, vms = 	583540736
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388451190
+io_counters, write_bytes = 	526657
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:39:51
+cpu_times, user= 	4.921875
+cpu_times, system = 	0.859375
+cpu_percent= 	0.0
+ppid= 	16924
+status =	running
+memory_info, rss= 	97153024
+memory_info, vms = 	583524352
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388451190
+io_counters, write_bytes = 	526657
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:40:33
+cpu_times, user= 	6.015625
+cpu_times, system = 	0.953125
+cpu_percent= 	0.0
+ppid= 	19820
+status =	running
+memory_info, rss= 	97619968
+memory_info, vms = 	584056832
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388451190
+io_counters, write_bytes = 	526657
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:41:21
+cpu_times, user= 	4.625
+cpu_times, system = 	0.75
+cpu_percent= 	0.0
+ppid= 	27632
+status =	running
+memory_info, rss= 	97054720
+memory_info, vms = 	583389184
+io_counters, read_count = 	48277
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	388451190
+io_counters, write_bytes = 	526690
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:42:04
+cpu_times, user= 	7.359375
+cpu_times, system = 	1.03125
+cpu_percent= 	0.0
+ppid= 	5620
+status =	running
+memory_info, rss= 	97689600
+memory_info, vms = 	584339456
+io_counters, read_count = 	47511
+io_counters, write_count = 	1122
+io_counters, read_bytes = 	382191631
+io_counters, write_bytes = 	525389
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:42:37
+cpu_times, user= 	5.875
+cpu_times, system = 	1.015625
+cpu_percent= 	0.0
+ppid= 	16700
+status =	running
+memory_info, rss= 	97505280
+memory_info, vms = 	583929856
+io_counters, read_count = 	47513
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	382192502
+io_counters, write_bytes = 	526352
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:43:08
+cpu_times, user= 	5.125
+cpu_times, system = 	1.125
+cpu_percent= 	0.0
+ppid= 	18088
+status =	running
+memory_info, rss= 	97411072
+memory_info, vms = 	583864320
+io_counters, read_count = 	47513
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	382192502
+io_counters, write_bytes = 	526326
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:44:54
+cpu_times, user= 	4.8125
+cpu_times, system = 	0.5625
+cpu_percent= 	0.0
+ppid= 	20824
+status =	running
+memory_info, rss= 	97812480
+memory_info, vms = 	584564736
+io_counters, read_count = 	47511
+io_counters, write_count = 	1122
+io_counters, read_bytes = 	382191631
+io_counters, write_bytes = 	525303
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:45:19
+cpu_times, user= 	5.65625
+cpu_times, system = 	0.8125
+cpu_percent= 	0.0
+ppid= 	14148
+status =	running
+memory_info, rss= 	97615872
+memory_info, vms = 	584028160
+io_counters, read_count = 	47513
+io_counters, write_count = 	1123
+io_counters, read_bytes = 	382192502
+io_counters, write_bytes = 	526352
+
+file name: gene_perturbagen_1timepoint_1control
+2021-07-09 18:46:17
+cpu_times, user= 	7.078125
+cpu_times, system = 	1.21875
+cpu_percent= 	0.0
+ppid= 	24532
+status =	running
+memory_info, rss= 	97169408
+memory_info, vms = 	583667712
+io_counters, read_count = 	48275
+io_counters, write_count = 	1122
+io_counters, read_bytes = 	388450319
+io_counters, write_bytes = 	525603
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-09 18:47:50
+cpu_times, user= 	29.171875
+cpu_times, system = 	1.953125
+cpu_percent= 	0.0
+ppid= 	24300
+status =	running
+memory_info, rss= 	299581440
+memory_info, vms = 	786931712
+io_counters, read_count = 	293004
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	2392195567
+io_counters, write_bytes = 	1150868
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-09 18:52:19
+cpu_times, user= 	25.0625
+cpu_times, system = 	2.1875
+cpu_percent= 	0.0
+ppid= 	20032
+status =	running
+memory_info, rss= 	299593728
+memory_info, vms = 	786911232
+io_counters, read_count = 	309386
+io_counters, write_count = 	1373
+io_counters, read_bytes = 	2526437760
+io_counters, write_bytes = 	1182048
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-09 18:54:32
+cpu_times, user= 	34.609375
+cpu_times, system = 	2.421875
+cpu_percent= 	0.0
+ppid= 	5480
+status =	running
+memory_info, rss= 	299290624
+memory_info, vms = 	786673664
+io_counters, read_count = 	307540
+io_counters, write_count = 	1373
+io_counters, read_bytes = 	2511315373
+io_counters, write_bytes = 	1182230
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-09 18:55:40
+cpu_times, user= 	32.203125
+cpu_times, system = 	2.46875
+cpu_percent= 	0.0
+ppid= 	27116
+status =	running
+memory_info, rss= 	299343872
+memory_info, vms = 	786915328
+io_counters, read_count = 	306604
+io_counters, write_count = 	1373
+io_counters, read_bytes = 	2503647684
+io_counters, write_bytes = 	1181814
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-09 18:56:48
+cpu_times, user= 	30.34375
+cpu_times, system = 	2.5
+cpu_percent= 	0.0
+ppid= 	10756
+status =	running
+memory_info, rss= 	299274240
+memory_info, vms = 	786718720
+io_counters, read_count = 	306604
+io_counters, write_count = 	1373
+io_counters, read_bytes = 	2503647684
+io_counters, write_bytes = 	1182413
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-09 18:58:05
+cpu_times, user= 	26.546875
+cpu_times, system = 	1.96875
+cpu_percent= 	0.0
+ppid= 	27100
+status =	running
+memory_info, rss= 	299343872
+memory_info, vms = 	786788352
+io_counters, read_count = 	306604
+io_counters, write_count = 	1373
+io_counters, read_bytes = 	2503647691
+io_counters, write_bytes = 	1182460
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-09 18:58:58
+cpu_times, user= 	25.328125
+cpu_times, system = 	1.90625
+cpu_percent= 	0.0
+ppid= 	1628
+status =	running
+memory_info, rss= 	299282432
+memory_info, vms = 	786829312
+io_counters, read_count = 	306604
+io_counters, write_count = 	1373
+io_counters, read_bytes = 	2503647691
+io_counters, write_bytes = 	1182237
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-09 18:59:46
+cpu_times, user= 	28.109375
+cpu_times, system = 	2.015625
+cpu_percent= 	0.0
+ppid= 	15480
+status =	running
+memory_info, rss= 	299610112
+memory_info, vms = 	787120128
+io_counters, read_count = 	306604
+io_counters, write_count = 	1373
+io_counters, read_bytes = 	2503647691
+io_counters, write_bytes = 	1181767
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-09 19:00:48
+cpu_times, user= 	28.46875
+cpu_times, system = 	2.140625
+cpu_percent= 	0.0
+ppid= 	25380
+status =	running
+memory_info, rss= 	299352064
+memory_info, vms = 	787046400
+io_counters, read_count = 	306604
+io_counters, write_count = 	1373
+io_counters, read_bytes = 	2503647693
+io_counters, write_bytes = 	1182550
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-09 19:02:40
+cpu_times, user= 	26.171875
+cpu_times, system = 	1.953125
+cpu_percent= 	0.0
+ppid= 	25548
+status =	running
+memory_info, rss= 	299331584
+memory_info, vms = 	786563072
+io_counters, read_count = 	306604
+io_counters, write_count = 	1373
+io_counters, read_bytes = 	2503647695
+io_counters, write_bytes = 	1181941
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-09 19:07:35
+cpu_times, user= 	45.109375
+cpu_times, system = 	1.703125
+cpu_percent= 	0.0
+ppid= 	14848
+status =	running
+memory_info, rss= 	193650688
+memory_info, vms = 	716001280
+io_counters, read_count = 	207993
+io_counters, write_count = 	2578
+io_counters, read_bytes = 	1676999840
+io_counters, write_bytes = 	1264515
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-09 19:13:29
+cpu_times, user= 	53.890625
+cpu_times, system = 	2.4375
+cpu_percent= 	0.0
+ppid= 	25808
+status =	running
+memory_info, rss= 	195506176
+memory_info, vms = 	717832192
+io_counters, read_count = 	201536
+io_counters, write_count = 	2573
+io_counters, read_bytes = 	1624104306
+io_counters, write_bytes = 	1275684
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-09 19:18:49
+cpu_times, user= 	42.171875
+cpu_times, system = 	1.984375
+cpu_percent= 	0.0
+ppid= 	17940
+status =	running
+memory_info, rss= 	192659456
+memory_info, vms = 	714178560
+io_counters, read_count = 	201538
+io_counters, write_count = 	2574
+io_counters, read_bytes = 	1624162083
+io_counters, write_bytes = 	1302998
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-09 19:27:21
+cpu_times, user= 	42.359375
+cpu_times, system = 	1.921875
+cpu_percent= 	0.0
+ppid= 	14080
+status =	running
+memory_info, rss= 	189906944
+memory_info, vms = 	711020544
+io_counters, read_count = 	201538
+io_counters, write_count = 	2574
+io_counters, read_bytes = 	1624162088
+io_counters, write_bytes = 	1301834
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-09 19:28:28
+cpu_times, user= 	48.15625
+cpu_times, system = 	2.046875
+cpu_percent= 	0.0
+ppid= 	26500
+status =	running
+memory_info, rss= 	193265664
+memory_info, vms = 	715677696
+io_counters, read_count = 	201538
+io_counters, write_count = 	2574
+io_counters, read_bytes = 	1624162083
+io_counters, write_bytes = 	1302777
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-09 19:30:13
+cpu_times, user= 	43.421875
+cpu_times, system = 	2.234375
+cpu_percent= 	0.0
+ppid= 	13944
+status =	running
+memory_info, rss= 	191053824
+memory_info, vms = 	712204288
+io_counters, read_count = 	201538
+io_counters, write_count = 	2574
+io_counters, read_bytes = 	1624162081
+io_counters, write_bytes = 	1302414
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-09 19:33:05
+cpu_times, user= 	53.703125
+cpu_times, system = 	2.578125
+cpu_percent= 	0.0
+ppid= 	6708
+status =	running
+memory_info, rss= 	193695744
+memory_info, vms = 	716886016
+io_counters, read_count = 	201538
+io_counters, write_count = 	2574
+io_counters, read_bytes = 	1624162074
+io_counters, write_bytes = 	1302410
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-09 19:59:28
+cpu_times, user= 	45.15625
+cpu_times, system = 	2.140625
+cpu_percent= 	0.0
+ppid= 	20132
+status =	running
+memory_info, rss= 	190005248
+memory_info, vms = 	711778304
+io_counters, read_count = 	201538
+io_counters, write_count = 	2574
+io_counters, read_bytes = 	1624161834
+io_counters, write_bytes = 	1302294
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-09 20:01:58
+cpu_times, user= 	39.203125
+cpu_times, system = 	1.828125
+cpu_percent= 	0.0
+ppid= 	4808
+status =	running
+memory_info, rss= 	191242240
+memory_info, vms = 	712441856
+io_counters, read_count = 	201538
+io_counters, write_count = 	2574
+io_counters, read_bytes = 	1624161950
+io_counters, write_bytes = 	1302173
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-09 20:07:27
+cpu_times, user= 	40.796875
+cpu_times, system = 	1.828125
+cpu_percent= 	0.0
+ppid= 	16728
+status =	running
+memory_info, rss= 	193888256
+memory_info, vms = 	715157504
+io_counters, read_count = 	195638
+io_counters, write_count = 	2573
+io_counters, read_bytes = 	1575800838
+io_counters, write_bytes = 	1286767
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 15:11:59
+cpu_times, user= 	110.140625
+cpu_times, system = 	4.515625
+cpu_percent= 	0.0
+ppid= 	23940
+status =	running
+memory_info, rss= 	968290304
+memory_info, vms = 	1492271104
+io_counters, read_count = 	1072736
+io_counters, write_count = 	3491
+io_counters, read_bytes = 	8761721603
+io_counters, write_bytes = 	4682392
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 16:12:17
+cpu_times, user= 	120.859375
+cpu_times, system = 	1.984375
+cpu_percent= 	0.0
+ppid= 	24124
+status =	running
+memory_info, rss= 	186257408
+memory_info, vms = 	708161536
+io_counters, read_count = 	309177
+io_counters, write_count = 	4189
+io_counters, read_bytes = 	2506660800
+io_counters, write_bytes = 	2546504
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 16:26:11
+cpu_times, user= 	116.28125
+cpu_times, system = 	2.078125
+cpu_percent= 	0.0
+ppid= 	29672
+status =	running
+memory_info, rss= 	186253312
+memory_info, vms = 	707514368
+io_counters, read_count = 	293157
+io_counters, write_count = 	4189
+io_counters, read_bytes = 	2375432890
+io_counters, write_bytes = 	2545962
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 16:28:52
+cpu_times, user= 	128.90625
+cpu_times, system = 	1.828125
+cpu_percent= 	0.0
+ppid= 	24384
+status =	running
+memory_info, rss= 	186368000
+memory_info, vms = 	707268608
+io_counters, read_count = 	309177
+io_counters, write_count = 	4189
+io_counters, read_bytes = 	2506668782
+io_counters, write_bytes = 	2548606
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 16:53:06
+cpu_times, user= 	126.296875
+cpu_times, system = 	2.296875
+cpu_percent= 	0.0
+ppid= 	2340
+status =	running
+memory_info, rss= 	185946112
+memory_info, vms = 	706961408
+io_counters, read_count = 	303916
+io_counters, write_count = 	4524
+io_counters, read_bytes = 	2463571725
+io_counters, write_bytes = 	2549557
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 17:00:51
+cpu_times, user= 	111.5625
+cpu_times, system = 	1.671875
+cpu_percent= 	0.0
+ppid= 	23332
+status =	running
+memory_info, rss= 	186212352
+memory_info, vms = 	707846144
+io_counters, read_count = 	300389
+io_counters, write_count = 	4524
+io_counters, read_bytes = 	2434678938
+io_counters, write_bytes = 	2551241
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 17:15:07
+cpu_times, user= 	119.53125
+cpu_times, system = 	2.203125
+cpu_percent= 	0.0
+ppid= 	25792
+status =	running
+memory_info, rss= 	186228736
+memory_info, vms = 	706912256
+io_counters, read_count = 	300389
+io_counters, write_count = 	4188
+io_counters, read_bytes = 	2434679582
+io_counters, write_bytes = 	2549747
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 17:21:54
+cpu_times, user= 	132.875
+cpu_times, system = 	2.09375
+cpu_percent= 	0.0
+ppid= 	29264
+status =	running
+memory_info, rss= 	185004032
+memory_info, vms = 	706154496
+io_counters, read_count = 	284844
+io_counters, write_count = 	4188
+io_counters, read_bytes = 	2307335054
+io_counters, write_bytes = 	2541141
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 17:27:24
+cpu_times, user= 	138.359375
+cpu_times, system = 	1.90625
+cpu_percent= 	0.0
+ppid= 	13032
+status =	running
+memory_info, rss= 	186793984
+memory_info, vms = 	708014080
+io_counters, read_count = 	295624
+io_counters, write_count = 	4189
+io_counters, read_bytes = 	2395682577
+io_counters, write_bytes = 	2576682
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 17:51:02
+cpu_times, user= 	182.15625
+cpu_times, system = 	5.375
+cpu_percent= 	0.0
+ppid= 	18816
+status =	running
+memory_info, rss= 	966303744
+memory_info, vms = 	1490878464
+io_counters, read_count = 	1210117
+io_counters, write_count = 	7630
+io_counters, read_bytes = 	9887177832
+io_counters, write_bytes = 	5206786
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 17:58:54
+cpu_times, user= 	188.703125
+cpu_times, system = 	6.140625
+cpu_percent= 	0.0
+ppid= 	4484
+status =	running
+memory_info, rss= 	968822784
+memory_info, vms = 	1492856832
+io_counters, read_count = 	1210117
+io_counters, write_count = 	4606
+io_counters, read_bytes = 	9887177629
+io_counters, write_bytes = 	5193686
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 18:45:25
+cpu_times, user= 	179.109375
+cpu_times, system = 	5.125
+cpu_percent= 	0.0
+ppid= 	6384
+status =	running
+memory_info, rss= 	970641408
+memory_info, vms = 	1495515136
+io_counters, read_count = 	1210117
+io_counters, write_count = 	4606
+io_counters, read_bytes = 	9887124081
+io_counters, write_bytes = 	5170031
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 18:49:12
+cpu_times, user= 	173.0
+cpu_times, system = 	5.046875
+cpu_percent= 	0.0
+ppid= 	7376
+status =	running
+memory_info, rss= 	970240000
+memory_info, vms = 	1495601152
+io_counters, read_count = 	1210117
+io_counters, write_count = 	4606
+io_counters, read_bytes = 	9887124115
+io_counters, write_bytes = 	5170031
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 18:53:20
+cpu_times, user= 	178.0625
+cpu_times, system = 	5.265625
+cpu_percent= 	0.0
+ppid= 	7904
+status =	running
+memory_info, rss= 	970739712
+memory_info, vms = 	1494020096
+io_counters, read_count = 	1210117
+io_counters, write_count = 	4606
+io_counters, read_bytes = 	9887124123
+io_counters, write_bytes = 	5170031
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 18:58:12
+cpu_times, user= 	179.328125
+cpu_times, system = 	5.734375
+cpu_percent= 	0.0
+ppid= 	28092
+status =	running
+memory_info, rss= 	967860224
+memory_info, vms = 	1492295680
+io_counters, read_count = 	1210117
+io_counters, write_count = 	4606
+io_counters, read_bytes = 	9887124119
+io_counters, write_bytes = 	5168864
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:04:08
+cpu_times, user= 	182.984375
+cpu_times, system = 	4.953125
+cpu_percent= 	0.0
+ppid= 	11036
+status =	running
+memory_info, rss= 	964575232
+memory_info, vms = 	1488916480
+io_counters, read_count = 	1210117
+io_counters, write_count = 	4606
+io_counters, read_bytes = 	9887177539
+io_counters, write_bytes = 	5208081
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:19:24
+cpu_times, user= 	172.703125
+cpu_times, system = 	4.9375
+cpu_percent= 	0.0
+ppid= 	19876
+status =	running
+memory_info, rss= 	969023488
+memory_info, vms = 	1493413888
+io_counters, read_count = 	1210117
+io_counters, write_count = 	6118
+io_counters, read_bytes = 	9887178009
+io_counters, write_bytes = 	5352096
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:26:47
+cpu_times, user= 	182.4375
+cpu_times, system = 	5.28125
+cpu_percent= 	0.0
+ppid= 	25116
+status =	running
+memory_info, rss= 	965107712
+memory_info, vms = 	1490313216
+io_counters, read_count = 	1210119
+io_counters, write_count = 	5839
+io_counters, read_bytes = 	9887208698
+io_counters, write_bytes = 	5233078
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:30:48
+cpu_times, user= 	202.890625
+cpu_times, system = 	5.640625
+cpu_percent= 	0.0
+ppid= 	26420
+status =	running
+memory_info, rss= 	962682880
+memory_info, vms = 	1486385152
+io_counters, read_count = 	1210117
+io_counters, write_count = 	5838
+io_counters, read_bytes = 	9887178099
+io_counters, write_bytes = 	5215570
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:36:10
+cpu_times, user= 	212.125
+cpu_times, system = 	5.890625
+cpu_percent= 	0.0
+ppid= 	16380
+status =	running
+memory_info, rss= 	964542464
+memory_info, vms = 	1489567744
+io_counters, read_count = 	1210117
+io_counters, write_count = 	4831
+io_counters, read_bytes = 	9887178027
+io_counters, write_bytes = 	5216443
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:46:24
+cpu_times, user= 	19.296875
+cpu_times, system = 	1.3125
+cpu_percent= 	0.0
+ppid= 	8360
+status =	running
+memory_info, rss= 	260980736
+memory_info, vms = 	749436928
+io_counters, read_count = 	320891
+io_counters, write_count = 	3166
+io_counters, read_bytes = 	2602675728
+io_counters, write_bytes = 	2665967
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:47:02
+cpu_times, user= 	19.171875
+cpu_times, system = 	1.484375
+cpu_percent= 	0.0
+ppid= 	10220
+status =	running
+memory_info, rss= 	260435968
+memory_info, vms = 	748720128
+io_counters, read_count = 	320891
+io_counters, write_count = 	3166
+io_counters, read_bytes = 	2602675728
+io_counters, write_bytes = 	2665972
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:47:44
+cpu_times, user= 	18.375
+cpu_times, system = 	1.296875
+cpu_percent= 	0.0
+ppid= 	25464
+status =	running
+memory_info, rss= 	261013504
+memory_info, vms = 	749174784
+io_counters, read_count = 	320891
+io_counters, write_count = 	3166
+io_counters, read_bytes = 	2602675737
+io_counters, write_bytes = 	2665976
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:48:30
+cpu_times, user= 	19.890625
+cpu_times, system = 	1.421875
+cpu_percent= 	0.0
+ppid= 	29304
+status =	running
+memory_info, rss= 	260665344
+memory_info, vms = 	748752896
+io_counters, read_count = 	320891
+io_counters, write_count = 	3166
+io_counters, read_bytes = 	2602675741
+io_counters, write_bytes = 	2662920
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:49:17
+cpu_times, user= 	22.03125
+cpu_times, system = 	1.296875
+cpu_percent= 	0.0
+ppid= 	27948
+status =	running
+memory_info, rss= 	261107712
+memory_info, vms = 	749387776
+io_counters, read_count = 	320891
+io_counters, write_count = 	3166
+io_counters, read_bytes = 	2602675741
+io_counters, write_bytes = 	2662915
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:49:57
+cpu_times, user= 	22.640625
+cpu_times, system = 	1.40625
+cpu_percent= 	0.0
+ppid= 	28416
+status =	running
+memory_info, rss= 	260734976
+memory_info, vms = 	748994560
+io_counters, read_count = 	320891
+io_counters, write_count = 	3166
+io_counters, read_bytes = 	2602675736
+io_counters, write_bytes = 	2662915
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 19:50:49
+cpu_times, user= 	19.265625
+cpu_times, system = 	1.375
+cpu_percent= 	0.0
+ppid= 	23768
+status =	running
+memory_info, rss= 	260653056
+memory_info, vms = 	748945408
+io_counters, read_count = 	320891
+io_counters, write_count = 	3166
+io_counters, read_bytes = 	2602675736
+io_counters, write_bytes = 	2666050
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 20:02:46
+cpu_times, user= 	19.515625
+cpu_times, system = 	1.5625
+cpu_percent= 	0.0
+ppid= 	1712
+status =	running
+memory_info, rss= 	260444160
+memory_info, vms = 	748638208
+io_counters, read_count = 	320893
+io_counters, write_count = 	2915
+io_counters, read_bytes = 	2602676762
+io_counters, write_bytes = 	2667398
+
+file name: genetic-chemical perturbagen several time points
+2021-07-10 20:04:08
+cpu_times, user= 	180.09375
+cpu_times, system = 	5.28125
+cpu_percent= 	0.0
+ppid= 	27708
+status =	running
+memory_info, rss= 	967135232
+memory_info, vms = 	1492172800
+io_counters, read_count = 	1210115
+io_counters, write_count = 	3821
+io_counters, read_bytes = 	9887123355
+io_counters, write_bytes = 	5155805
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-10 20:07:48
+cpu_times, user= 	34.4375
+cpu_times, system = 	1.53125
+cpu_percent= 	0.0
+ppid= 	25740
+status =	running
+memory_info, rss= 	197263360
+memory_info, vms = 	719212544
+io_counters, read_count = 	230923
+io_counters, write_count = 	2628
+io_counters, read_bytes = 	1864843724
+io_counters, write_bytes = 	1381875
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-10 20:12:51
+cpu_times, user= 	27.0
+cpu_times, system = 	1.34375
+cpu_percent= 	0.0
+ppid= 	19256
+status =	running
+memory_info, rss= 	195137536
+memory_info, vms = 	716550144
+io_counters, read_count = 	230925
+io_counters, write_count = 	2629
+io_counters, read_bytes = 	1864898452
+io_counters, write_bytes = 	1408643
+
+file name: genetic-chemical perturbagen several time points_2
+2021-07-10 21:23:17
+cpu_times, user= 	71.46875
+cpu_times, system = 	3.34375
+cpu_percent= 	0.0
+ppid= 	21704
+status =	running
+memory_info, rss= 	649310208
+memory_info, vms = 	1171660800
+io_counters, read_count = 	647204
+io_counters, write_count = 	2122
+io_counters, read_bytes = 	5289496337
+io_counters, write_bytes = 	2811727
+
+file name: genetic-chemical perturbagen several time points_2
+2021-07-10 21:27:22
+cpu_times, user= 	54.21875
+cpu_times, system = 	2.71875
+cpu_percent= 	0.0
+ppid= 	22324
+status =	running
+memory_info, rss= 	646356992
+memory_info, vms = 	1169133568
+io_counters, read_count = 	617099
+io_counters, write_count = 	1962
+io_counters, read_bytes = 	5042785469
+io_counters, write_bytes = 	2451239
+
+file name: drugscreen_severaltimepoint_1control
+2021-07-12 18:17:50
+cpu_times, user= 	5.609375
+cpu_times, system = 	0.390625
+cpu_percent= 	0.0
+ppid= 	9404
+status =	running
+memory_info, rss= 	131444736
+memory_info, vms = 	651583488
+io_counters, read_count = 	46159
+io_counters, write_count = 	514
+io_counters, read_bytes = 	376692694
+io_counters, write_bytes = 	402962
+
+file name: drug combination several time points
+2021-07-12 18:50:52
+cpu_times, user= 	69.265625
+cpu_times, system = 	3.640625
+cpu_percent= 	0.0
+ppid= 	18124
+status =	running
+memory_info, rss= 	770146304
+memory_info, vms = 	1293258752
+io_counters, read_count = 	859483
+io_counters, write_count = 	1959
+io_counters, read_bytes = 	7030581019
+io_counters, write_bytes = 	4511199
+
+file name: drug combination several time points
+2021-07-12 19:23:15
+cpu_times, user= 	74.25
+cpu_times, system = 	3.421875
+cpu_percent= 	0.0
+ppid= 	18280
+status =	running
+memory_info, rss= 	763916288
+memory_info, vms = 	1289691136
+io_counters, read_count = 	889349
+io_counters, write_count = 	1960
+io_counters, read_bytes = 	7275273590
+io_counters, write_bytes = 	4577947
+
+file name: drug combination several time points
+2021-07-12 19:25:13
+cpu_times, user= 	72.328125
+cpu_times, system = 	3.171875
+cpu_percent= 	0.0
+ppid= 	3336
+status =	running
+memory_info, rss= 	762994688
+memory_info, vms = 	1288634368
+io_counters, read_count = 	889349
+io_counters, write_count = 	1960
+io_counters, read_bytes = 	7275273646
+io_counters, write_bytes = 	4578847
+
+file name: drug combination several time points
+2021-07-12 19:27:07
+cpu_times, user= 	71.21875
+cpu_times, system = 	2.953125
+cpu_percent= 	0.0
+ppid= 	20996
+status =	running
+memory_info, rss= 	760782848
+memory_info, vms = 	1285083136
+io_counters, read_count = 	889349
+io_counters, write_count = 	1960
+io_counters, read_bytes = 	7275273642
+io_counters, write_bytes = 	4577800
+
+file name: drug combination several time points
+2021-07-12 19:29:51
+cpu_times, user= 	70.640625
+cpu_times, system = 	3.5
+cpu_percent= 	0.0
+ppid= 	14176
+status =	running
+memory_info, rss= 	763809792
+memory_info, vms = 	1287122944
+io_counters, read_count = 	889349
+io_counters, write_count = 	1960
+io_counters, read_bytes = 	7275273642
+io_counters, write_bytes = 	4568927
+
+file name: drug combination several time points
+2021-07-12 19:42:35
+cpu_times, user= 	77.578125
+cpu_times, system = 	4.109375
+cpu_percent= 	0.0
+ppid= 	15820
+status =	running
+memory_info, rss= 	1319854080
+memory_info, vms = 	1845665792
+io_counters, read_count = 	975721
+io_counters, write_count = 	1960
+io_counters, read_bytes = 	7982834327
+io_counters, write_bytes = 	4585375
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-13 12:23:46
+cpu_times, user= 	17.921875
+cpu_times, system = 	1.296875
+cpu_percent= 	0.0
+ppid= 	24832
+status =	running
+memory_info, rss= 	299438080
+memory_info, vms = 	787001344
+io_counters, read_count = 	292267
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	2386194412
+io_counters, write_bytes = 	1171702
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-13 12:30:24
+cpu_times, user= 	16.96875
+cpu_times, system = 	1.25
+cpu_percent= 	0.0
+ppid= 	25596
+status =	running
+memory_info, rss= 	299634688
+memory_info, vms = 	787038208
+io_counters, read_count = 	292267
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	2386194426
+io_counters, write_bytes = 	1171716
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-13 12:31:21
+cpu_times, user= 	18.015625
+cpu_times, system = 	1.1875
+cpu_percent= 	0.0
+ppid= 	23592
+status =	running
+memory_info, rss= 	299114496
+memory_info, vms = 	786722816
+io_counters, read_count = 	292267
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	2386194442
+io_counters, write_bytes = 	1171713
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-13 12:33:49
+cpu_times, user= 	20.53125
+cpu_times, system = 	1.40625
+cpu_percent= 	0.0
+ppid= 	23960
+status =	running
+memory_info, rss= 	299122688
+memory_info, vms = 	786489344
+io_counters, read_count = 	302095
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	2466705465
+io_counters, write_bytes = 	1172709
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-13 12:34:43
+cpu_times, user= 	17.515625
+cpu_times, system = 	1.171875
+cpu_percent= 	0.0
+ppid= 	5856
+status =	running
+memory_info, rss= 	299327488
+memory_info, vms = 	786841600
+io_counters, read_count = 	300223
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	2451370131
+io_counters, write_bytes = 	1172441
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-13 12:46:26
+cpu_times, user= 	35.96875
+cpu_times, system = 	1.453125
+cpu_percent= 	0.0
+ppid= 	5760
+status =	running
+memory_info, rss= 	313315328
+memory_info, vms = 	799907840
+io_counters, read_count = 	300573
+io_counters, write_count = 	1371
+io_counters, read_bytes = 	2453638600
+io_counters, write_bytes = 	1145288
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-13 12:48:55
+cpu_times, user= 	17.140625
+cpu_times, system = 	1.1875
+cpu_percent= 	0.0
+ppid= 	26040
+status =	running
+memory_info, rss= 	299106304
+memory_info, vms = 	786669568
+io_counters, read_count = 	295777
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	2414947983
+io_counters, write_bytes = 	1172045
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-13 12:50:26
+cpu_times, user= 	16.921875
+cpu_times, system = 	1.03125
+cpu_percent= 	0.0
+ppid= 	25492
+status =	running
+memory_info, rss= 	299053056
+memory_info, vms = 	786497536
+io_counters, read_count = 	300269
+io_counters, write_count = 	1371
+io_counters, read_bytes = 	2451711506
+io_counters, write_bytes = 	1145407
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-13 13:34:06
+cpu_times, user= 	16.8125
+cpu_times, system = 	1.09375
+cpu_percent= 	0.0
+ppid= 	23940
+status =	running
+memory_info, rss= 	299155456
+memory_info, vms = 	786669568
+io_counters, read_count = 	300244
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	2451541617
+io_counters, write_bytes = 	1171978
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-13 14:08:36
+cpu_times, user= 	29.421875
+cpu_times, system = 	1.234375
+cpu_percent= 	0.0
+ppid= 	21380
+status =	running
+memory_info, rss= 	198729728
+memory_info, vms = 	720666624
+io_counters, read_count = 	225339
+io_counters, write_count = 	2629
+io_counters, read_bytes = 	1819113676
+io_counters, write_bytes = 	1398676
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-13 14:10:32
+cpu_times, user= 	30.734375
+cpu_times, system = 	1.0625
+cpu_percent= 	0.0
+ppid= 	1984
+status =	running
+memory_info, rss= 	195403776
+memory_info, vms = 	716922880
+io_counters, read_count = 	174536
+io_counters, write_count = 	2628
+io_counters, read_bytes = 	1402921033
+io_counters, write_bytes = 	1377099
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-13 14:23:23
+cpu_times, user= 	31.015625
+cpu_times, system = 	1.1875
+cpu_percent= 	0.0
+ppid= 	19708
+status =	running
+memory_info, rss= 	196767744
+memory_info, vms = 	717070336
+io_counters, read_count = 	174538
+io_counters, write_count = 	2629
+io_counters, read_bytes = 	1402972356
+io_counters, write_bytes = 	1404281
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-13 14:25:51
+cpu_times, user= 	30.359375
+cpu_times, system = 	1.0
+cpu_percent= 	0.0
+ppid= 	11160
+status =	running
+memory_info, rss= 	194932736
+memory_info, vms = 	716689408
+io_counters, read_count = 	174538
+io_counters, write_count = 	2629
+io_counters, read_bytes = 	1402972354
+io_counters, write_bytes = 	1404273
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-13 14:28:58
+cpu_times, user= 	30.578125
+cpu_times, system = 	1.1875
+cpu_percent= 	0.0
+ppid= 	20416
+status =	running
+memory_info, rss= 	197271552
+memory_info, vms = 	718557184
+io_counters, read_count = 	230925
+io_counters, write_count = 	2629
+io_counters, read_bytes = 	1864894652
+io_counters, write_bytes = 	1408914
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-13 14:29:48
+cpu_times, user= 	31.0
+cpu_times, system = 	1.03125
+cpu_percent= 	0.0
+ppid= 	24176
+status =	running
+memory_info, rss= 	197812224
+memory_info, vms = 	719634432
+io_counters, read_count = 	230923
+io_counters, write_count = 	2628
+io_counters, read_bytes = 	1864843341
+io_counters, write_bytes = 	1381738
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-13 14:30:49
+cpu_times, user= 	32.09375
+cpu_times, system = 	1.390625
+cpu_percent= 	0.0
+ppid= 	20596
+status =	running
+memory_info, rss= 	197435392
+memory_info, vms = 	718778368
+io_counters, read_count = 	225337
+io_counters, write_count = 	2628
+io_counters, read_bytes = 	1819082829
+io_counters, write_bytes = 	1382112
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-13 14:36:17
+cpu_times, user= 	32.171875
+cpu_times, system = 	1.21875
+cpu_percent= 	0.0
+ppid= 	24124
+status =	running
+memory_info, rss= 	196804608
+memory_info, vms = 	717975552
+io_counters, read_count = 	230923
+io_counters, write_count = 	2628
+io_counters, read_bytes = 	1864843341
+io_counters, write_bytes = 	1381738
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-13 14:43:09
+cpu_times, user= 	27.78125
+cpu_times, system = 	1.09375
+cpu_percent= 	0.0
+ppid= 	5192
+status =	running
+memory_info, rss= 	194117632
+memory_info, vms = 	714973184
+io_counters, read_count = 	225337
+io_counters, write_count = 	2628
+io_counters, read_bytes = 	1819082829
+io_counters, write_bytes = 	1382112
+
+file name: drug combination several time points
+2021-07-13 16:07:11
+cpu_times, user= 	90.46875
+cpu_times, system = 	4.375
+cpu_percent= 	0.0
+ppid= 	24236
+status =	running
+memory_info, rss= 	1320075264
+memory_info, vms = 	1845837824
+io_counters, read_count = 	975719
+io_counters, write_count = 	1959
+io_counters, read_bytes = 	7982782533
+io_counters, write_bytes = 	4561847
+
+file name: 20210412_SHSY5Y_shBRIP1_compound
+2021-07-13 16:42:30
+cpu_times, user= 	80.046875
+cpu_times, system = 	2.75
+cpu_percent= 	0.0
+ppid= 	24224
+status =	running
+memory_info, rss= 	510291968
+memory_info, vms = 	1032306688
+io_counters, read_count = 	459238
+io_counters, write_count = 	1740
+io_counters, read_bytes = 	3751344202
+io_counters, write_bytes = 	2124917
+
+file name: 20210412_SHSY5Y_shBRIP1_compound
+2021-07-13 16:45:11
+cpu_times, user= 	72.703125
+cpu_times, system = 	2.609375
+cpu_percent= 	0.0
+ppid= 	12992
+status =	running
+memory_info, rss= 	511934464
+memory_info, vms = 	1034608640
+io_counters, read_count = 	463342
+io_counters, write_count = 	1740
+io_counters, read_bytes = 	3784964322
+io_counters, write_bytes = 	2107975
+
+file name: 20210412_SHSY5Y_shBRIP1_compound
+2021-07-13 17:09:19
+cpu_times, user= 	86.515625
+cpu_times, system = 	2.53125
+cpu_percent= 	0.0
+ppid= 	17612
+status =	running
+memory_info, rss= 	512479232
+memory_info, vms = 	1034665984
+io_counters, read_count = 	462552
+io_counters, write_count = 	3157
+io_counters, read_bytes = 	3757825908
+io_counters, write_bytes = 	2830457
+
+file name: 20210412_SHSY5Y_shBRIP1_compound
+2021-07-13 17:27:49
+cpu_times, user= 	48.015625
+cpu_times, system = 	1.921875
+cpu_percent= 	0.0
+ppid= 	17128
+status =	running
+memory_info, rss= 	509591552
+memory_info, vms = 	1031413760
+io_counters, read_count = 	464964
+io_counters, write_count = 	1834
+io_counters, read_bytes = 	3798731104
+io_counters, write_bytes = 	2182391
+
+file name: 20210412_SHSY5Y_shBRIP1_compound
+2021-07-13 20:28:10
+cpu_times, user= 	58.265625
+cpu_times, system = 	2.4375
+cpu_percent= 	0.0
+ppid= 	23508
+status =	running
+memory_info, rss= 	515870720
+memory_info, vms = 	1038065664
+io_counters, read_count = 	431382
+io_counters, write_count = 	1882
+io_counters, read_bytes = 	3523631112
+io_counters, write_bytes = 	2039171
+
+file name: 20210412_SHSY5Y_shBRIP1_compound
+2021-07-13 20:42:03
+cpu_times, user= 	57.75
+cpu_times, system = 	2.125
+cpu_percent= 	0.0
+ppid= 	26092
+status =	running
+memory_info, rss= 	517083136
+memory_info, vms = 	1038872576
+io_counters, read_count = 	417172
+io_counters, write_count = 	2012
+io_counters, read_bytes = 	3407205767
+io_counters, write_bytes = 	1950766
+
+file name: 20210412_SHSY5Y_shBRIP1_compound
+2021-07-13 20:45:25
+cpu_times, user= 	59.90625
+cpu_times, system = 	2.546875
+cpu_percent= 	0.0
+ppid= 	18620
+status =	running
+memory_info, rss= 	516116480
+memory_info, vms = 	1038192640
+io_counters, read_count = 	431382
+io_counters, write_count = 	2026
+io_counters, read_bytes = 	3523630788
+io_counters, write_bytes = 	2039614
+
+file name: 20210412_SHSY5Y_shBRIP1_compound
+2021-07-13 21:09:26
+cpu_times, user= 	49.359375
+cpu_times, system = 	2.09375
+cpu_percent= 	0.0
+ppid= 	26600
+status =	running
+memory_info, rss= 	513970176
+memory_info, vms = 	1037459456
+io_counters, read_count = 	458126
+io_counters, write_count = 	2329
+io_counters, read_bytes = 	3742718180
+io_counters, write_bytes = 	2134758
+
+file name: 20210412_SHSY5Y_shBRIP1_compound
+2021-07-13 21:12:14
+cpu_times, user= 	48.234375
+cpu_times, system = 	2.203125
+cpu_percent= 	0.0
+ppid= 	16380
+status =	running
+memory_info, rss= 	544436224
+memory_info, vms = 	1066713088
+io_counters, read_count = 	483170
+io_counters, write_count = 	1911
+io_counters, read_bytes = 	3947879048
+io_counters, write_bytes = 	2225058
+
+file name: 20210323_BRIP1_KD_raw data incucyte
+2021-07-13 21:19:13
+cpu_times, user= 	53.171875
+cpu_times, system = 	2.171875
+cpu_percent= 	0.0
+ppid= 	18188
+status =	running
+memory_info, rss= 	648830976
+memory_info, vms = 	1172369408
+io_counters, read_count = 	531744
+io_counters, write_count = 	2130
+io_counters, read_bytes = 	4344331784
+io_counters, write_bytes = 	2258549
+
+file name: genetic-chemical perturbagen several time points_2
+2021-07-14 18:23:14
+cpu_times, user= 	114.953125
+cpu_times, system = 	9.078125
+cpu_percent= 	0.0
+ppid= 	23144
+status =	running
+memory_info, rss= 	1723240448
+memory_info, vms = 	2374758400
+io_counters, read_count = 	1681276
+io_counters, write_count = 	3769
+io_counters, read_bytes = 	13761262918
+io_counters, write_bytes = 	5226437
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-15 10:24:34
+cpu_times, user= 	15.59375
+cpu_times, system = 	1.0625
+cpu_percent= 	0.0
+ppid= 	10496
+status =	running
+memory_info, rss= 	298500096
+memory_info, vms = 	785887232
+io_counters, read_count = 	276631
+io_counters, write_count = 	1371
+io_counters, read_bytes = 	2258053771
+io_counters, write_bytes = 	1135168
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-15 10:30:29
+cpu_times, user= 	15.859375
+cpu_times, system = 	0.96875
+cpu_percent= 	0.0
+ppid= 	18236
+status =	running
+memory_info, rss= 	297635840
+memory_info, vms = 	785272832
+io_counters, read_count = 	244887
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	1998041752
+io_counters, write_bytes = 	1153166
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-15 10:37:35
+cpu_times, user= 	15.546875
+cpu_times, system = 	1.03125
+cpu_percent= 	0.0
+ppid= 	19168
+status =	running
+memory_info, rss= 	297558016
+memory_info, vms = 	784883712
+io_counters, read_count = 	247461
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	2019127808
+io_counters, write_bytes = 	1152277
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-15 10:39:27
+cpu_times, user= 	15.9375
+cpu_times, system = 	1.140625
+cpu_percent= 	0.0
+ppid= 	9260
+status =	running
+memory_info, rss= 	297693184
+memory_info, vms = 	784945152
+io_counters, read_count = 	240441
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	1961619899
+io_counters, write_bytes = 	1151515
+
+file name: Gene_perturbagen_severaltimepoints
+2021-07-15 10:40:59
+cpu_times, user= 	16.0
+cpu_times, system = 	0.90625
+cpu_percent= 	0.0
+ppid= 	27408
+status =	running
+memory_info, rss= 	297644032
+memory_info, vms = 	784982016
+io_counters, read_count = 	231501
+io_counters, write_count = 	1372
+io_counters, read_bytes = 	1888383417
+io_counters, write_bytes = 	1150742
+
+file name: genetic-chemical perturbagen several time points
+2021-07-15 11:40:10
+cpu_times, user= 	201.390625
+cpu_times, system = 	9.0625
+cpu_percent= 	0.0
+ppid= 	28004
+status =	running
+memory_info, rss= 	1729744896
+memory_info, vms = 	2256175104
+io_counters, read_count = 	2259092
+io_counters, write_count = 	4368
+io_counters, read_bytes = 	18481456363
+io_counters, write_bytes = 	8219340
+
+file name: genetic-chemical perturbagen several time points
+2021-07-15 11:44:20
+cpu_times, user= 	203.734375
+cpu_times, system = 	8.46875
+cpu_percent= 	0.0
+ppid= 	19476
+status =	running
+memory_info, rss= 	1727512576
+memory_info, vms = 	2254225408
+io_counters, read_count = 	2246324
+io_counters, write_count = 	4368
+io_counters, read_bytes = 	18376860907
+io_counters, write_bytes = 	8223097
+
+file name: genetic-chemical perturbagen several time points_2_DOXPNocontrol
+2021-07-15 12:34:18
+cpu_times, user= 	90.15625
+cpu_times, system = 	5.046875
+cpu_percent= 	0.0
+ppid= 	11648
+status =	running
+memory_info, rss= 	1538297856
+memory_info, vms = 	2064723968
+io_counters, read_count = 	1199758
+io_counters, write_count = 	18548
+io_counters, read_bytes = 	9816667528
+io_counters, write_bytes = 	4194708
+
+file name: genetic-chemical perturbagen several time points_2_DOXPNocontrol
+2021-07-15 12:46:17
+cpu_times, user= 	112.4375
+cpu_times, system = 	6.34375
+cpu_percent= 	0.0
+ppid= 	18668
+status =	running
+memory_info, rss= 	1860509696
+memory_info, vms = 	2396528640
+io_counters, read_count = 	1701040
+io_counters, write_count = 	2453
+io_counters, read_bytes = 	13923161305
+io_counters, write_bytes = 	5269004
+
+file name: genetic-chemical perturbagen several time points
+2021-07-15 12:51:15
+cpu_times, user= 	222.765625
+cpu_times, system = 	8.484375
+cpu_percent= 	0.0
+ppid= 	21112
+status =	running
+memory_info, rss= 	1739956224
+memory_info, vms = 	2265739264
+io_counters, read_count = 	2192564
+io_counters, write_count = 	4167
+io_counters, read_bytes = 	17936464887
+io_counters, write_bytes = 	8245200
+
+file name: genetic-chemical perturbagen several time points
+2021-07-15 12:57:08
+cpu_times, user= 	174.0
+cpu_times, system = 	8.140625
+cpu_percent= 	0.0
+ppid= 	18788
+status =	running
+memory_info, rss= 	1777979392
+memory_info, vms = 	2307604480
+io_counters, read_count = 	1938571
+io_counters, write_count = 	3867
+io_counters, read_bytes = 	15855549468
+io_counters, write_bytes = 	6939947
+
+file name: genetic-chemical perturbagen several time points_2
+2021-07-28 18:25:31
+cpu_times, user= 	160.53125
+cpu_times, system = 	15.40625
+cpu_percent= 	0.0
+ppid= 	18064
+status =	running
+memory_info, rss= 	1064267776
+memory_info, vms = 	2377592832
+io_counters, read_count = 	1684999
+io_counters, write_count = 	2391
+io_counters, read_bytes = 	13791739731
+io_counters, write_bytes = 	5213381
+
+file name: genetic-chemical perturbagen several time points_2
+2021-07-28 19:46:22
+cpu_times, user= 	66.015625
+cpu_times, system = 	2.8125
+cpu_percent= 	0.0
+ppid= 	7520
+status =	running
+memory_info, rss= 	297218048
+memory_info, vms = 	818737152
+io_counters, read_count = 	510502
+io_counters, write_count = 	2104
+io_counters, read_bytes = 	4170260418
+io_counters, write_bytes = 	2101908
+
+file name: genetic-chemical perturbagen several time points_2
+2021-07-28 19:56:46
+cpu_times, user= 	68.734375
+cpu_times, system = 	3.234375
+cpu_percent= 	0.0
+ppid= 	4180
+status =	running
+memory_info, rss= 	592449536
+memory_info, vms = 	1172238336
+io_counters, read_count = 	543148
+io_counters, write_count = 	2123
+io_counters, read_bytes = 	4437708174
+io_counters, write_bytes = 	2341530
+
+file name: genetic-chemical perturbagen several time points_2
+2021-07-28 20:00:51
+cpu_times, user= 	65.078125
+cpu_times, system = 	3.59375
+cpu_percent= 	0.0
+ppid= 	26052
+status =	running
+memory_info, rss= 	650285056
+memory_info, vms = 	1172303872
+io_counters, read_count = 	543148
+io_counters, write_count = 	2339
+io_counters, read_bytes = 	4437708447
+io_counters, write_bytes = 	2341310
+
+file name: genetic-chemical perturbagen several time points_2
+2021-07-29 10:07:43
+cpu_times, user= 	61.234375
+cpu_times, system = 	3.828125
+cpu_percent= 	0.0
+ppid= 	9536
+status =	running
+memory_info, rss= 	255893504
+memory_info, vms = 	1172324352
+io_counters, read_count = 	543149
+io_counters, write_count = 	2339
+io_counters, read_bytes = 	4437729664
+io_counters, write_bytes = 	2346716
+
+file name: genetic-chemical perturbagen 1time point
+2021-07-29 10:12:05
+cpu_times, user= 	30.78125
+cpu_times, system = 	1.28125
+cpu_percent= 	0.0
+ppid= 	23308
+status =	running
+memory_info, rss= 	192966656
+memory_info, vms = 	713281536
+io_counters, read_count = 	234864
+io_counters, write_count = 	2551
+io_counters, read_bytes = 	1898282583
+io_counters, write_bytes = 	1368393

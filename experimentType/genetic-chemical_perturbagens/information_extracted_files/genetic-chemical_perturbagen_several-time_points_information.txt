@@ -1,0 +1,175 @@
+File name: genetic-chemical_perturbagen_several-time_points
+
+HTSplotter Categorizes the experiments as follows: 
+	 drug => Concentration >= 2; Condition = "Condition"; Combination = 0 
+	 drug combination => Condition = "Condition"; Combination != 0 
+	 genetic perturbagen => Concentration = 1; Condition = "Condition" ; Combination = 0 
+	 genetic-chemical perturbagen => Condition != "Condition"; Combination !=0 
+
+Based on the input file the categorization is : genetic-chemical_perturbagen
+
+	 number of concentration for each compound: 7;7;7;7;7;7;1;1;1;
+
+	 combination: Drug-A_GeneOff Drug-B_GeneOff Drug-C_GeneOff DMSO_Drug-C_GeneOff DMSO_Drug-B_GeneOff DMSO_Drug-A_GeneOff CellsOnly_GeneOff 
+
+	 control: Control_DMSO_Drug-C Control_DMSO_Drug-B Control_DMSO_Drug-A 
+
+	 condition: Condition GeneOff 
+
+	 the number of time points is: 25	0.0	3.0	6.0	9.0	12.0	15.0	18.0	21.0	24.0	27.0	30.0	33.0	36.0	39.0	42.0	45.0	48.0	51.0	54.0	57.0	60.0	63.0	66.0	69.0	72.0	
+
+
+The following information was obtained from the file header 
+
+Information about standard deviation: Std Dev
+
+Information about compounds: 
+
+	 Cell line: CellLine1
+	 Seeding: 10K
+	 Condition: Condition
+	 Compound: Drug-A
+	 Number of Concentration tested: 7
+	 Concentration range: 	45.7 	137.2 	411.5 	1234.6 	3703.7 	11111.1 	33333.3 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine1
+	 Seeding: 10K
+	 Condition: Condition
+	 Compound: Drug-B
+	 Number of Concentration tested: 7
+	 Concentration range: 	45.7 	137.2 	411.5 	1234.6 	3703.7 	11111.1 	33333.3 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine1
+	 Seeding: 10K
+	 Condition: Condition
+	 Compound: Drug-C
+	 Number of Concentration tested: 7
+	 Concentration range: 	1.4 	2.11 	3.16 	4.74 	7.11 	10.67 	16 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine1
+	 Seeding: 10K
+	 Condition: GeneOff
+	 Compound: Drug-A_GeneOff
+	 Number of Concentration tested: 7
+	 Concentration range: 	45.7 	137.2 	411.5 	1234.6 	3703.7 	11111.1 	33333.3 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine1
+	 Seeding: 10K
+	 Condition: GeneOff
+	 Compound: Drug-B_GeneOff
+	 Number of Concentration tested: 7
+	 Concentration range: 	45.7 	137.2 	411.5 	1234.6 	3703.7 	11111.1 	33333.3 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine1
+	 Seeding: 10K
+	 Condition: GeneOff
+	 Compound: Drug-C_GeneOff
+	 Number of Concentration tested: 7
+	 Concentration range: 	1.4 	2.11 	3.16 	4.74 	7.11 	10.67 	16 
+	 Number of Units tested: 7
+
+	 Cell line: CellLine1
+	 Seeding: 10K
+	 Condition: GeneOff
+	 Compound: DMSO_Drug-C_GeneOff
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1
+	 Seeding: 10K
+	 Condition: GeneOff
+	 Compound: DMSO_Drug-B_GeneOff
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1
+	 Seeding: 10K
+	 Condition: GeneOff
+	 Compound: DMSO_Drug-A_GeneOff
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+Information about control: 
+
+	 Cell line: CellLine3
+	 Seeding: 10K
+	 Condition: Condition
+	 Compound: Control_DMSO_Drug-C
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine3
+	 Seeding: 10K
+	 Condition: Condition
+	 Compound: Control_DMSO_Drug-B
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine3
+	 Seeding: 10K
+	 Condition: Condition
+	 Compound: Control_DMSO_Drug-A
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.1 
+	 Number of Units tested: 1
+
+Information about medium: 
+
+	 Cell line: CellLine3
+	 Seeding: 10K
+	 Condition: GeneOff
+	 Compound: CellsOnly_GeneOff
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine3
+	 Seeding: 10K
+	 Condition: GeneOff
+	 Compound: CellsOnly_GeneOff
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine3
+	 Seeding: 10K
+	 Condition: GeneOff
+	 Compound: CellsOnly_GeneOff
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine3
+	 Seeding: 10K
+	 Condition: Condition
+	 Compound: CellsOnly
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine3
+	 Seeding: 10K
+	 Condition: Condition
+	 Compound: CellsOnly
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine3
+	 Seeding: 10K
+	 Condition: Condition
+	 Compound: CellsOnly
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+

@@ -1,0 +1,86 @@
+File name: drugscreen_severaltimepoint
+
+The following information was obtained from the file header 
+
+Information about standard deviation: Std Dev Img
+
+Information about compounds: 
+
+	 Cell line: CellLine1
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: MK-1775
+	 Number of Concentration tested: 14
+	 Concentration range: 	1590.41 	45.7 	2640.81 	75.88 	4384.95 	126 	7281.01 	209.22 	12089.8 	347.4 	20074.6 	576.84 	33333 	957.81 
+	 Number of Units tested: 14
+
+	 Cell line: CellLine1
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: BAY1895344
+	 Number of Concentration tested: 14
+	 Concentration range: 	40.88 	0.15 	91.08 	0.33 	202.92 	0.74 	452.09 	1.66 	1007.26 	3.7 	2244.17 	8.23 	5000 	18.35 
+	 Number of Units tested: 14
+
+	 Cell line: CellLine1
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: Prexasertib
+	 Number of Concentration tested: 14
+	 Concentration range: 	114.6 	1.4 	215.03 	2.63 	403.45 	4.93 	756.98 	9.25 	1420.3 	17.35 	2664.86 	32.55 	5000 	61.08 
+	 Number of Units tested: 14
+
+	 Cell line: CellLine1
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: DMSOPrexasertib
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.09 
+	 Number of Units tested: 1
+
+	 Cell line: CellLine1
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: DMSOMK-1775
+	 Number of Concentration tested: 1
+	 Concentration range: 	0.33 
+	 Number of Units tested: 1
+
+Information about control: 
+
+	 Cell line: CellLine1
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: Control_DMSO_Experimentcontrol
+	 Number of Concentration tested: 1
+	 Concentration range: 	1 
+	 Number of Units tested: 1
+
+Information about medium: 
+
+	 Cell line: CellLine1
+	 Seeding: 10Kperwell
+	 Condition: Condition
+	 Compound: OnlyCells
+	 Number of Concentration tested: 1
+	 Concentration range: 	100 
+	 Number of Units tested: 1
+
+HTSplotter Categorizes the experiments as follows: 
+	 drug => Concentration >3; Condition = "Condition"; Combination = 0 
+	 drug combination => Condition = "Condition"; Combination != 0 
+	 genetic perturbagen => Concentration = 1; Condition = "Condition" ; Combination = 0 
+	 genetic-chemical perturbagen => Condition != "Condition"; Combination !=0 
+
+Based on the input file the categorization is : drug_screen
+
+	 number of concentration for each compound: 14;14;14;1;1;
+	 combination: 
+	 control: Control_DMSO_Experimentcontrol 
+	 condition: Condition 
+	 the number of time points is: 37	0.0	2.0	4.0	6.0	8.0	10.0	12.0	14.0	16.0	18.0	20.0	22.0	24.0	26.0	28.0	30.0	32.0	34.0	36.0	38.0	40.0	42.0	44.0	46.0	48.0	50.0	52.0	54.0	56.0	58.0	60.0	62.0	64.0	66.0	68.0	70.0	72.0	
+
+HTSplotter categorized the experiment as: drug_screen
+Define the experiment read out (e.g. confluency, cell viability, apoptosis, cell index) : 
+Please, indicate the read-out units (e.g. %) : 
+Confirm your experiment type, according to the options above: 
