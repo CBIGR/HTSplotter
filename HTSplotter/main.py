@@ -5,23 +5,23 @@ import datetime
 import sys
 import numpy as np
 # librarys made for this script
-from readfiles import Readfile
-from filenames import Filenames
-from headers import Headers
-from categorisation import Categorisation
-from interactionsuser import Outputfile, Inputfile
-from save_hdf5file import Compoundscreenonecontrol, Compoundscreen, \
+from HTSplotter.readfiles import Readfile
+from HTSplotter.filenames import Filenames
+from HTSplotter.headers import Headers
+from HTSplotter.categorisation import Categorisation
+from HTSplotter.interactionsuser import Outputfile, Inputfile
+from HTSplotter.save_hdf5file import Compoundscreenonecontrol, Compoundscreen, \
     Compoundcombination, Geneticperturbagem, Geneticchemicalperturbagem
-from save_hdf5brfiles import BRHdf5database, Individualcombinationstructure, BRcompoundscreenseveralcontrol, \
+from HTSplotter.save_hdf5brfiles import BRHdf5database, Individualcombinationstructure, BRcompoundscreenseveralcontrol, \
     BRcombinationstructure, BRcompoundscreenonecontrol, BRgeneticperturbagem, BRgeneticchemicalperturbagem, \
     Individualgeneticperturbagen
 from plotting import Overtime
-from combination import ExperimentCombination
-from geneticperturbagem import ExperimentGeneticPerturbagem
-from compoundscreen import SingleCompound, SingleCompoundonecontrol
-from geneticchemicalperturbagem import GeneticChemicalPerturbagem
+from HTSplotter.combination import ExperimentCombination
+from HTSplotter.geneticperturbagem import ExperimentGeneticPerturbagem
+from HTSplotter.compoundscreen import SingleCompound, SingleCompoundonecontrol
+from HTSplotter.geneticchemicalperturbagem import GeneticChemicalPerturbagem
 
-from txtsavedata import Savetxt
+from HTSplotter.txtsavedata import Savetxt
 
 
 class HTSplotter:

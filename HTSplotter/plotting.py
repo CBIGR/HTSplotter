@@ -3,7 +3,7 @@ import os
 os.environ['MPLCONFIGDIR'] = '/opt/HTSplotter/.config/matplotlib'
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
-from arrayRGB import ColorsHtsplots
+from HTSplotter.arrayRGB import ColorsHtsplots
 import random
 import math
 import scipy.interpolate as inter

@@ -3,7 +3,7 @@ import os
 from scipy import stats
 from scipy.stats import norm
 import numpy as np
-from hdf5functions import Hdf5functions
+from HTSplotter.hdf5functions import Hdf5functions
 from copy import deepcopy
 
 class Hdf5database:

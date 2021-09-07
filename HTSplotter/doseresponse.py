@@ -1,6 +1,6 @@
 import numpy as np
 import os
-from grupping import Groupping
+from HTSplotter.grupping import Groupping
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 from matplotlib import ticker

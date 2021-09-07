@@ -1,7 +1,7 @@
 import numpy as np
 import os
 import math
-from save_hdf5file import Hdf5database
+from HTSplotter.save_hdf5file import Hdf5database
 
 class Blissmethod:
 

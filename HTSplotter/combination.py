@@ -1,18 +1,16 @@
 import numpy as np
 import os
-from grupping import Groupping, Data_group
-from synergism import Blissmethod
-from plotting import Overtime
-from timepointselection import Timepointselection
-
+from HTSplotter.grupping import Groupping, Data_group
+from HTSplotter.synergism import Blissmethod
+from HTSplotter.plotting import Overtime
+from HTSplotter.timepointselection import Timepointselection
+from HTSplotter.doseresponse import DoseResponseSingle
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 from matplotlib.backends.backend_pdf import PdfPages
-
-
 import math
 import scipy.interpolate as inter
-from doseresponse import DoseResponseSingle
+
 import time
 
 import time as ti

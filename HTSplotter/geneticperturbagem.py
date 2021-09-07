@@ -1,11 +1,11 @@
 import numpy as np
 
 import os
-from grupping import Groupping, Data_group, Grouppingmedium
+from HTSplotter.grupping import Groupping, Data_group, Grouppingmedium
 import matplotlib.pyplot as plt
-from doseresponse import DoseResponseSingle, DoseResponseCondition
-from plotting import Overtime
-from timepointselection import Timepointselection
+from HTSplotter.doseresponse import DoseResponseSingle, DoseResponseCondition
+from HTSplotter.plotting import Overtime
+from HTSplotter.timepointselection import Timepointselection
 
 from matplotlib.pyplot import cm
 from matplotlib.backends.backend_pdf import PdfPages

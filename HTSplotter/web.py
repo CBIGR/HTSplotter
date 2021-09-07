@@ -11,22 +11,22 @@ from minio import Minio
 from minio.error import S3Error
 
 # librarys made for this script
-from readfiles import Readfile
-from filenames import Filenames
-from headers import Headers
-from categorisation import Categorisation
-from interactionsuser import Outputfile, Inputfile
-from save_hdf5file import Compoundscreenonecontrol, Compoundscreen, \
+from HTSplotter.readfiles import Readfile
+from HTSplotter.filenames import Filenames
+from HTSplotter.headers import Headers
+from HTSplotter.categorisation import Categorisation
+from HTSplotter.interactionsuser import Outputfile, Inputfile
+from HTSplotter.save_hdf5file import Compoundscreenonecontrol, Compoundscreen, \
 	Compoundcombination, Geneticperturbagem, Geneticchemicalperturbagem
-from save_hdf5brfiles import BRHdf5database, Individualcombinationstructure, BRcompoundscreenseveralcontrol, \
+from HTSplotter.save_hdf5brfiles import BRHdf5database, Individualcombinationstructure, BRcompoundscreenseveralcontrol, \
 	BRcombinationstructure, BRcompoundscreenonecontrol, BRgeneticperturbagem, BRgeneticchemicalperturbagem, \
 	Individualgeneticperturbagen
 from plotting import Overtime
-from combination import ExperimentCombination
-from geneticperturbagem import ExperimentGeneticPerturbagem
-from compoundscreen import SingleCompound, SingleCompoundonecontrol
-from geneticchemicalperturbagem import GeneticChemicalPerturbagem
-from txtsavedata import Savetxt
+from HTSplotter.combination import ExperimentCombination
+from HTSplotter.geneticperturbagem import ExperimentGeneticPerturbagem
+from HTSplotter.compoundscreen import SingleCompound, SingleCompoundonecontrol
+from HTSplotter.geneticchemicalperturbagem import GeneticChemicalPerturbagem
+from HTSplotter.txtsavedata import Savetxt
 
 parser = argparse.ArgumentParser(description='Submit HTSplotter job from website')
 parser.add_argument('-f', nargs=1, required=True, help='The directory containing file(s) that need to be analysed', metavar='file_dir')
