@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'HTSplotter',         # How you named your package folder (MyLib)
   packages = ['HTSplotter'],   # Chose the same as "name"
-  version = '0.1',      # Start with a small number and increase it with every change you make
+  version = '0.2',      # Start with a small number and increase it with every change you make
   license='GNU General Public License v3 or later (GPLv3+)',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'An end-to-end data processing, '
                 'analysis and visualisation tool for chemical and genetic in '
