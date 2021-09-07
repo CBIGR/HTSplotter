@@ -28,7 +28,7 @@ class Outputfile:
         self.controlnameerror = None
         self.error = []
         self.readout = None # indicates the readout for the axis
-        # self.errorheader = []
+
         self.keylistmaingroups = ["Cell", "Seeding", "Condition", "Compound", "Concentration", "Unit", "Position"]
 
         self.get_check()
@@ -37,7 +37,6 @@ class Outputfile:
         self.closefile()
 
     def get_check(self):
-        # self.error.append("check experiment conditions information")
         for i in range(len(self.outputheader)):
             for j in range(len(self.outputheader[i])):
                 if len(self.outputheader[i][j]) == 0:
@@ -54,9 +53,7 @@ class Outputfile:
             self.controlnameerror = "Control unidentified"
         if self.error == 1:
             self.error = "check error file, please"
-        # if len(self.errorheader) != 0:
-        #     for k in self.errorheader:
-        #         self.errorheader.append(k)
+
 
     def setfile(self):
         self.outputfile = open(self.filename, 'w')
@@ -129,18 +126,7 @@ class Outputfile:
             error.write("Error was not identified" + '\n' + '\n')
             error.write("cellline, seeding, condition, compound, concentration, units, position from the input file" +
                         '\n' + '\n')
-            # error.write("'unidentified', means the information is missing" + '\n' + '\n')
-            # for j in self.outputheader:
-            #     j[-1] = str(j[-1])
-            #     for i in range(len(j)):
-            #         try:
-            #             if len(j[i]) == 0:
-            #                 j[i] = "unidentified"
-            #         except TypeError:
-            #             j[i] = str(j[i])
-            #
-            #     error.write(", ".join(j) + '\n')
-            # error.write('\n')
+
         if info == 1:
             error.write("You have an error from your header, please check bellow " + '\n' + '\n')
             error.write("Information order: cellline, seeding, condition, compound, "
@@ -184,7 +170,7 @@ class Outputfile:
                 file.write("\n")
                 file.write("\t Number of Units tested: " + str(len(name[i]["Unit"])) + '\n')
             except TypeError:
-                print(name[i])
+                file.write(name[i])
 
 
 class Inputfile:
@@ -214,7 +200,6 @@ class Inputfile:
 
     def get_experimenttype(self):
         readout = self.information[-2].split(' ')
-        print(readout)
         if len(readout[-1]) == 0:
             self.readout = 'confluency'
         else:

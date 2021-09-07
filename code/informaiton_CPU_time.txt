@@ -2924,3 +2924,17 @@ io_counters, read_count = 	234864
 io_counters, write_count = 	2551
 io_counters, read_bytes = 	1898282583
 io_counters, write_bytes = 	1368393
+
+file name: drug_combination_several_time_points
+2021-09-07 16:17:12
+cpu_times, user= 	87.1875
+cpu_times, system = 	3.953125
+cpu_percent= 	0.0
+ppid= 	1748
+status =	running
+memory_info, rss= 	1341779968
+memory_info, vms = 	1863811072
+io_counters, read_count = 	975165
+io_counters, write_count = 	1910
+io_counters, read_bytes = 	7988607520
+io_counters, write_bytes = 	3727969

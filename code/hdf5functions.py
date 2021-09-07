@@ -155,8 +155,7 @@ class Hdf5functions:
 
     @staticmethod
     def hdf5normalization(grp, control, controldata):
-        # grp2 = grp[entrance]
-        # + "_"+ control\
+
         if 'data' in list(grp):
             grp.create_dataset('normalizedperc' + "_" + control,
                                data=np.divide(grp['data'][:], controldata) * 100)
@@ -501,8 +500,6 @@ class Hdf5functions:
                             if len(temp) <= 3:
                                 combination.append(temp)
                                 combinsize.append(temsize)
-                        # elif "Control" in k:
-                        #     self.compoundalone.append(k)
                     self.possiblecombination.append(combination)
                     self.possiblecombinationsize.append(combinsize)
 

@@ -64,7 +64,6 @@ class DoseResponse:
 
 		# this situation should be applied
 		# if the number of plot require more than 1row have 1 row
-		# axs = fig.add_subplot(row_numeber_per_figure, cols, cont+1)
 
 		color = iter(cm.tab20b(np.linspace(0, 1, len(grup.concentration) + 1)))
 		time_selected = ''
@@ -102,10 +101,7 @@ class DoseResponse:
 				axs[col].set_xlabel(title_x_label, fontsize=9)
 				axs[col].set_ylabel(self.readout_units + ' '+self.readout)
 				axs[col].set_ylim(0, 120)
-				# axs[col].set_xticklabels(title_x_label, fontsize=9)
-				# axs[col].set_yticklabels(np.arange(0, 120, 20), fontsize=9)
 				axs[col].yaxis.set_major_locator(ticker.FixedLocator(np.arange(0, 120, 20)))
-				# axs[col].yaxis.set_major_formatter(ticker.FixedFormatter("% confluence"))
 				axs[col].xaxis.set_major_locator(ticker.FixedLocator(x_label_log))
 				axs[col].xaxis.set_major_formatter(ticker.FixedFormatter(title_x_label))
 				axs[col].set_xlim(self.concentration_range[1] * 0.6, self.concentration_range[-1] * 1.6)
@@ -132,8 +128,7 @@ class DoseResponse:
 				axs[col].legend((ic15_legeng, ec50_legend, ic50_legeng, ecmax_legend,
 								 ("LL4=> " + fit_curv_info), "experiment_data"),
 								loc="lower left", fontsize=7, frameon=False)
-				# axs[col].legend((ec50_legend, ic50_legeng, ecmax_legend),
-				#                 loc="lower left", fontsize=7, frameon=False)
+
 				fig.tight_layout()
 				fig.subplots_adjust(top=0.88)
 				self.save_ic_info(grup, cont, data_for_plot, ec50_legend, ic_selected, ic_concentration,
@@ -162,7 +157,7 @@ class DoseResponse:
 		compound_info = "compound: " + grup.name + "\n" + " cell line: " + grup.cell_name
 		# this situation should be applied
 		# if the number of plot require more than 1row have 1 row
-		# axs = fig.add_subplot(row_numeber_per_figure, cols, cont+1)
+
 		fig, axs = plt.subplots(int(rs), int(cols), figsize=(35, 15))  # sharey='row',
 		fig.suptitle(compound_info, fontsize=18, fontweight='bold',
 					 ha="center")
@@ -183,7 +178,6 @@ class DoseResponse:
 						std_for_plot = self.std_range[cont]
 						x_label_log = np.log10(self.concentration_range)
 						time_selected = str(int(self.time_selected[cont]))
-						# c = next(color)
 
 					title_for_each_plot = "Time: " + time_selected + " h"
 
@@ -259,12 +253,10 @@ class DoseResponse:
 
 	@staticmethod
 	def get_statistics(logfunc, x_label_log, data_for_plot, std_for_plot, popt, pcov):
-		# get standard deviations of the parameters (square root of the diagonal of the covariance
+		# gets standard deviations of the parameters (square root of the diagonal of the covariance
 		stdves = np.sqrt(np.diag(pcov))
 		# determine Chi-square
 
-		# nchisq = sum([((data_for_plot[i] - self.logistic_function(x_label_log[i], *popt)) / std_for_plot[
-		#     i]) ** 2.0for i in range(len(data_for_plot))])
 		chisq = sum(((data_for_plot - logfunc(x_label_log, *popt)) / std_for_plot) ** 2)
 
 		dof = len(x_label_log) - len(popt)
@@ -559,7 +551,7 @@ class DoseResponseCondition(DoseResponse):
 		else:
 			self.plotting_rows_fourparameter(grup, 1)
 
-   # method only for on and off situation
+# method only for on and off situation
 
 	def sigmoid_on_off_summary(self, grup, compounds_name_on_off,  dose_curve_on_off,
 							   data_curve_on_off, std_curve_on_off, ic_concentration_on_off,
@@ -588,9 +580,6 @@ class DoseResponseCondition(DoseResponse):
 			fig.suptitle(compound_info, fontsize=10, fontweight='bold',
 						 ha='center')
 
-		# fig, axs = plt.subplots(rs, cols, figsize=(15, 5))  # sharey='row',
-		# fig.suptitle(compound_info, fontsize=10, fontweight='bold',
-		#              ha="center")
 		color = iter(cm.tab20b(np.linspace(0, 1, len(self.compounds_name_on_off) + 1)))
 		ste = step
 		con = 0

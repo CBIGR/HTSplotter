@@ -94,7 +94,7 @@ class Readfile:
     # to be called after output file and error files
     def get_split_data_std(self, split):
         num_rows, num_cols = self.data_std.shape
-        # split = int(num_cols/2)
+
         self.data = self.data_std[:, :split]
         self.std = self.data_std[:, split:]
 

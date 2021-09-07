@@ -55,7 +55,7 @@ if __name__ == '__main__':
 
 	# Parse arguments
 	args = parser.parse_args()
-	# print(args)
+
 
 	input_path = args.f[0]
 	results_path = input_path + "results/"
@@ -76,7 +76,6 @@ if __name__ == '__main__':
 	os.makedirs(results_path, exist_ok=True)
 
 	if biological_replicate == 1:
-		print("Processing Bioloical replicate")
 		count = 0
 		file_br_names = Filenames(file_name_br, input_path, results_path, information_extracted)
 
@@ -119,14 +118,7 @@ if __name__ == '__main__':
 
 				# set error file
 
-				# set error file
-				print("Experiment type"+str(count)+":",catego.experimentype)
-				print("File"+str(count)+":",eachfile)
-				# if len(out.error) == 0:
-				# 	print("HTSplotter did not identify any error from your input file")
-				# 	out.seterrorfile(0)
 				if len(out.error) != 0:
-					print("check error file, please")
 					out.seterrorfile(1)
 					sys.exit()
 				count += 1
@@ -164,29 +156,23 @@ if __name__ == '__main__':
 															header_info.newheader, file_info.elapsed,
 															file_info.date_info, file_info.date, file_info.data,
 															file_info.std, header_info.medium)
-				
 
-				print("Output PDF: ",file_name_br)
 				if catego.experimentype != exp_types[count]:
-					print("=====>check error file", exp_types[count], catego.experimentype)
+
 					break
-				print("=====>ok", exp_types[count], catego.experimentype)
+
 
 				count += 1
 				# out.seterrorfile(0)
 
 			# # check if the input files have the same compounds and conditions
 			if catego.experimentype == "drug_combination":
-				print("Compound_combinationBR", catego.experimentype)
+
 				brcombdata = BRcombinationstructure(count, file_br_names.filehdf5resultspath, catego.experimentype,
 													catego.branch, file_name_br, header_info.newheader, file_info.elapsed,
 													file_info.date_info, file_info.date, file_info.data, file_info.std,
 													header_info.medium)
 
-				print(len(brcombdata.fields), len(brcombdata.data), len(brcombdata.std), len(brcombdata.std_inh),
-					  len(brcombdata.normalized_perc), len(brcombdata.normalized))
-				for g in range(len(brcombdata.possiblecombination)):
-					print(brcombdata.possiblecombinationsize[g], brcombdata.possiblecombination[g])
 
 				comb = ExperimentCombination(brcombdata.fields, file_info.elapsed, catego.branch,
 											 brcombdata.control, brcombdata.compoundalone,
@@ -219,7 +205,7 @@ if __name__ == '__main__':
 						comb.inhibition(brcombdata.normalizedtranslation, brcombdata.std_inh, 1, 1)
 
 				else:
-					print("1 time point for combination biological replicates")
+
 					if expected_effect == 0:
 						comb.endpointinhibition(brcombdata.inhibited, brcombdata.std_inh, 2, 1)
 					if expected_effect == 1:
@@ -227,21 +213,16 @@ if __name__ == '__main__':
 				comb.close_pdf()
 
 			if catego.experimentype == "drug_screen":
-				print("Compound_screen", catego.experimentype)
+
 				if len(catego.compound) == len(catego.control):
 					# 1 control for each compound
-					print("Compound_screen several control BR", len(catego.compound), len(catego.control), catego.medium)
+
 					brcomscreendata = BRcompoundscreenseveralcontrol(count, file_br_names.filehdf5resultspath,
 																	 catego.experimentype, catego.branch, file_name_br,
 																	 header_info.newheader, file_info.elapsed,
 																	 file_info.date_info, file_info.date, file_info.data,
 																	 file_info.std, header_info.medium)
-					print(len(brcomscreendata.fields), len(brcomscreendata.data), len(brcomscreendata.std),
-						  len(brcomscreendata.std_inh), len(brcomscreendata.normalized_perc),
-						  len(brcomscreendata.normalized))
-					for g in range(len(brcomscreendata.compoundalone)):
-						print(brcomscreendata.compoundalone[g])
-					print(brcomscreendata.medium)
+
 					singlecompond = SingleCompound(header_info.branch, brcomscreendata.celline,
 												   brcomscreendata.seeding, brcomscreendata.fields,
 												   file_info.elapsed, brcomscreendata.control,
@@ -264,19 +245,12 @@ if __name__ == '__main__':
 					singlecompond.doseresponse(brcomscreendata.normalized_perc, brcomscreendata.std)
 					singlecompond.close_pdf()
 				else:
-					print("drug_screen 1 control BR", len(catego.compound), len(catego.control), catego.medium)
+
 					brcomscreenonecontrol = BRcompoundscreenonecontrol(count, file_br_names.filehdf5resultspath,
 																	   catego.experimentype, catego.branch, file_name_br,
 																	   header_info.newheader, file_info.elapsed,
 																	   file_info.date_info, file_info.date, file_info.data,
 																	   file_info.std, header_info.medium)
-					print("one control")
-					print(len(brcomscreenonecontrol.fields), len(brcomscreenonecontrol.data),
-						  len(brcomscreenonecontrol.std), len(brcomscreenonecontrol.std_inh),
-						  len(brcomscreenonecontrol.normalized_perc), len(brcomscreenonecontrol.normalized))
-					for g in range(len(brcomscreenonecontrol.compoundalone)):
-						print(brcomscreenonecontrol.compoundalone[g])
-					print(brcomscreenonecontrol.medium)
 
 					singlecomponecontrol = SingleCompoundonecontrol(header_info.branch, brcomscreenonecontrol.celline,
 																	brcomscreenonecontrol.seeding,
@@ -308,17 +282,13 @@ if __name__ == '__main__':
 					singlecomponecontrol.close_pdf()
 
 			if catego.experimentype == "Genetic_perturbagen":
-				print("Genetic_perturbagen")
 				# save information on HDF5 file
 				BRhdf5genetic = BRgeneticperturbagem(count, file_br_names.filehdf5resultspath,
 													 catego.experimentype, catego.branch, file_name_br,
 													 header_info.newheader, file_info.elapsed,
 													 file_info.date_info, file_info.date, file_info.data,
 													 file_info.std, header_info.medium)
-				print("did it?>>>")
-				print(len(BRhdf5genetic.fields), len(BRhdf5genetic.data), len(BRhdf5genetic.std),
-					  len(BRhdf5genetic.std_inh), len(BRhdf5genetic.normalized_perc), len(BRhdf5genetic.normalized))
-				print(BRhdf5genetic.compoundalone)
+
 				geneticpert = ExperimentGeneticPerturbagem(header_info.branch, BRhdf5genetic.celline,
 														   BRhdf5genetic.seeding,
 														   BRhdf5genetic.fields, file_info.elapsed,
@@ -338,7 +308,7 @@ if __name__ == '__main__':
 						geneticpert.perturbagemovertime(BRhdf5genetic.normalizedtranslation, BRhdf5genetic.std_inh, 1, 1, 1)
 
 				else:
-					print("1 time point for genetic-chemical perturbagem")
+
 					if expected_effect == 0:
 						geneticpert.perturbagemendpoint(BRhdf5genetic.inhibited, BRhdf5genetic.std_inh, 2, 1, 1)
 					elif expected_effect == 1:
@@ -348,7 +318,7 @@ if __name__ == '__main__':
 				geneticpert.close_pdf()
 
 			if catego.experimentype == "genetic-chemical_perturbagen":
-				print("genetic-chemical_perturbagen")
+
 				# save information on HDF5 file
 				brhdfgeneticchemical = BRgeneticchemicalperturbagem(count, file_br_names.filehdf5resultspath,
 																	catego.experimentype, catego.branch, file_name_br,
@@ -356,14 +326,6 @@ if __name__ == '__main__':
 																	file_info.date_info, file_info.date, file_info.data,
 																	file_info.std, header_info.medium)
 
-				print(len(brhdfgeneticchemical.fields), len(brhdfgeneticchemical.data), len(brhdfgeneticchemical.std),
-					  len(brhdfgeneticchemical.std_inh), len(brhdfgeneticchemical.normalized_perc),
-					  len(brhdfgeneticchemical.normalized))
-				print("medium information", len(brhdfgeneticchemical.fieldsmedium), len(brhdfgeneticchemical.datamedium),
-					  len(brhdfgeneticchemical.stdmedium), len(brhdfgeneticchemical.std_inhmedium),
-					  len(brhdfgeneticchemical.normalized_percmedium), len(brhdfgeneticchemical.normalizedmedium))
-				print(brhdfgeneticchemical.possiblecombination)
-				# print(brhdfgeneticchemical.branch)
 				geneticchemical = GeneticChemicalPerturbagem(brhdfgeneticchemical.fields, file_info.elapsed,
 															 brhdfgeneticchemical.branch, brhdfgeneticchemical.control,
 															 brhdfgeneticchemical.compoundalone,
@@ -394,7 +356,7 @@ if __name__ == '__main__':
 						geneticchemical.confluencyovertime(brhdfgeneticchemical.normalizedtranslation, brhdfgeneticchemical.std_inh, 1, 1)
 
 				else:
-					print("are we here?")
+
 					if expected_effect == 0:
 						geneticchemical.endpointinhibition(brhdfgeneticchemical.inhibited, brhdfgeneticchemical.std_inh,
 														   2, 1)
@@ -405,10 +367,10 @@ if __name__ == '__main__':
 				geneticchemical.close_pdf()
 
 			# zip all files
-			print('Zip all output files')
+
 			output_filename = input_path+input_path[input_path.rfind('/', 0, input_path.rfind('/'))+1:-1]
 			shutil.make_archive(output_filename, 'zip', input_path, 'results')
-			print(output_filename)
+
 
 			# Minio file upload
 			upload_fn = output_filename+'.zip'
@@ -419,11 +381,7 @@ if __name__ == '__main__':
 				access_key=args.sa[0],#"Q3AM3UQ867SPQQA43P2F",
 				secret_key=args.ss[0],#"zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
 			)
-			# found = client.bucket_exists(args.sb[0])
-			# if not found:
-			# 	client.make_bucket(args.sb[0])
-			# else:
-			# 	print("Bucket",args.sb[0],"already exists")
+
 
 			result = client.fput_object(args.sb[0], upload_alias, upload_fn)
 			shutil.rmtree(input_path)
@@ -461,42 +419,27 @@ if __name__ == '__main__':
 							 file_info.elapsed, catego.condition, header_info.outputheader, header_info.errorheader)
 			# set error file
 			if userinput == 0:
-				print("Experiment type: ",catego.experimentype)
-				print("File:",i)
-				# if len(out.error) == 0:
-				# 	print("HTSplotter did not identify any error from your input file")
-				# 	out.seterrorfile(0)
 				if len(out.error) != 0:
-					print("check error file, please")
 					out.seterrorfile(1)
 					sys.exit()
 
 			# check user confirmation
 			elif userinput == 1:
-				print("Output PDF: ",file_pdf_name[:-4]) # remove .pdf extension
+
 				if catego.experimentype != exp_types[0]:
-					print("=====>check error file", exp_types[0], catego.experimentype)
 					break
-				print("=====>ok", exp_types[0], catego.experimentype)
 				out.seterrorfile(0)
 				
 				# for each experiment type: save information on HDF5 file, process and visualization
 				if catego.experimentype == "drug_screen":
 					if len(catego.compound) == len(catego.control):
 						# 1 control for each compound
-						print("drug_screen", len(catego.compound), len(catego.control), catego.medium)
+
 						# save information on HDF5 file
 						hdfcompound = Compoundscreen(catego.experimentype, catego.branch, file_names.filehdf5resultspath,
 													 header_info.newheader, file_info.elapsed, file_info.date_info,
 													 file_info.date, file_info.data, file_info.std, catego.stdinfo,
 													 catego.medium, catego.compound)
-						print(len(hdfcompound.fields), len(hdfcompound.data), len(hdfcompound.std),
-							  len(hdfcompound.std_inh), len(hdfcompound.normalized_perc),
-							  len(hdfcompound.normalized))
-
-						print("medium information", len(hdfcompound.datamedium),
-							  len(hdfcompound.stdmedium), len(hdfcompound.std_inhmedium),
-							  len(hdfcompound.normalized_percmedium), len(hdfcompound.normalizedmedium))
 
 						singlecompond = SingleCompound(header_info.branch, hdfcompound.celline,
 													   hdfcompound.seeding, hdfcompound.fields,
@@ -524,16 +467,14 @@ if __name__ == '__main__':
 
 					else:
 						# 1 control for all compounds
-						print("drug_screen", len(catego.compound), len(catego.control))
+
 						# save information on HDF5 file
 						hdfcompoundonecontrol = Compoundscreenonecontrol(catego.experimentype, catego.branch,
 																		 file_names.filehdf5resultspath, header_info.newheader,
 																		 file_info.elapsed, file_info.date_info,
 																		 file_info.date, file_info.data, file_info.std,
 																		 catego.stdinfo, catego.medium, catego.compound)
-						print(len(hdfcompoundonecontrol.fields), len(hdfcompoundonecontrol.data),
-							  len(hdfcompoundonecontrol.std), len(hdfcompoundonecontrol.std_inh),
-							  len(hdfcompoundonecontrol.normalized_perc), len(hdfcompoundonecontrol.normalized))
+
 						singlecomponecontrol = SingleCompoundonecontrol(header_info.branch,
 																		hdfcompoundonecontrol.celline,
 																		hdfcompoundonecontrol.seeding,
@@ -566,16 +507,13 @@ if __name__ == '__main__':
 						singlecomponecontrol.close_pdf()
 
 				if catego.experimentype == "drug_combination":
-					print("drug_combination")
+
 					# save information on HDF5 file
 					hdfcompoundcomb = Compoundcombination(catego.experimentype, catego.branch,
 														  file_names.filehdf5resultspath, header_info.newheader,
 														  file_info.elapsed, file_info.date_info, file_info.date,
 														  file_info.data, file_info.std, catego.stdinfo,
 														  catego.medium, catego.compound)
-
-					print(len(hdfcompoundcomb.fields), len(hdfcompoundcomb.data), len(hdfcompoundcomb.std),
-						  len(hdfcompoundcomb.std_inh), len(hdfcompoundcomb.normalized_perc), len(hdfcompoundcomb.normalized))
 
 					comb = ExperimentCombination(hdfcompoundcomb.fields, file_info.elapsed, catego.branch,
 												 hdfcompoundcomb.control, hdfcompoundcomb.compoundalone,
@@ -611,7 +549,7 @@ if __name__ == '__main__':
 							comb.inhibition(hdfcompoundcomb.normalizedtranslation, hdfcompoundcomb.std_inh, 1, 1)
 
 					else:
-						print("1 time point for combo")
+
 						if expected_effect == 0:
 							comb.endpointinhibition(hdfcompoundcomb.inhibited, hdfcompoundcomb.std_inh, 2, 1)
 						elif expected_effect == 1:
@@ -621,16 +559,13 @@ if __name__ == '__main__':
 					comb.close_pdf()
 
 				if catego.experimentype == "Genetic_perturbagen":
-					print("Genetic_perturbagen")
+
 					# save information on HDF5 file
 					hdfgenetic = Geneticperturbagem(catego.experimentype, catego.branch, file_names.filehdf5resultspath,
 													header_info.newheader, file_info.elapsed, file_info.date_info,
 													file_info.date, file_info.data, file_info.std, catego.stdinfo,
 													catego.medium, catego.compound)
 
-					print(len(hdfgenetic.fields), len(hdfgenetic.data), len(hdfgenetic.std),
-						  len(hdfgenetic.std_inh), len(hdfgenetic.normalized_perc), len(hdfgenetic.normalized))
-					print(hdfgenetic.compoundalone)
 					geneticpert = ExperimentGeneticPerturbagem(header_info.branch, hdfgenetic.celline, hdfgenetic.seeding,
 															   hdfgenetic.fields, file_info.elapsed, hdfgenetic.control,
 															   hdfgenetic.compoundalone, hdfgenetic.condition,
@@ -650,7 +585,7 @@ if __name__ == '__main__':
 						elif expected_effect == 1:
 							geneticpert.perturbagemovertime(hdfgenetic.normalizedtranslation, hdfgenetic.std_inh, 1, 1, 1)
 					else:
-						print("1 time point for genetic perturbagem")
+
 						if expected_effect == 0:
 							geneticpert.perturbagemendpoint(hdfgenetic.inhibited, hdfgenetic.std_inh, 2, 1, 1)
 						elif expected_effect == 1:
@@ -660,7 +595,6 @@ if __name__ == '__main__':
 					geneticpert.close_pdf()
 
 				if catego.experimentype == "genetic-chemical_perturbagen":
-					print("genetic-chemical_perturbagen")
 					# save information on HDF5 file
 					hdfgeneticchemical = Geneticchemicalperturbagem(catego.experimentype, catego.branch,
 																	file_names.filehdf5resultspath,
@@ -670,13 +604,7 @@ if __name__ == '__main__':
 																	file_info.data, file_info.std, catego.stdinfo,
 																	catego.medium, catego.compound)
 
-					print(len(hdfgeneticchemical.fields), len(hdfgeneticchemical.data), len(hdfgeneticchemical.std),
-						  len(hdfgeneticchemical.std_inh), len(hdfgeneticchemical.normalized_perc),
-						  len(hdfgeneticchemical.normalized))
-					print("medium information", len(hdfgeneticchemical.fieldsmedium), len(hdfgeneticchemical.datamedium),
-						  len(hdfgeneticchemical.stdmedium), len(hdfgeneticchemical.std_inhmedium),
-						  len(hdfgeneticchemical.normalized_percmedium), len(hdfgeneticchemical.normalizedmedium))
-					#
+
 					geneticchemical = GeneticChemicalPerturbagem(hdfgeneticchemical.fields, file_info.elapsed,
 																 hdfgeneticchemical.branch, hdfgeneticchemical.control,
 																 hdfgeneticchemical.compoundalone,
@@ -708,7 +636,7 @@ if __name__ == '__main__':
 							geneticchemical.confluencyovertime(hdfgeneticchemical.normalizedtranslation, hdfgeneticchemical.std_inh, 1, 1)
 
 					else:
-						print("1 time point for genetic-chemical perturbagem")
+
 						if expected_effect == 0:
 							geneticchemical.endpointinhibition(hdfgeneticchemical.inhibited, hdfgeneticchemical.std_inh, 2, 1)
 						elif expected_effect == 1:
@@ -719,7 +647,7 @@ if __name__ == '__main__':
 					geneticchemical.close_pdf()
 				
 				# zip all files
-				print('Zip all output files')
+
 				output_filename = input_path+input_path[input_path.rfind('/', 0, input_path.rfind('/'))+1:-1]
 				shutil.make_archive(output_filename, 'zip', input_path, 'results')
 				
@@ -732,11 +660,7 @@ if __name__ == '__main__':
 					access_key=args.sa[0],#"Q3AM3UQ867SPQQA43P2F",
 					secret_key=args.ss[0],#"zuf+tfteSlswRu7BJ86wekitnifILbZam1KYY3TG",
 				)
-				# found = client.bucket_exists(args.sb[0])
-				# if not found:
-				# 	client.make_bucket(args.sb[0])
-				# else:
-				# 	print("Bucket",args.sb[0],"already exists")
+
 
 				result = client.fput_object(args.sb[0], upload_alias, upload_fn)
 				shutil.rmtree(input_path)

@@ -121,8 +121,6 @@ class GeneticChemicalPerturbagem:
                     if self.control[i][k][0] == j[0] and self.control[i][k][1] == j[1] and \
                             self.control[i][k][2] == j[2] and self.control[i][k][3] == j[3]:
                         self.control[i][k] = j
-        # self.combcontrol = self.control[::2]
-        # self.doxcontrol = self.control[1::2]
 
     def make_empty_list(self, possible_comb):
         header_count = len(possible_comb[0])
@@ -176,7 +174,6 @@ class GeneticChemicalPerturbagem:
                     list2.append(list1)
                 self.com_list_group[i][j].append(list2)
 
-                #self.onandoff[i][j].append(deepcopy(list2))
         for h in range(len(self.possible_comb)):
             for d in range(len(self.possible_comb[h])):
                 lista4 = []
@@ -377,8 +374,6 @@ class GeneticChemicalPerturbagem:
                             grup = [Groupping(c, self.possible_comb[g][k], self.celine[g], self.seeding,
                                               self.condition) for c in self.com_list_group[g][k][0]]
 
-                            # data_grup = [Data_group(self.data_plot, m.concentration) for m in grup]
-                            # std_data_grup = [Data_group(self.std_plot, m.concentration) for m in grup]
                             grup_orig = grup.copy()
                             grup_bar = grup.copy()
                             data_grup = [Data_group(self.data_plot, m.concentration) for m in grup]
@@ -387,7 +382,7 @@ class GeneticChemicalPerturbagem:
                             std_data_grup = [Data_group(self.std_plot, m.concentration) for m in grup]
                             std_orig = std_data_grup.copy()
                             std_bar = std_data_grup.copy()
-                            # self.adjust_data(data_grup)
+
 
                             self.plotting.barplot_comb_inhibition_recursive(grup_bar, data_bar, std_bar, info1, info2,
                                                                             self.comb_name_per_group[g][k],
@@ -398,14 +393,4 @@ class GeneticChemicalPerturbagem:
                             self.plotting.heat_map_selec_time_bi_biDim(grup_orig, self.time_selected,
                                                                        self.time_position,
                                                                        self.bi_score_per_group[g][k])
-
-
-        # for cel in range(len(self.onandoff)):
-        #     for cond in range(len(self.onandoff)):
-        #         grup = [Groupping(c, self.onandoff[cel][cond], self.celine[cel], self.seeding,
-        #                           self.condition) for c in self.onandoff[cel][cond]]
-        #         self.plotting.barplot_geneticchemicalperturbgen_recursive(grup, data, std, 2, 1,
-        #                                                                   self.time_selected, self.time_position,
-        #                                                                   self.readout,
-        #                                                                   self.readout_units)
 

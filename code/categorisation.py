@@ -135,16 +135,16 @@ class Categorisation:
             self.compoundscreen.append(len(self.diccompoundgroupkey[i]["Concentration"]))
             if compoundscreen == 1:
                 self.experimentype = "drug_screen"
-                print(self.experimentype, len(self.compound), len(self.control), self.stdinfo[0])
+
             if geneticpertur == 1 and compoundscreen == 0:
                 self.experimentype = "Genetic_perturbagen"
-                print(self.experimentype, len(self.control), len(self.compound))
+
         if len(self.combination) > 0 and len(self.condition) == 1 and len(self.condition) == len(self.cellline):
             self.experimentype = "drug_combination"
-            print(self.experimentype, len(self.combination), len(self.control), self.stdinfo[0])
+
         if len(self.condition) > 1 and len(self.combination) > 0:
             self.experimentype = "genetic-chemical_perturbagen"
-            print(self.experimentype, len(self.control), len(self.compound), self.stdinfo[0])
+
 
     @staticmethod
     def get_dictionary(templist):

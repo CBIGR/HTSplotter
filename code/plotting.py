@@ -1,23 +1,14 @@
 import numpy as np
 import os
-# from grupping import Groupping, Data_group
-# from synergism import Blissmethod
 os.environ['MPLCONFIGDIR'] = '/opt/HTSplotter/.config/matplotlib'
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 from arrayRGB import ColorsHtsplots
 import random
-# from matplotlib.backends.backend_pdf import PdfPages
 import math
-from interactionsuser import Outputfile
 import scipy.interpolate as inter
-from interactionsuser import Outputfile
 
 
-# from doseresponse import DoseResponseSingle
-# import time
-
-# import time as ti
 
 
 class Overtime:
@@ -51,7 +42,6 @@ class Overtime:
     def set_y_axis_limt(self, inf, maxim, minin):
         y_axis_min = None
         y_axis_max = None
-        # stepsize = round((maximoriginal-minim)/len(self.data_plot[0]), 1)
         if inf == 0:
             y_axis_min = 0
             if maxim > 10 and maxim < 100:
@@ -60,7 +50,6 @@ class Overtime:
                 y_axis_max = maxim * 1.5  # 120
 
         if inf == 1:
-            # y_axis_min = minin*0.5
             if minin > 0:
                 y_axis_min = -1.5
             if minin == 0:
@@ -87,7 +76,7 @@ class Overtime:
             if counter is None:
                 counter = np.zeros(len(grup), dtype=np.int16)
 
-            group = grup[ind]  # .pop(0)
+            group = grup[ind]
 
             for i in range(ind, -1, -1):
                 if counter[i] == grup[i].concentration.shape[0]:
@@ -180,7 +169,6 @@ class Overtime:
         plt.xlabel("time (h)")
         plt.ylabel(y_axis_name)
         plt.ylim(y_axis_min, y_axis_max)
-        # plt.yticks(np.arange(y_axis_min, y_axis_max, stepsize))
         sub = plt.suptitle(self.plot_titel, fontsize=12)
         plt.title(titel_page, fontsize=8,
                   fontweight='bold')
@@ -258,16 +246,13 @@ class Overtime:
                 text_titel_bi = ["BI_score :\n"]
                 te = self.get_addition_text(text_titel_bi, bi_score_per_group, timeselected, timeposition, i)
                 tr = plt.text(self.elapse[-1], y_axis_min + 0.5, te, bbox=dict(facecolor='none', edgecolor='silver'))
-            # text_titel_hsa = ["HSA_score :\n"]
 
-            # hsa_text = plt.text(80, -0.4, text_titel_hsa, bbox=dict(facecolor='none', edgecolor='silver'))
             plt.xlabel("time (h)")
             plt.ylabel(y_axis_name)
             plt.ylim(y_axis_min, y_axis_max)
             sub = plt.suptitle(self.plot_titel, fontsize=12)
             plt.title(titel_page, fontsize=8, fontweight='bold')
             title_leg = self.get_leg_title(grup[0])
-            # title_leg = grup[0].cell_name + "  " + self.std_type
             lgd = plt.legend(title=title_leg, loc='center left', bbox_to_anchor=(1, 0.5))  # , borderaxespad=0)
             ax.spines['top'].set_visible(False)
             ax.spines['right'].set_visible(False)
@@ -292,10 +277,9 @@ class Overtime:
         y_axis_min, y_axis_max = self.set_y_axis_limt(info2, np.max(self.data_plot), np.min(self.data_plot))
         fig = plt.figure(figsize=(8, 8), dpi=80)
         ax = plt.axes()
-        # label_titel = "Cell lines: " + grup.cell_name
 
-        label_b = str(self.controldata[3])  # + "_" + self.control_info[-2]
-        # titel_page = str(label_titel)
+        label_b = str(self.controldata[3])
+
 
         plt.plot(self.elapse, self.data_plot[self.controldata[-1]], label=label_b, color="black")
         if len(self.std_plot[0].shape) == 2:
@@ -305,8 +289,6 @@ class Overtime:
                              self.controlstd[1], alpha=0.5, edgecolor='black', facecolor='silver')
 
         else:
-            # plt.fill_between(self.elapse, self.controldata - self.controlstd,
-            #                  self.controldata + self.controlstd, alpha=0.5, edgecolor='black', facecolor='silver')
             leg_titel = grup.cell_name + " " + grup.seeding.replace("per", "/") + "\n" + \
                         self.std_type
             plt.fill_between(self.elapse, self.data_plot[self.controldata[-1]] - self.std_plot[self.controldata[-1]],
@@ -325,19 +307,10 @@ class Overtime:
                 plt.fill_between(self.elapse, self.std_plot[post1][0],
                                  self.std_plot[post1][1],
                                  alpha=0.5, edgecolor=self.colormap[i], facecolor='silver')
-                # if info3 == 0:
-                #     text_titel_bi = ["perturbagem effect (confluency):\n"]
-                #     te = self.get_perturbagem_text(text_titel_bi, self.data_plot[post1], timeselected, timeposition)
-                #     tr = plt.text(self.elapse[-1], 5, te, bbox=dict(facecolor='none', edgecolor='silver'))
             else:
                 plt.fill_between(self.elapse, self.data_plot[post1] - self.std_plot[post1],
                                  self.data_plot[post1] + self.std_plot[post1],
                                  alpha=0.5, edgecolor=self.colormap[i], facecolor='silver')
-                # if info3 == 0:
-                #     # text_titel_bi = ["condition effect " + self.readout + self.readout_units + "\n"]
-                #     # te = self.get_perturbagem_text(text_titel_bi, self.data_plot[post1], timeselected, timeposition)
-                #     # tr = plt.text(self.elapse[-1], y_axis_min + 5, te, bbox=dict(facecolor='none', edgecolor='silver'))
-                #     leg = ()
                 if info3 != 0:
                     text_titel_bi = [y_axis_name + "\n"]
                     te = self.get_perturbagem_text(text_titel_bi, self.data_plot[post1], timeselected, timeposition)
@@ -348,8 +321,7 @@ class Overtime:
         plt.ylabel(y_axis_name)
         plt.ylim(y_axis_min, y_axis_max)
         sub = plt.suptitle(self.plot_titel, fontsize=12)
-        # plt.title(titel_page, fontsize=8,
-        #           fontweight='bold')
+
 
         lgd = plt.legend(title=leg_titel, loc='center left', bbox_to_anchor=(1, 0.5))
         ax.spines['top'].set_visible(False)
@@ -422,16 +394,13 @@ class Overtime:
                                                                            std_sel, data_grup, std_data_grup,
                                                                            y_axis_name, y_axis_max, y_axis_min, counter,
                                                                            timeposition, info1)
-                    plt.savefig('C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/'
-                                'Carol personal Lab/In silico lab/Drugging_script/paperfigures/HTSplotter_2/' +
-                                compound_info + '.pdf')
                     self.pdf_pages.savefig(fig, bbox_inches='tight')
                     del fig
 
     def barplot_1row(self, grup, cols, comb_name_per_group, predicted_per_group, bi_score_per_group,
                      tim, cont, group, combination_counter, axs, data_sel, std_sel, data_grup,
                      std_data_grup, y_axis_name, y_axis_max, y_axis_min, counter, timeposition, info1):
-        # self.adjust_combinationvalues(data_grup)
+
         for col in range(cols):
             if cont >= len(grup[0].concentration):
                 axs[col].axis('off')
@@ -538,9 +507,8 @@ class Overtime:
                         leg = [te, label_a]
                     else:
                         leg = [label_a]
-                    #color = iter(cm.tab20b(np.linspace(0, 1, len(fr))))
+
                     for j in range(len(fr)):
-                        #c = next(color)
                         label_tem = str(grup[j].name) + " " + \
                                     str(grup[j].concentration[counter_old[j]][:-1][0]) + " " + str(grup[j].unidade)
                         leg.append(label_tem)
@@ -575,7 +543,7 @@ class Overtime:
         self.readout_units = readout_units
         y_axis_name = self.set_y_axis_name(info1)
         y_axis_min, y_axis_max = self.set_y_axis_limt(info2, np.max(data_grup), np.min(data_grup))
-        # self.adjust_combinationvalues(data_grup)
+
 
         counter = None
 
@@ -624,9 +592,7 @@ class Overtime:
         self.readout_units = readout_units
         y_axis_name = self.set_y_axis_name(info1)
         y_axis_min, y_axis_max = self.set_y_axis_limt(info2, np.max(data_grup), np.min(data_grup))
-        # self.adjust_combinationvalues(data_grup)
 
-        # for tim in range(len(timeselected)):
         combination_counter = 0
         counter = None
 
@@ -639,7 +605,6 @@ class Overtime:
         cont = 0
         col = ColorsHtsplots(len(grup[0].concentration))
         self.colormap = col.map
-        # color = iter(cm.Set2(np.linspace(0, 2, len(grup) * 5)))
 
         fr = []
 
@@ -654,8 +619,6 @@ class Overtime:
             te = 'effect = ' + (str("{:.2f}".format(data_grup[int(grup[j].concentration[0][-1])][0]))) + \
                  "_" + grup[j].name
 
-            # data.append(data_grup[grup[i].concentration[0][-1][0]])
-            # std.append(data_grup[grup[i].concentration[0][-1][0]])
             axs.bar(x_barplot[j], data_grup[int(grup[j].concentration[0][-1])][0],
                     yerr=std_data_grup[int(grup[j].concentration[0][-1])][0], color=self.colormap[j])
 
@@ -670,8 +633,6 @@ class Overtime:
         axs.legend(leg, ncol=4, title=title_leg, fontsize=16, loc=2, frameon=False,
                    title_fontsize=16)
 
-        # self.barplot_geneticperturbagen(grup, branch, tim, cont, data_grup,
-        #                                 std_data_grup, y_axis_name, y_axis_max, counter, timeposition)
         self.pdf_pages.savefig(fig, bbox_inches='tight')
         del fig
 
@@ -775,20 +736,14 @@ class Overtime:
             ax.set_yticklabels(name_y, fontsize=15)
 
             heatplot = ax.imshow(tem, vmin=-1, vmax=1, cmap='RdBu')
-            # for ynum in range(len(name_x)):
-            #     for xnum in range(len(name_y)):
-            #         text = ax.text(ynum, xnum, np.round(tem[xnum, ynum], 2),
-            #                        ha="center", va="center", color="black")
 
             plt.setp(ax.get_xticklabels(), rotation=45, ha="right", rotation_mode="anchor")
 
             cbar = fig.colorbar(heatplot, ticks=[-1, 0.5, 0, -0.5, 1], fraction=0.15, pad=0.05, shrink=0.5, aspect=20)
-            # cbar = fig.colorbar(heatplot, ticks=[-1, 0, 1], fraction=0.15, pad=0.05, shrink=0.5, aspect=20)
 
             cbar.ax.tick_params(labelsize=18)
             cbar.set_label(string_completa_a, labelpad=100, rotation=-90, fontsize=20)
             fig.tight_layout()
-            # plt.show()
             ax.set_title(title, fontsize=20)
             if len(grup[1].concentration[:, 0]) != 1 and len(grup[2].concentration[:, 0]) != 1:
 
@@ -869,8 +824,6 @@ class Overtime:
                 fig.subplots_adjust(top=0.88)
 
             self.pdf_pages.savefig(fig)
-            # plt.savefig('C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/'
-            #             'Carol personal Lab/In silico lab/Drugging_script/paperfigures/HTSplotter_2/' + title + '.pdf')
             del fig
 
     def get_temp_bi_score(self, grup, ti_posit, bi_score_per_group):
@@ -1069,7 +1022,6 @@ class Overtime:
             c = next(color)
             label_b = str(grup[j].name)   # control
             post_b = int(grup[j].concentration[0][-1])
-            print(post_b)
             plt.plot(self.elapse, mediumdata[post_b], label=label_b, color=c)
             if len(mediumstd[post_b]) == 2:
                 plt.fill_between(self.elapse, mediumstd[post_b][0],

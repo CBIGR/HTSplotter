@@ -119,7 +119,7 @@ class Hdf5database:
                 if len(self.std_ini) != 0:
                     a.create_dataset('std', data=self.std_ini[:, i[-1][0]])
                 if len(self.std_ini) == 0:
-                    a.create_dataset('std', data=np.zeros(self.data_ini[:, i[-1][0]].shape))  # np.zeros(len(tem_list[k]))
+                    a.create_dataset('std', data=np.zeros(self.data_ini[:, i[-1][0]].shape))
                 if "Control" in a.name and "Condition" in a.name:
                     new = a.name.split("/")
                     compound = new[-2].split("_")
@@ -173,70 +173,6 @@ class Hdf5database:
             self.hdfnorm.get_normalizeseveralcontrol(self.file, level, 0, k, self.celline, self.seeding,
                                                      self.condition, self.controlpath, self.controlpathdata,
                                                      self.medium, self.mediumword)
-            # level += 1
-            # cellpath = self.file[k]
-            # self.celline.append(k)
-            # seeding = list(cellpath.keys())
-            # for j in seeding:
-            #     self.seeding.append(j)
-            #     level += 1
-            #     seedingpath = cellpath[j]
-            #     condition = list(seedingpath.keys())
-            #     self.condition.append(condition)
-            #     for g in condition:
-            #         level += 1
-            #         conditionpath = seedingpath[g]
-            #         compound = list(conditionpath.keys())
-            #         for c in compound:
-            #             compoundpath = conditionpath[c]
-            #             for i in range(len(self.controlpath)):
-            #                 if compoundpath.name == self.controlpath[i]:
-            #                     dosage = list(compoundpath.keys())
-            #                     for d in dosage:
-            #                         grup = compoundpath[d]
-            #                         controlname = self.controlpath[i].split("/")
-            #                         self.hdf5normalization(grup, controlname[-1], self.controlpathdata[i])
-            #                 elif "Condition" not in compoundpath.name:
-            #                     splitpath = self.controlpath[i].split("/")
-            #                     pathmain = "/".join(splitpath[:-2])
-            #                     pathcontrolcompound = splitpath[-1]
-            #                     if pathmain in compoundpath.name and pathcontrolcompound in compoundpath.name:
-            #                         dosage = list(compoundpath.keys())
-            #                         for d in dosage:
-            #                             grup = compoundpath[d]
-            #                             controlname = self.controlpath[i].split("/")
-            #                             self.hdf5normalization(grup, controlname[-1], self.controlpathdata[i])
-            #                     elif self.mediumword in c:
-            #                         singledosage = list(compoundpath.keys())
-            #                         grup = compoundpath[singledosage[0]]
-            #                         new4 = self.controlpath[i].split("/")
-            #                         new3 = "/".join(new4[:-2])
-            #                         if new3 in conditionpath.name:
-            #                             self.hdf5normalization(grup, new4[-1], self.controlpathdata[i])
-            #                 if c in self.medium:
-            #                     singledosage = list(compoundpath.keys())
-            #                     grup = compoundpath[singledosage[0]]
-            #                     new = self.controlpath[i].split("/")
-            #                     new2 = "/".join(new[:-1])
-            #                     if new2 in conditionpath.name:
-            #                         self.hdf5normalization(grup, new[-1], self.controlpathdata[i])
-            #                 if "Control" in c:
-            #                     singledosage = list(compoundpath.keys())
-            #                     grup = compoundpath[singledosage[0]]
-            #                     new = compoundpath.name.split("/")
-            #                     new2 = new[-1].split("_")
-            #                     if len(new2) > 3:
-            #                         new3 = "_".join(new2[-2:])
-            #                         new4 = "/".join(new[:-1])
-            #                         complete = new4+"/"+new3
-            #                         if complete == self.controlpath[i]:
-            #                             self.hdf5normalization(grup, new[-1], self.controlpathdata[i])
-            #                     else:
-            #                         new3 = "_".join(new2[-1:])
-            #                         new4 = "/".join(new[:-1])
-            #                         complete = new4 + "/" + new3
-            #                         if complete == self.controlpath[i]:
-            #                             self.hdf5normalization(grup, new[-1], self.controlpathdata[i])
 
     def normalizeonecontrol(self):
         cell = list(self.file.keys())
@@ -246,54 +182,6 @@ class Hdf5database:
             self.hdfnorm.get_normalizeonecontrol(self.file, 0, k, self.celline, self.seeding,
                                                  self.condition, self.conditionpath, self.controlpath,
                                                  self.controlpathdata, self.medium, self.mediumword)
-
-    # def get_fieldsonecontrol(self, f, level):
-    #     if level > 0:
-    #         try:
-    #             keys = list(f.keys())
-    #             for key in keys:
-    #                 grp1 = f[key]
-    #                 self.get_fieldsonecontrol(grp1, level-1)
-    #         except AttributeError:
-    #             pass
-    #     else:
-    #         makefields = f.name.split("/")
-    #         listtemp = makefields[1:]
-    #         if len(listtemp) >= 5:
-    #             self.get_data(f, listtemp)
-    #             if "Control" in f.name:
-    #                 self.control.append(listtemp)
-
-    # def get_data(self, f, listtemp):
-    #     listtemp.append(len(self.fields))
-    #     self.fields.append(listtemp)
-    #     processeddata = list(f.keys())
-    #     for k in processeddata:
-    #         self.save_list(f, k, self.data, self.inhibited, self.normalized_perc, self.normalized,
-    #                        self.std_inh, self.std, self.normalizedtranslation)
-
-    # def get_fieldsseveralcontrol(self, f, level):
-    #     if level > 0:
-    #         try:
-    #             keys = list(f.keys())
-    #             for key in keys:
-    #                 grp1 = f[key]
-    #                 self.get_fieldsseveralcontrol(grp1, level-1)
-    #         except AttributeError:
-    #             pass
-    #     else:
-    #         makefields = f.name.split("/")
-    #         listtemp = makefields[1:]
-    #         if self.mediumword not in f.name:
-    #             if len(listtemp) >= 5:
-    #                 self.get_data(f, listtemp)
-    #         else:
-    #             if len(listtemp) >= 5:
-    #                 processeddata = list(f.keys())
-    #                 for k in processeddata:
-    #                     self.save_list(f, k, self.datamedium, self.inhibitedmedium, self.normalized_percmedium,
-    #                                    self.normalizedmedium, self.std_inhmedium, self.stdmedium,
-    #                                    self.normalizedtranslationmedium)
 
     def get_medium_control(self, f, level):
         if level > 0:
@@ -356,12 +244,9 @@ class Compoundscreenonecontrol(Hdf5database):
         self.structure_data()
         if len(self.header[0][-1]) == 1 and len(self.std_ini) == 0:
             self.std_info = ["No STD"]
-            print("NO STD!!!")
         elif len(self.header[0][-1]) > 1:
             self.std_info = ["STD computed by HTSplotter"]
             self.comput_comb_average_std(self.file, 3)
-            print("compute average and std!!!")
-
         self.normalizeonecontrol()
         self.hdfnorm.get_fieldsonecontrolmain(self.file, self.control_stru_level, 0, self.fields,
                                               self.control, self.data,
@@ -370,7 +255,7 @@ class Compoundscreenonecontrol(Hdf5database):
                                               self.datamedium, self.inhibitedmedium, self.normalized_percmedium,
                                               self.normalizedmedium, self.std_inhmedium, self.stdmedium,
                                               self.confinterval, self.normalizedtranslationmedium)
-        # self.get_fieldsonecontrol(self.file, self.control_stru_level)
+
         self.get_compoundalone(self.file, 3)
 
         self.close_file()
@@ -386,13 +271,13 @@ class Compoundcombination(Hdf5database):
         self.structure_data()
         if len(self.header[0][-1]) == 1 and len(self.std_ini) == 0:
             self.std_info = ["No STD"]
-            print("NO STD!!!")
+
         elif len(self.header[0][-1]) > 1:
             self.std_info = ["STD computed by HTSplotter"]
             self.comput_comb_average_std(self.file, 3)
-            print("compute average and std!!!")
+
         self.normalizeonecontrol()
-        # self.get_fieldsonecontrol(self.file, self.control_stru_level)
+
         self.hdfnorm.get_fieldsonecontrolmain(self.file, self.control_stru_level, 0, self.fields,
                                               self.control, self.data,
                                               self.inhibited, self.normalized_perc, self.normalized,
@@ -414,11 +299,11 @@ class Compoundscreen(Hdf5database):
         self.structure_data()
         if len(self.header[0][-1]) == 1 and len(self.std_ini) == 0:
             self.std_info = ["No STD"]
-            print("NO STD!!!")
+
         elif len(self.header[0][-1]) > 1:
             self.std_info = ["STD computed by HTSplotter"]
             self.comput_comb_average_std(self.file, 3)
-            print("compute average and std!!!")
+
         self.normalizeseveralcontrol()
         self.hdfnorm.get_fieldsseveralcontrolmain(self.file, self.control_stru_level, 0, self.fields, self.data,
                                                   self.inhibited,
@@ -451,11 +336,11 @@ class Geneticperturbagem(Hdf5database):
 
         if len(self.header[0][-1]) == 1 and len(self.std_ini) == 0:
             self.std_info = ["No STD"]
-            print("NO STD!!!")
+
         elif len(self.header[0][-1]) > 1:
             self.std_info = ["STD computed by HTSplotter"]
             self.comput_comb_average_std(self.file, 3)
-            print("compute average and std!!!")
+
 
         self.normalizeonecontrol()
         self.hdfnorm.get_fieldsonecontrolmain(self.file, self.control_stru_level, 0, self.fields,
@@ -465,7 +350,7 @@ class Geneticperturbagem(Hdf5database):
                                               self.datamedium, self.inhibitedmedium, self.normalized_percmedium,
                                               self.normalizedmedium, self.std_inhmedium, self.stdmedium,
                                               self.confinterval, self.normalizedtranslationmedium)
-        # self.get_fieldsonecontrol(self.file, self.control_stru_level)
+
         self.get_compoundalone(self.file, 3)
 
         self.close_file()
@@ -491,7 +376,6 @@ class Geneticperturbagem(Hdf5database):
                     for k in j[-1]:
                         existpath2.create_dataset('data_' + str(k), data=self.data_ini[:, k])
             controlmainpath = self.file.create_group("/" + "/".join(j[:-3]) + "/Control" + "/" + self.controlnamenew)
-            # self.controlpath = ["/" + "/".join(j[:-3]) + "/Control"]
             for i in self.controlnamenewdata:
                 for h in i:
                     controlmainpath.create_dataset('data_' + str(h), data=self.data_ini[:, h])
@@ -513,11 +397,11 @@ class Geneticchemicalperturbagem(Hdf5database):
         self.structure_data()
         if len(self.header[0][-1]) == 1 and len(self.std_ini) == 0:
             self.std_info = ["No STD"]
-            print("NO STD!!!")
+
         elif len(self.header[0][-1]) > 1:
             self.std_info = ["STD computed by HTSplotter"]
             self.comput_comb_average_std(self.file, 3)
-            print("compute average and std!!!")
+
 
         self.normalizeseveralcontrol()
 

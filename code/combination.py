@@ -81,7 +81,7 @@ class ExperimentCombination:
         self.make_empty_list(self.possible_comb)
         self.make_empty_list_single()
         self.get_headers_single()
-        self.get_headers_comb()  # will get the list with possible combination
+        self.get_headers_comb()  # gets the list with possible combination
 
         self.comb_name_per_group = [[] for i in range(0, len(self.com_list_group))]
         self.bi_score_per_group = [[] for i in range(0, len(self.com_list_group))]
@@ -350,7 +350,5 @@ class ExperimentCombination:
                                                                 self.time_selected, self.time_position, self.readout,
                                                                 self.readout_units)
 
-                # if self.comb_matrix[i][k][-1] == self.comb_matrix[i][k][-2] and len(grup_orig) == 3 and \
-                #         len(grup_orig[1].concentration) > 2 and len(grup_orig[-1].concentration) > 2:
                 self.plotting.heat_map_selec_time_bi_biDim(grup_orig, self.time_selected, self.time_position,
                                                            self.bi_score_per_group[i][k])

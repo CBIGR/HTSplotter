@@ -1,7 +1,6 @@
 import numpy as np
 
 import os
-from grupping import Groupping
 from grupping import Groupping, Data_group, Grouppingmedium
 import matplotlib.pyplot as plt
 from doseresponse import DoseResponseSingle, DoseResponseCondition
@@ -103,7 +102,7 @@ class ExperimentGeneticPerturbagem:
         self.pdf_path = pdfpathname
         self.pdf_pages = PdfPages(self.pdf_path)
         self.plotting = Overtime(self.pdf_pages, self.experiment_name, self.elapse, self.stdinfo)
-        print(self.pdf_path)
+
 
     def close_pdf(self):
         self.pdf_pages.close()
@@ -136,13 +135,5 @@ class ExperimentGeneticPerturbagem:
             self.plotting.barplot_geneticperturbgen_recursive(grup, self.data_plot, self.std_plot, info1, info2,
                                                               self.time_selected, self.time_position, self.readout,
                                                               self.readout_units)
-            # for j in range(len(self.compound_alone[i])):
-            #     self.control_info = self.control[i]
-            #     grup = [Groupping(c, self.compound_alone[i][j], self.celine[i], self.seeding[i],
-            #                       self.condition[i]) for c in self.comalone_list_group[i][j]]
-            #     print(grup[0].name)
-            #     if info3 == 1:
-            #         self.plotting.heat_map_perturbation(grup[0], self.data_plot, self.perturbagem[i], self.control_info)
-
 
 

@@ -43,10 +43,7 @@ class Savetxt:
 
     def get_txt_path(self):
 
-        # f = open(self.file_path, 'w')
         np.savetxt(self.file_path, self.complete, delimiter='\t', fmt="%s")
-
-        # f.close()
 
     def get_header_format(self):
         head1 = []
@@ -56,12 +53,7 @@ class Savetxt:
         head5 = []
         head6 = []
         if self.datatype == 1:
-            # head1 = [[] for i in range(0, 2)]
-            # head2 = [[] for i in range(0, 2)]
-            # head3 = [[] for i in range(0, 2)]
-            # head4 = [[] for i in range(0, 2)]
-            # head5 = [[] for i in range(0, 2)]
-            # head6 = [[] for i in range(0, 2)]
+
             for j in self.header:
                 head1.append(j[0])
                 head1.append(j[0])

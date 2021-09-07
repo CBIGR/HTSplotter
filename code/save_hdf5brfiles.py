@@ -27,7 +27,6 @@ class BRHdf5database:
         self.experiment_name = file_name
         self.individual_file_name = file_name
         self.count_br = count
-        # self.file_path = os.path.join(folder, self.experiment_name)
         self.header = header
         self.branch = branch
         self.elapse = np.asarray(elapse)
@@ -40,9 +39,6 @@ class BRHdf5database:
         self.f = None
         self.main_grup = None
 
-        # self.control_information = []
-        # self.compound_information = []
-        # self.control_name = None  # control name for Combination
         self.control_stru_level = 3
         self.experiment_type = experiment_type
 
@@ -236,7 +232,7 @@ class BRHdf5database:
         subpath = "/".join(name_path_split[2:])
         name2 = name.split(" ")
         add = "_BR"
-        path1 = "/" + add + "/" + subpath  # name2[0] + "_" +
+        path1 = "/" + add + "/" + subpath
         path.append(path1)
 
         return path
@@ -320,71 +316,6 @@ class BRHdf5database:
                     self.hdfnorm.get_normalizeseveralcontrol(self.f, level, exp, k, self.celline, self.seeding,
                                                              self.condition, self.controlpath, self.controlpathdata,
                                                              self.medium, self.mediumword)
-                    # level += 1
-                    # cellpath = self.f[exp][k]
-                    # self.celline.append(k)
-                    # seeding = list(cellpath.keys())
-                    # for j in seeding:
-                    #     self.seeding.append(j)
-                    #     level += 1
-                    #     seedingpath = cellpath[j]
-                    #     condition = list(seedingpath.keys())
-                    #     self.condition.append(condition)
-                    #     for g in condition:
-                    #         level += 1
-                    #         conditionpath = seedingpath[g]
-                    #         compound = list(conditionpath.keys())
-                    #         for c in compound:
-                    #             compoundpath = conditionpath[c]
-                    #             for i in range(len(self.controlpath)):
-                    #                 if compoundpath.name == self.controlpath[i]:
-                    #                     dosage = list(compoundpath.keys())
-                    #                     for d in dosage:
-                    #                         grup = compoundpath[d]
-                    #                         controlname = self.controlpath[i].split("/")
-                    #                         self.hdf5normalization(grup, controlname[-1], self.controlpathdata[i])
-                    #                 elif "Condition" not in compoundpath.name:
-                    #                     splitpath = self.controlpath[i].split("/")
-                    #                     pathmain = "/".join(splitpath[:-2])
-                    #                     pathcontrolcompound = splitpath[-1]
-                    #                     if pathmain in compoundpath.name and pathcontrolcompound in compoundpath.name:
-                    #                         dosage = list(compoundpath.keys())
-                    #                         for d in dosage:
-                    #                             grup = compoundpath[d]
-                    #                             controlname = self.controlpath[i].split("/")
-                    #                             self.hdf5normalization(grup, controlname[-1], self.controlpathdata[i])
-                    #                     elif self.mediumword in c:
-                    #                         singledosage = list(compoundpath.keys())
-                    #                         grup = compoundpath[singledosage[0]]
-                    #                         new4 = self.controlpath[i].split("/")
-                    #                         new3 = "/".join(new4[:-2])
-                    #                         if new3 in conditionpath.name:
-                    #                             self.hdf5normalization(grup, new4[-1], self.controlpathdata[i])
-                    #                 if c in self.medium:
-                    #                     singledosage = list(compoundpath.keys())
-                    #                     grup = compoundpath[singledosage[0]]
-                    #                     new = self.controlpath[i].split("/")
-                    #                     new2 = "/".join(new[:-1])
-                    #                     if new2 in conditionpath.name:
-                    #                         self.hdf5normalization(grup, new[-1], self.controlpathdata[i])
-                    #                 if "Control" in c:
-                    #                     singledosage = list(compoundpath.keys())
-                    #                     grup = compoundpath[singledosage[0]]
-                    #                     new = compoundpath.name.split("/")
-                    #                     new2 = new[-1].split("_")
-                    #                     if len(new2) > 3:
-                    #                         new3 = "_".join(new2[-2:])
-                    #                         new4 = "/".join(new[:-1])
-                    #                         complete = new4 + "/" + new3
-                    #                         if complete == self.controlpath[i]:
-                    #                             self.hdf5normalization(grup, new[-1], self.controlpathdata[i])
-                    #                     else:
-                    #                         new3 = "_".join(new2[-1:])
-                    #                         new4 = "/".join(new[:-1])
-                    #                         complete = new4 + "/" + new3
-                    #                         if complete == self.controlpath[i]:
-                    #                             self.hdf5normalization(grup, new[-1], self.controlpathdata[i])
-
     def normalizeonecontrol(self):
         experiments = list(self.f.keys())
         self.hdfnorm = Hdf5functions()
@@ -398,28 +329,6 @@ class BRHdf5database:
                     self.hdfnorm.get_normalizeonecontrol(self.f, exp, k, self.celline, self.seeding,
                                                          self.condition, self.conditionpath, self.controlpath,
                                                          self.controlpathdata, self.medium, self.mediumword)
-                    # cellpath = self.f[exp][k]
-                    # seeding = list(cellpath.keys())
-                    # self.celline.append(k)
-                    # for j in seeding:
-                    #     seedingpath = cellpath[j]
-                    #     condition = list(seedingpath.keys())
-                    #     self.seeding.append(j)
-                    #     for g in condition:
-                    #         conditionpath = seedingpath[g]
-                    #         compound = list(conditionpath.keys())
-                    #         self.condition.append(g)
-                    #         self.conditionpath.append(conditionpath.name)
-                    #         for c in compound:
-                    #             compoundpath = conditionpath[c]
-                    #             dosage = list(compoundpath.keys())
-                    #             for i in range(len(self.controlpath)):
-                    #                 for d in dosage:
-                    #                     grup = compoundpath[d]
-                    #                     controlname = self.controlpath[i].split("/")
-                    #                     controlmainpath = "/".join(controlname[:-1])
-                    #                     if controlmainpath == conditionpath.name:
-                    #                         self.hdf5normalization(grup, controlname[-1], self.controlpathdata[i])
 
     def get_combination(self, f, level):
         self.hdfnorm = Hdf5functions()
@@ -447,65 +356,6 @@ class BRHdf5database:
         else:
             self.hdfnorm.medium_control(f, 1, self.mediumword, self.control, self.compoundalone,
                                         self.fieldsmedium, self.fieldsmediuminhibited)
-            # compound = list(f.keys())
-            # alone = []
-            # mediumne = []
-            # inhmedium = []
-            # control = []
-            # correcpositi = 0
-            # correcpositiinhib = 0
-            # if len(self.fieldsmedium) > 0:
-            #     posit = self.fieldsmedium[-1][-1][-1]
-            #     correcpositi = 1
-            # if len(self.fieldsmediuminhibited) > 0:
-            #     positinh = self.fieldsmediuminhibited[-1][-1][-1]
-            #     correcpositiinhib = 1
-            # # if f.name
-            # for i in compound:
-            #     if "Control" in i and "Condition" in f.name:
-            #         cont = f[i]
-            #         k = list(cont.keys())
-            #         cont2 = cont[k[0]]
-            #         control.append(cont2.name.split("/")[2:])
-            #     elif self.mediumword in i and '_BR' in f.name:
-            #         medium = f[i]
-            #         k = list(medium.keys())
-            #         a = medium[k[0]]
-            #         cond = list(a.keys())
-            #         makefields = a.name.split("/")
-            #         listtemp = makefields[2:]
-            #         temmed = []
-            #         teminh = []
-            #         for c in cond:
-            #             lista2 = listtemp.copy()
-            #             lista3 = listtemp.copy()
-            #             if "_" in c and 'inhibited' in c:
-            #                 lista3[3] += "_" + c.split("_")[-1]
-            #                 if lista3[3] not in teminh:
-            #                     if correcpositiinhib == 1:
-            #                         posit += 1
-            #                         lista3.append(positinh)
-            #                     else:
-            #                         lista3.append(len(inhmedium))
-            #                     teminh.append(lista3[3])
-            #                     inhmedium.append(lista3)
-            #             if lista2[3] not in temmed:
-            #                 temmed.append(lista2[3])
-            #                 if correcpositi == 1:
-            #                     posit += 1
-            #                     lista2.append(posit)
-            #                 else:
-            #                     lista2.append(len(mediumne))
-            #                 mediumne.append(lista2)
-            #     elif i not in alone:
-            #         alone.append(i)
-            # if len(control) != 0:
-            #     self.control.append(control)
-            # self.compoundalone.append(alone)
-            # if len(mediumne) > 0:
-            #     self.fieldsmedium.append(mediumne)
-            # if len(inhmedium) > 0:
-            #     self.fieldsmediuminhibited.append(inhmedium)
 
     def get_compoundalone(self, f, level):
         if level > 0:
@@ -664,7 +514,6 @@ class BRcompoundscreenseveralcontrol(BRHdf5database):
         super().__init__(count, file_name_br, experiment_type, branch, file_name,
                          header, elapse, date_info, date, data, std, medium)
 
-        # self.control_name = []
         self.std_info = ["STD_BR"]
         self.control_data_single = None
 
@@ -689,7 +538,6 @@ class BRcompoundscreenonecontrol(BRHdf5database):
         super().__init__(count, file_name_br, experiment_type, branch, file_name,
                          header, elapse, date_info, date, data, std, medium)
 
-        # self.control_name = []
         self.std_info = ["STD_BR"]
         self.control_data_single = None
 
@@ -719,7 +567,6 @@ class BRcombinationstructure(BRHdf5database):
         self.celline = []
         self.seeding = []
         self.condition = []
-        # self.control_name = []
         self.std_info = ["STD_BR"]
         self.control_data_single = None
 
@@ -736,7 +583,6 @@ class BRcombinationstructure(BRHdf5database):
                                               self.normalized_percmedium, self.normalizedmedium, self.std_inhmedium,
                                               self.stdmedium, self.confinterval, self.normalizedtranslationmedium)
         self.get_combination(self.brpath, 3)
-        # self.get_medium_control(self.file, 3)
 
         self.close_file()
 
@@ -751,7 +597,6 @@ class BRgeneticchemicalperturbagem(BRHdf5database):
         self.seeding = []
         self.branch = []
         self.condition = []
-        # self.control_name = []
         self.std_info = ["STD_BR"]
         self.control_data_single = None
 
@@ -783,7 +628,6 @@ class BRgeneticperturbagem(BRHdf5database):
         self.celline = []
         self.seeding = []
         self.condition = []
-        # self.control_name = []
         self.std_info = ["STD_BR"]
         # this is the only experimental condition that accepts more than 1 control
         self.open_file()
@@ -797,7 +641,6 @@ class BRgeneticperturbagem(BRHdf5database):
                                               self.normalizedtranslation, self.datamedium, self.inhibitedmedium,
                                               self.normalized_percmedium, self.normalizedmedium, self.std_inhmedium,
                                               self.stdmedium, self.confinterval, self.normalizedtranslationmedium)
-        # self.get_fieldsonecontrol(self.brpath, 5)
         self.get_compoundalone(self.brpath, 3)
 
         self.close_file()
