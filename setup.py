@@ -23,7 +23,7 @@ setup(
                     'numpy',
                     'Pillow',
                     'psutil',
-                    'pyparsing'
+                    'pyparsing',
                     'pyPdf',
                     'PyPDF2',
                     'PyPDF3',
