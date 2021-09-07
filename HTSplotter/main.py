@@ -15,7 +15,7 @@ from HTSplotter.save_hdf5file import Compoundscreenonecontrol, Compoundscreen, \
 from HTSplotter.save_hdf5brfiles import BRHdf5database, Individualcombinationstructure, BRcompoundscreenseveralcontrol, \
     BRcombinationstructure, BRcompoundscreenonecontrol, BRgeneticperturbagem, BRgeneticchemicalperturbagem, \
     Individualgeneticperturbagen
-from plotting import Overtime
+from HTSplotter.plotting import Overtime
 from HTSplotter.combination import ExperimentCombination
 from HTSplotter.geneticperturbagem import ExperimentGeneticPerturbagem
 from HTSplotter.compoundscreen import SingleCompound, SingleCompoundonecontrol
