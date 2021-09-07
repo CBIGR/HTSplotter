@@ -27,7 +27,7 @@ setup(
                     'pyPdf',
                     'PyPDF2',
                     'PyPDF3',
-                    'python-dateutil'
+                    'python-dateutil',
                     'pytz',
                     'scipy',
                     'seaborn',
