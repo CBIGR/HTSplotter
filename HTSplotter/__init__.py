@@ -1,1 +1,1 @@
-from main import HTSplotter
+from HTSplotter.main import HTSplotter
