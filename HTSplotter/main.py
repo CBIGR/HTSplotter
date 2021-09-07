@@ -712,7 +712,7 @@ if __name__ == '__main__':
 
     htsplotter = HTSplotter()
 
-    htsplotter.main_folder = "/GitHub_HTSplotter/HTSplotter/" \
+    htsplotter.main_folder = "HTSplotter/"\
                              "experiment_type/drug_combination/"# add your folder path e.g. GitHub path
 
     htsplotter.input_path = htsplotter.main_folder + "inputfile/"# + input path folder
