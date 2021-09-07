@@ -10,7 +10,7 @@ setup(
   author = 'CarolinadCNunes',                   # Type in your name
   author_email = 'carolina.decarvalhonunes@ugent.be',      # Type in your E-Mail
   url = 'https://github.com/CBIGR/HTSplotter',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/CBIGR/HTSplotter/archive/refs/tags/HTSplotter_01.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/CBIGR/HTSplotter/archive/refs/tags/HTSplotter_v0.2.tar.gz',    # I explain this later on
   keywords = ['High-throughput screening', 'drug combination',
               'genetic-chemical perturbation', 'dose-response'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
