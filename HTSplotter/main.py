@@ -108,8 +108,62 @@ class HTSplotter:
         else:
             raise AttributeError
 
-    def read_input_file(self, input_file):
-        pass
+    def execute_from_file(self, input_file):
+
+        ifile = open(input_file, 'r')
+        ifile.seek(0, 2)
+        eof = ifile.tell()
+        ifile.seek(0, 0)
+
+        while ifile.tell() < eof:
+
+            self.files_list = []
+            counter = 0
+            for line in ifile:
+                if counter == 0:
+                    self.main_folder = line.split()[0]
+                elif counter == 1:
+                    aux = line.split()
+                    if aux[0] == 'main_folder':
+                        self.input_path = self.main_folder + aux[2]
+                    else:
+                        self.input_path = aux[0]
+                elif counter == 2:
+                    aux = line.split()
+                    if aux[0] == 'main_folder':
+                        self.information_extracted = self.main_folder + aux[2]
+                    else:
+                        self.information_extracted = aux[0]
+                elif counter == 3:
+                    aux = line.split()
+                    if aux[0] == 'main_folder':
+                        self.results_path = self.main_folder + aux[2]
+                    else:
+                        self.results_path = aux[0]
+                elif counter == 4:
+                    self.biological_replicate = int(line.split()[0])
+                elif counter == 5:
+                    self.userinput = int(line.split()[0])
+                elif counter == 6:
+                    self.information_readout = line.split()[0]
+                elif counter == 7:
+                    self.readout_units = line.split()[0]
+                elif counter == 8:
+                    self.expected_effect = int(line.split()[0])
+                elif counter == 9:
+                    self.file_name_br = line.split()[0]
+                else:
+                    aux = line.split()
+                    if aux[0] != 'end':
+                        self.files_list.append(line.split()[0])
+                    else:
+                        break
+
+                counter += 1
+
+            ifile.readline()
+
+            self.execute()
 
     def execute(self):
 
