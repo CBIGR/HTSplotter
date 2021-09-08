@@ -64,7 +64,7 @@ htsplotter.execute()
 
 #### preper input_file
 HTSplotter allows an input file, as txt, with all atributes and files. In this way, all files to be analysed with the same atributes can be grouped in one block
-
+chekc [input file](input_file.txt) example
 ```
 import HTSplotter as HTSP
 
