@@ -5,7 +5,7 @@ HTSplotter is tailored to analyse drug, drug combination, genetic perturbagen an
 These experiments can be conducted either in real-time or as with endpoint readout. HTSplotter identifies the type of experimental setup through a conditional statement algorithm. It then performs a normalization and, in case of a drug screen, drug combination or genetic-chemical perturbagen experiment, identifies the dose-response relationship for each drug alone. Additionally, synergism or antagonism of drug or genetic-chemical combination screens is determined through the BI method. Finally, results are plotted and exported as PDF files, allowing a fast biological interpretation of the data.
 
 
-All python library usage information is in this page, however, complementary information and example files can be found at the [website manual](https://htsplotter.cmgg.be/).
+All python library usage information is in this page, however, complementary information and example files can be found at the [website manual](https://htsplotter.cmgg.be/) or at [HTSplotter GitHub](https://github.com/CBIGR/HTSplotter).
 
 ## Install
 ```
