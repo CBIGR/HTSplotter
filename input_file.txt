@@ -1,0 +1,26 @@
+C:/Users/cdcarval/Downloads/Newfolder  # add your folder path e.g. GitHub path
+C:/Users/cdcarval/Downloads/Newfolder  # + input path folder ( )
+C:/Users/cdcarval/Downloads/Newfolder   # + information_extracted path folder
+C:/Users/cdcarval/Downloads/Newfolder   # + output_results path folder
+0  # biological_replicate 0 if not, 1 if it is
+0  # userinput 1 if yes
+confluency  # information_readout e.g.: "confluency"
+(%) # readout_units e.g. # (%)
+0   # expected_effect 0 = "inhibition"; 1 = enhanced
+0  # file_name_br file name
+drug_combination_screen_1timepoint                           # file 1
+end                                                          # file 2 (if end, stop reading)
+#
+C:/Users/cdcarval/Downloads/Newfolder  # add your folder path e.g. GitHub path
+C:/Users/cdcarval/Downloads/Newfolder  # + input path folder ( )
+C:/Users/cdcarval/Downloads/Newfolder   # + information_extracted path folder
+C:/Users/cdcarval/Downloads/Newfolder   # + output_results path folder
+0  # biological_replicate 0 if not, 1 if it is
+0  # userinput 1 if yes
+confluency  # information_readout e.g.: "confluency"
+(%) # readout_units e.g. # (%)
+0   # expected_effect 0 = "inhibition"; 1 = enhanced
+0  # file_name_br file name
+drugscreen_1timepoint					     # file 1
+end                                                          # file 2 (if end, stop reading)
+#
