@@ -33,12 +33,12 @@ class Analyser:
         self.information_extracted = None
         self.results_path = None
 
-        self.biological_replicate = None  # 0  # 0 if not, 1 if it is
-        self.userinput = None  # 0  # 1 if yes
+        self.biological_replicate = 0  # 0  # 0 if not, 1 if it is
+        self.userinput = 0  # 0  # 1 if yes
         self.information_readout = None  # "confluency"  # default = confluency = 0; add effect name = 1
         self.readout_units = None  # "(%)"
-        self.expected_effect = None  # 0  # 0 = "inhibition"; 1 = enhanced
-        self.file_name_br = None  # "BiologicalReplicateteste"
+        self.expected_effect = 0  # 0  # 0 = "inhibition"; 1 = enhanced
+        self.file_name_br = '0'  # "BiologicalReplicateteste"
 
         self.files_list = None
 
@@ -127,19 +127,28 @@ class Analyser:
                 elif counter == 1:
                     aux = line.split()
                     if aux[0] == 'main_folder':
-                        self.input_path = self.main_folder + aux[2]
+                        if aux[1] == '+':
+                            self.input_path = self.main_folder + aux[2]
+                        else:
+                            self.input_path = self.main_folder
                     else:
                         self.input_path = aux[0]
                 elif counter == 2:
                     aux = line.split()
                     if aux[0] == 'main_folder':
-                        self.information_extracted = self.main_folder + aux[2]
+                        if aux[1] == '+':
+                            self.information_extracted = self.main_folder + aux[2]
+                        else:
+                            self.information_extracted = self.main_folder
                     else:
                         self.information_extracted = aux[0]
                 elif counter == 3:
                     aux = line.split()
                     if aux[0] == 'main_folder':
-                        self.results_path = self.main_folder + aux[2]
+                        if aux[1] == '+':
+                            self.results_path = self.main_folder + aux[2]
+                        else:
+                            self.results_path = self.main_folder
                     else:
                         self.results_path = aux[0]
                 elif counter == 4:
@@ -169,6 +178,8 @@ class Analyser:
             count_global += counter + 2
 
     def execute(self):
+
+        self.verify_inputs()
 
         start = time.time()
 
@@ -764,10 +775,19 @@ class Analyser:
 
                     geneticchemical.close_pdf()
 
+    def verify_inputs(self):
+
+        if self.input_path is None:
+            self.input_path = self.main_folder.copy()
+        if self.information_extracted is None:
+            self.information_extracted = self.main_folder.copy()
+        if self.results_path is None:
+            self.results_path = self.main_folder.copy()
+
 
 if __name__ == '__main__':
 
-    htsplotter = HTSplotter()
+    htsplotter = Analyser()
 
     htsplotter.main_folder = "HTSplotter/"\
                              "experiment_type/drug_combination/"# add your folder path e.g. GitHub path
