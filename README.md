@@ -75,5 +75,4 @@ hts.execute_from_file('PATH_from_your_input_file/input_file.txt')
 htsplotter.execute()
 
 ```
-# HTSplotter scheme
-![](images/HTSplotter_scheme_GITHUB.png)
+
