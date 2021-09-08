@@ -24,7 +24,7 @@ from HTSplotter.geneticchemicalperturbagem import GeneticChemicalPerturbagem
 from HTSplotter.txtsavedata import Savetxt
 
 
-class HTSplotter:
+class Analyser:
 
     def __init__(self):
 
