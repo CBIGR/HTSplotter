@@ -1,7 +1,7 @@
 # HTSplotter
 
 HTSplotter allows an end-to-end data processing and analysis of chemical and genetic in vitro perturbation screens. It also available as a [web tool](https://htsplotter.cmgg.be/). 
-HTSplotter is tailored to analyze drug, drug combination, genetic perturbagen and combinations of genetic-chemical perturbagen screens. 
+HTSplotter is tailored to analyse drug, drug combination, genetic perturbagen and combinations of genetic-chemical perturbagen screens. 
 These experiments can be conducted either in real-time or as with endpoint readout. HTSplotter identifies the type of experimental setup through a conditional statement algorithm. It then performs a normalization and, in case of a drug screen, drug combination or genetic-chemical perturbagen experiment, identifies the dose-response relationship for each drug alone. Additionally, synergism or antagonism of drug or genetic-chemical combination screens is determined through the BI method. Finally, results are plotted and exported as PDF files, allowing a fast biological interpretation of the data.
 
 
@@ -9,11 +9,11 @@ All python library usage information is in this page, however, complementary inf
 
 ## Install
 ```
-pip install HTSplotter==0.10
+pip install HTSplotter
 ```
 ## Uninstall
 ```
-pip uninstall HTSplotter==0.10
+pip uninstall HTSplotter
 ```
 ## Import HTSplotter library
 ```
