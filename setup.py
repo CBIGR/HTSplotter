@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'HTSplotter',         # How you named your package folder (MyLib)
   packages = ['HTSplotter'],   # Chose the same as "name"
-  version = '0.8',      # Start with a small number and increase it with every change you make
+  version = '0.9',      # Start with a small number and increase it with every change you make
   license='GNU General Public License v3 or later (GPLv3+)',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'An end-to-end data processing, '
                 'analysis and visualisation tool for chemical and genetic in '
@@ -10,7 +10,7 @@ setup(
   author = 'CarolinadCNunes',                   # Type in your name
   author_email = 'carolina.decarvalhonunes@ugent.be',      # Type in your E-Mail
   url = 'https://github.com/CBIGR/HTSplotter',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/CBIGR/HTSplotter/archive/refs/tags/HTSplotter_v0.8.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/CBIGR/HTSplotter/archive/refs/tags/HTSplotter_v0.9.tar.gz',    # I explain this later on
   keywords = ['High-throughput screening', 'drug combination',
               'genetic-chemical perturbation', 'dose-response'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second

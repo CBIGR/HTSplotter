@@ -111,11 +111,13 @@ class HTSplotter:
     def execute_from_file(self, input_file):
 
         ifile = open(input_file, 'r')
-        ifile.seek(0, 2)
-        eof = ifile.tell()
+        count_lines = 0
+        for _ in ifile:
+            count_lines += 1
         ifile.seek(0, 0)
 
-        while ifile.tell() < eof:
+        count_global = 0
+        while count_global < count_lines:
 
             self.files_list = []
             counter = 0
@@ -164,6 +166,7 @@ class HTSplotter:
             ifile.readline()
 
             self.execute()
+            count_global += counter + 2
 
     def execute(self):
 
