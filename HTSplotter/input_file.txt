@@ -1,26 +1,27 @@
-C:/Users/cdcarval/Downloads/Newfolder  # add your folder path e.g. GitHub path
-main_folder  # + input path folder ( )
-main_folder   # + information_extracted path folder
-main_folder   # + output_results path folder
-0  # biological_replicate 0 if not, 1 if it is
-0  # userinput 1 if yes
-confluency  # information_readout e.g.: "confluency"
-(%) # readout_units e.g. # (%)
-0   # expected_effect 0 = "inhibition"; 1 = enhanced
-0  # file_name_br file name
-drug_combination_screen_1timepoint                           # file 1
-end                                                          # file 2 (if end, stop reading)
+path/to/to/main/directory/                             # add your directory path
+path/to/input/files/directory/                         # input path directory
+path/to/information/extracted/files/directory          # information_extracted path directory
+path/to/output/files/directory/                        # output_results path directory
+0                                                      # =0 not biological replicate (default); =1 biological replicate
+0                                                      # =0 no user validation (default); =1 user validation
+confluency                                             # information_readout e.g.: confluency, impedance, fluorescence, ...
+%                                                      # readout_units e.g. %, area, Å _mÅ _/Wel, ...
+0                                                      # =0 inhibition (default); =1 enhancement
+0                                                      # file_name_br file name
+drug_combination_screen_1timepoint.txt                 # file 1
+end                                                    # file 2 (if end, stop reading)
 #
-C:/Users/cdcarval/Downloads/Newfolder  # add your folder path e.g. GitHub path
-main_folder  # + input path folder ( )
-main_folder   # + information_extracted path folder
-main_folder   # + output_results path folder
-0  # biological_replicate 0 if not, 1 if it is
-0  # userinput 1 if yes
-confluency  # information_readout e.g.: "confluency"
-(%) # readout_units e.g. # (%)
-0   # expected_effect 0 = "inhibition"; 1 = enhanced
-0  # file_name_br file name
-drugscreen_1timepoint                                        # file 1
-end                                                          # file 2 (if end, stop reading)
+path/to/to/main/directory/                             # add your directory path
+path/to/input/files/directory/                         # input path directory
+path/to/information/extracted/files/directory          # information_extracted path directory
+path/to/output/files/directory/                        # output_results path directory
+1                                                      # =0 not biological replicate (default); =1 biological replicate
+0                                                      # =0 no user validation (default); =1 user validation
+confluency                                             # information_readout e.g.: confluency, impedance, fluorescence, ...
+area                                                   # readout_units e.g. %, area, Å _mÅ _/Wel, ...
+0                                                      # =0 inhibition (default); =1 enhancement
+drug_screen_biological_replicate.txt                   # file_name_br file name
+drug_screen_over_time_br1.txt			       # file 1
+drug_screen_over_time_br2.txt			       # file 2
+end                                                    # file 3 (if end, stop reading)
 #

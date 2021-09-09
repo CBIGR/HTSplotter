@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: HTSplotter
-Version: 0.13
+Version: 0.14
 Summary: An end-to-end data processing, analysis and visualisation tool for chemical and genetic in vitro perturbation screens
 Home-page: https://github.com/CBIGR/HTSplotter
 Author: CarolinadCNunes
 Author-email: carolina.decarvalhonunes@ugent.be
 License: GNU General Public License v3 or later (GPLv3+)
-Download-URL: https://github.com/CBIGR/HTSplotter/archive/refs/tags/HTSplotter_v0.13.tar.gz
+Download-URL: https://github.com/CBIGR/HTSplotter/archive/refs/tags/HTSplotter_v0.14.tar.gz
 Description: # HTSplotter
         
         HTSplotter allows an end-to-end data processing and analysis of chemical and genetic in vitro perturbation screens. It also available as a [web tool](https://htsplotter.cmgg.be/). 
@@ -14,7 +14,7 @@ Description: # HTSplotter
         These experiments can be conducted either in real-time or as with endpoint readout. HTSplotter identifies the type of experimental setup through a conditional statement algorithm. It then performs a normalization and, in case of a drug screen, drug combination or genetic-chemical perturbagen experiment, identifies the dose-response relationship for each drug alone. Additionally, synergism or antagonism of drug or genetic-chemical combination screens is determined through the BI method. Finally, results are plotted and exported as PDF files, allowing a fast biological interpretation of the data.
         
         
-        All python library usage information is in this page, however, complementary information and example files can be found at the [website manual](https://htsplotter.cmgg.be/).
+        All python library usage information is in this page, however, complementary information and example files can be found at the [website manual](https://htsplotter.cmgg.be/) or at [HTSplotter GitHub](https://github.com/CBIGR/HTSplotter).
         
         ## Install
         ```
