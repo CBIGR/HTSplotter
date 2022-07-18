@@ -8,6 +8,7 @@ class Hdf5functions:
 
     def __init__(self):
         self.f = None
+        self.path = None
         self.celline = None
         self.seeding = None
         self.condition = None
@@ -18,11 +19,19 @@ class Hdf5functions:
         self.medium = None
         self.data = None
         self.inhibited = None
+        self.normtozero = None
+        self.normtozeromedium = None
         self.normalized_perc = None
         self.normalized = None
         self.std_inh = None
         self.std = None
         self.normalizedtranslation = None
+        # self.inhibitedperc = None
+        self.control = None
+        self.fieldsmedium = None
+        self.fieldsmediuminhibited = None
+
+        self.mediuminhibitedperc = None
         self.datamedium = None
         self.inhibitedmedium = None
         self.normalized_percmedium = None
@@ -34,17 +43,23 @@ class Hdf5functions:
         self.confinterval = None
         self.br = None
 
+        self.file = None
+        self.control_stru_level = None
+
+        self.compoundalone = None
+        self.possiblecombination = None
+        self.possiblecombinationsize = None
+
     # Normalizations
-    def get_normalizeseveralcontrol(self, f, level, exp, k, celline,
-                                    seeding, condition, controlpath, controlpathdata, medium, mediumword):
-        self.f = f
-        self.celline = celline
-        self.seeding = seeding
-        self.condition = condition
-        self.controlpath = controlpath
-        self.controlpathdata = controlpathdata
-        self.mediumword =mediumword
-        self.medium = medium
+    def get_normalizeseveralcontrol(self, savehdf5file, file, level, exp, k):
+        self.f = file
+        self.celline = savehdf5file.celline
+        self.seeding = savehdf5file.seeding
+        self.condition = savehdf5file.condition
+        self.controlpath = savehdf5file.controlpath
+        self.controlpathdata = savehdf5file.controlpathdata
+        self.mediumword = savehdf5file.mediumword
+        self.medium = savehdf5file.medium
 
         level += 1
         if exp != 0:
@@ -114,18 +129,17 @@ class Hdf5functions:
                                 if complete == self.controlpath[i]:
                                     self.hdf5normalization(grup, new[-1], self.controlpathdata[i])
 
-    def get_normalizeonecontrol(self, f, exp, k, celline, seeding, condition, conditionpath, controlpath,
-                                controlpathdata, medium, mediumword):
+    def get_normalizeonecontrol(self, savehdf5file, file, exp, k):
 
-        self.f = f
-        self.celline = celline
-        self.seeding = seeding
-        self.condition = condition
-        self.conditionpath = conditionpath
-        self.controlpath = controlpath
-        self.controlpathdata = controlpathdata
-        self.mediumword = mediumword
-        self.medium = medium
+        self.f = file  # this changes according to the BR HDF5 or not
+        self.celline = savehdf5file.celline
+        self.seeding = savehdf5file.seeding
+        self.condition = savehdf5file.condition
+        self.conditionpath = savehdf5file.conditionpath
+        self.controlpath = savehdf5file.controlpath
+        self.controlpathdata = savehdf5file.controlpathdata
+        self.mediumword = savehdf5file.mediumword
+        self.medium = savehdf5file.medium
         if exp != 0:
             cellpath = self.f[exp][k]
         else:
@@ -140,7 +154,7 @@ class Hdf5functions:
             for g in condition:
                 conditionpath = seedingpath[g]
                 compound = list(conditionpath.keys())
-                self.condition.append(g)
+                self.condition.append([g])
                 self.conditionpath.append(conditionpath.name)
                 for c in compound:
                     compoundpath = conditionpath[c]
@@ -150,13 +164,18 @@ class Hdf5functions:
                             grup = compoundpath[d]
                             controlname = self.controlpath[i].split("/")
                             controlmainpath = "/".join(controlname[:-1])
+                            # controlmainpath = "/".join(controlname[:-2])
                             if controlmainpath == conditionpath.name:
                                 self.hdf5normalization(grup, controlname[-1], self.controlpathdata[i])
 
     @staticmethod
     def hdf5normalization(grp, control, controldata):
-
+        print('sotp')
+        # + "_"+ control\
         if 'data' in list(grp):
+            # controldata = np.divide(controldata, controldata[0])
+            # stdnew = np.divide(grp['std'][:], grp['std'][0])
+            # supp = np.divide(grp['data'][:], grp['data'][0])
             grp.create_dataset('normalizedperc' + "_" + control,
                                data=np.divide(grp['data'][:], controldata) * 100)
             grp.create_dataset('normalized' + "_" + control,
@@ -167,6 +186,12 @@ class Hdf5functions:
                                data=(1 - np.divide(grp['data'][:], controldata)))
             grp.create_dataset('stdinh' + "_" + control,
                                data=(np.divide(grp['std'][:], controldata)))
+            grp.create_dataset('inhibitedperc' + "_" + control,
+                               data=((1 - np.divide(grp['data'][:], controldata))*100))
+
+            grp.create_dataset('NormToZero' + "_" + control,
+                               data=(np.divide(grp['data'][:], grp['data'][0])))
+
         else:
             grp.create_dataset('normalizedperc' + "_" + control,
                                data=np.divide(grp['mean'][:], controldata) * 100)
@@ -178,12 +203,16 @@ class Hdf5functions:
                                data=(1 - np.divide(grp['mean'][:], controldata)))
             grp.create_dataset('stdinh' + "_" + control,
                                data=(np.divide(grp['std_BR'][:], controldata)))
+            grp.create_dataset('inhibitedperc' + "_" + control,
+                               data=((1 - np.divide(grp['mean'][:], controldata))*100))
+            grp.create_dataset('NormToZero'+ "_" + control,
+                               data=(np.divide(grp['mean'][:], grp['mean'][0])))
 
     # combinations common for drug combination and genetic-chemical perturbagem
-    def get_combination(self, f, compoundalone, possiblecombination, possiblecombinationsize):
-        self.compoundalone = compoundalone
-        self.possiblecombination = possiblecombination
-        self.possiblecombinationsize = possiblecombinationsize
+    def get_combination(self, savehdf5file, f):
+        self.compoundalone = savehdf5file.compoundalone
+        self.possiblecombination = savehdf5file.possiblecombination
+        self.possiblecombinationsize = savehdf5file.possiblecombinationsize
 
         combination = []
         alone = []
@@ -216,44 +245,62 @@ class Hdf5functions:
             self.possiblecombinationsize.append(combinsize)
 
     # add combination results to hdf5 file--> common for drugcombination and genetic-chemical perturbagem
-    def add_comboinformation(self, groupname, biscore, predicted, path, possiblecombination, conditionpath,
-                             possiblecombinationsize):
+    def add_comboinformation(self, savehdf5file, groupname, biscore, predicted, synergymethod):
 
-        for i in range(len(possiblecombination)):
-            for j in range(len(possiblecombination[i])):
-                grp = path.create_group(conditionpath[i] + "/" + "combination_"
-                                        + possiblecombination[i][j][0])
+        self.path = savehdf5file.file
+        self.possiblecombination = savehdf5file.possiblecombination
+        self.conditionpath = savehdf5file.conditionpath
+        self.possiblecombinationsize = savehdf5file.possiblecombinationsize
 
-                for u in range(possiblecombinationsize[i][j][0]):
-                    grp2 = grp.create_group(groupname[i][j][u])
-                    grp2 = grp[groupname[i][j][u]]
-                    grp2.create_dataset('predicted_value', data=predicted[i][j][:, u])
-                    grp2.create_dataset('BI_Score', data=biscore[i][j][:, u])
+        for i in range(len(self.possiblecombination)):
+            for j in range(len(self.possiblecombination[i])):
+                grp = self.path.create_group(self.conditionpath[i] + "/" + "combination_"
+                                        + self.possiblecombination[i][j][0])
+                if synergymethod == 2:
+                    if self.possiblecombinationsize[i][j][-1] > 1:
+                        for u in range(self.possiblecombinationsize[i][j][0]):
+                            grp2 = grp.create_group(groupname[i][j][u])
+                            grp2 = grp[groupname[i][j][u]]
+                            if len(predicted) > 1:
+                                grp2.create_dataset('predicted_value', data=predicted[i][j][:, u])
+                            grp2.create_dataset('Score', data=biscore[i][j][:, u])
+                else:
+                    for u in range(self.possiblecombinationsize[i][j][0]):
+                        grp2 = grp.create_group(groupname[i][j][u])
+                        grp2 = grp[groupname[i][j][u]]
+                        if len(predicted) > 1:
+                            grp2.create_dataset('predicted_value', data=predicted[i][j][:, u])
+                        grp2.create_dataset('Score', data=biscore[i][j][:, u])
 
     # common to drug screens with more than 1 control and genetic-chemical perturbagem
-    def get_fieldsseveralcontrolmain(self, f, level, br, fields, data, inhibited, normalized_perc, normalized,
-                                     std_inh, std, normalizedtranslation, datamedium, inhibitedmedium, normalized_percmedium,
-                                     normalizedmedium, std_inhmedium, stdmedium, confinterval,
-                                     normalizedtranslationmedium):
-        self.data = data
-        self.inhibited = inhibited
-        self.normalized_perc = normalized_perc
-        self.normalized = normalized
-        self.std_inh = std_inh
-        self.std =std
-        self.normalizedtranslation =normalizedtranslation
-        self.datamedium = datamedium
-        self.inhibitedmedium = inhibitedmedium
-        self.normalized_percmedium = normalized_percmedium
-        self.normalizedmedium =normalizedmedium
-        self.std_inhmedium = std_inhmedium
-        self.stdmedium = stdmedium
-        self.normalizedtranslationmedium = normalizedtranslationmedium
-        self.fields = fields
-        self.confinterval = confinterval
-        self.br = br
+    def get_fieldsseveralcontrolmain(self, savehdf5file, path, br, level):
 
-        self.get_fieldsseveralcontrol(f, level)
+        self.data = savehdf5file.data
+        self.inhibited = savehdf5file.inhibited
+        self.inhibitedperc = savehdf5file.inhibitedperc
+        self.normtozero = savehdf5file.normtozero
+        self.normtozeromedium = savehdf5file.normtozeromedium
+        self.normalized_perc = savehdf5file.normalized_perc
+        self.normalized = savehdf5file.normalized
+        self.std_inh = savehdf5file.std_inh
+        self.std = savehdf5file.std
+        self.normalizedtranslation = savehdf5file.normalizedtranslation
+        self.datamedium = savehdf5file.datamedium
+        self.inhibitedmedium = savehdf5file.inhibitedmedium
+        self.normalized_percmedium = savehdf5file.normalized_percmedium
+        self.mediuminhibitedperc = savehdf5file.mediuminhibitedperc
+        self.normalizedmedium = savehdf5file.normalizedmedium
+        self.std_inhmedium = savehdf5file.std_inhmedium
+        self.stdmedium = savehdf5file.stdmedium
+        self.normalizedtranslationmedium = savehdf5file.normalizedtranslationmedium
+        self.fields = savehdf5file.fields
+        self.confinterval = savehdf5file.confinterval
+
+        self.br = br
+        self.file = path  # savehdf5file.file
+        self.control_stru_level = level
+
+        self.get_fieldsseveralcontrol(self.file, self.control_stru_level)
 
     def get_fieldsseveralcontrol(self, f, level):
         if level > 0:
@@ -271,6 +318,7 @@ class Hdf5functions:
 
             else:
                 listtemp = makefields[1:]
+
             if self.mediumword not in f.name:
                 if len(listtemp) >= 5:
                     self.get_data(f, listtemp)
@@ -279,40 +327,47 @@ class Hdf5functions:
                     processeddata = list(f.keys())
                     for k in processeddata:
                         if self.br == 1:
-                            self.save_listbr(f, k, self.datamedium, self.inhibitedmedium,
+                            self.save_listbr(f, k, self.datamedium, self.inhibitedmedium, self.normtozeromedium,
                                              self.normalized_percmedium,
                                              self.normalizedmedium, self.std_inhmedium, self.stdmedium,
-                                             self.confinterval, self.normalizedtranslationmedium)
+                                             self.confinterval, self.normalizedtranslationmedium,
+                                             self.mediuminhibitedperc)
                         else:
-                            self.save_list(f, k, self.datamedium, self.inhibitedmedium,
+                            self.save_list(f, k, self.datamedium, self.inhibitedmedium, self.normtozeromedium,
                                            self.normalized_percmedium, self.normalizedmedium,
-                                           self.std_inhmedium, self.stdmedium, self.normalizedtranslationmedium)
+                                           self.std_inhmedium, self.stdmedium, self.normalizedtranslationmedium,
+                                           self.mediuminhibitedperc)
 
+    def get_fieldsonecontrolmain(self, savehdf5file, file, br, level):
 
-    def get_fieldsonecontrolmain(self, f, level, br, fields, control, data, inhibited, normalized_perc, normalized,
-                                     std_inh, std, normalizedtranslation, datamedium, inhibitedmedium, normalized_percmedium,
-                                     normalizedmedium, std_inhmedium, stdmedium, confinterval,
-                                     normalizedtranslationmedium):
-        self.data = data
-        self.inhibited = inhibited
-        self.normalized_perc = normalized_perc
-        self.normalized = normalized
-        self.std_inh = std_inh
-        self.std =std
-        self.normalizedtranslation =normalizedtranslation
-        self.datamedium = datamedium
-        self.inhibitedmedium = inhibitedmedium
-        self.normalized_percmedium = normalized_percmedium
-        self.normalizedmedium =normalizedmedium
-        self.std_inhmedium = std_inhmedium
-        self.stdmedium = stdmedium
-        self.normalizedtranslationmedium = normalizedtranslationmedium
-        self.fields = fields
-        self.control = control
-        self.confinterval = confinterval
+        self.data = savehdf5file.data
+        self.inhibited = savehdf5file.inhibited
+        self.normalized_perc = savehdf5file.normalized_perc
+        self.normtozero = savehdf5file.normtozero
+        self.normtozeromedium = savehdf5file.normtozeromedium
+        self.normalized = savehdf5file.normalized
+        self.std_inh = savehdf5file.std_inh
+        self.std = savehdf5file.std
+        self.normalizedtranslation = savehdf5file.normalizedtranslation
+        self.inhibitedperc = savehdf5file.inhibitedperc
+        self.datamedium = savehdf5file.datamedium
+        self.inhibitedmedium = savehdf5file.inhibitedmedium
+
+        self.normalized_percmedium = savehdf5file.normalized_percmedium
+        self.normalizedmedium = savehdf5file.normalizedmedium
+        self.std_inhmedium = savehdf5file.std_inhmedium
+        self.mediuminhibitedperc = savehdf5file.mediuminhibitedperc
+        self.stdmedium = savehdf5file.stdmedium
+        self.normalizedtranslationmedium = savehdf5file.normalizedtranslationmedium
+        self.fields = savehdf5file.fields
+        self.control = savehdf5file.control
+        self.confinterval = savehdf5file.confinterval
+
         self.br = br
+        self.file = file
+        self.control_stru_level = level
 
-        self.get_fieldsonecontrol(f, level)
+        self.get_fieldsonecontrol(self.file, self.control_stru_level)
 
     def get_fieldsonecontrol(self, f, level):
         if level > 0:
@@ -340,19 +395,24 @@ class Hdf5functions:
         processeddata = list(f.keys())
         for k in processeddata:
             if self.br == 1:
-                self.save_listbr(f, k, self.data, self.inhibited, self.normalized_perc, self.normalized,
-                                 self.std_inh, self.std, self.confinterval, self.normalizedtranslation)
+                self.save_listbr(f, k, self.data, self.inhibited, self.normtozero, self.normalized_perc, self.normalized,
+                                 self.std_inh, self.std, self.confinterval, self.normalizedtranslation,
+                                 self.inhibitedperc)
             else:
-                self.save_list(f, k, self.data, self.inhibited, self.normalized_perc, self.normalized,
-                               self.std_inh, self.std, self.normalizedtranslation)
+                self.save_list(f, k, self.data, self.inhibited, self.normtozero, self.normalized_perc, self.normalized,
+                               self.std_inh, self.std, self.normalizedtranslation, self.inhibitedperc)
 
     @staticmethod
-    def save_list(f, k, datamedium, inhibitedmedium, normalized_percmedium, normalizedmedium,
-                  std_inhmedium, stdmedium, normalizedtranslation):
+    def save_list(f, k, datamedium, inhibitedmedium, normtozero, normalized_percmedium, normalizedmedium,
+                  std_inhmedium, stdmedium, normalizedtranslation, inhibitedperc):
         if 'data' == k:
             datamedium.append(f[k][:])
+        elif 'inhibitedperc' in k:
+            inhibitedperc.append((f[k][:]))
         elif 'inhibited' in k:
             inhibitedmedium.append((f[k][:]))
+        elif 'NormToZero' in k:
+            normtozero.append((f[k][:]))
         elif 'normalizedperc' in k:
             normalized_percmedium.append((f[k][:]))
         elif 'normalized_translation' in k:
@@ -365,12 +425,17 @@ class Hdf5functions:
             stdmedium.append(f[k][:])
 
     @staticmethod
-    def save_listbr(f, k, datamedium, inhibitedmedium, normalized_percmedium, normalizedmedium,
-                  std_inhmedium, stdmedium, confinterval, normalizedtranslation):
+    def save_listbr(f, k, datamedium, inhibitedmedium, normtozero, normalized_percmedium, normalizedmedium,
+                    std_inhmedium, stdmedium, confinterval, normalizedtranslation, inhibitedperc):
+
         if 'mean' == k:
             datamedium.append(f[k][:])
+        elif 'inhibitedperc' in k:
+            inhibitedperc.append((f[k][:]))
         elif 'inhibited' in k:
             inhibitedmedium.append((f[k][:]))
+        elif 'NormToZero' in k:
+            normtozero.append((f[k][:]))
         elif 'normalizedperc' in k:
             normalized_percmedium.append((f[k][:]))
         elif 'normalized_translation' in k:
@@ -384,18 +449,20 @@ class Hdf5functions:
         elif '95%CI_BR' in k:
             confinterval.append(f[k][:])
 
-    def medium_control(self, f, br, mediumword, control, compoundalone, fieldsmedium, fieldsmediuminhibited):
+    def medium_control(self, savehdf5file, f, br):
         self.br = br
-        self.mediumword =mediumword
-        self.control = control
-        self.compoundalone = compoundalone
-        self.fieldsmedium = fieldsmedium
-        self.fieldsmediuminhibited = fieldsmediuminhibited
+        self.mediumword = savehdf5file.mediumword
+        self.control = savehdf5file.control
+        self.compoundalone = savehdf5file.compoundalone
+        self.fieldsmedium = savehdf5file.fieldsmedium
+        self.fieldsmediuminhibited = savehdf5file.fieldsmediuminhibited
+        self.fieldsmediuminhibitedperc = savehdf5file.mediuminhibitedperc
 
         compound = list(f.keys())
         alone = []
         mediumne = []
         inhmedium = []
+        inhmediumperc = []
         control = []
         correcpositi = 0
         correcpositiinhib = 0
@@ -426,10 +493,11 @@ class Hdf5functions:
                     listtemp = makefields[1:]
                 temmed = []
                 teminh = []
+                teminhperc = []
                 for c in cond:
                     lista2 = listtemp.copy()
                     lista3 = listtemp.copy()
-                    if "_" in c and 'inhibited' in c:
+                    if "_" in c and 'inhibited' in c and 'perc' not in c:
                         lista3[3] += "_" + c.split("_")[-1]
                         if correcpositiinhib == 1:
                             posit += 1
@@ -438,6 +506,15 @@ class Hdf5functions:
                             lista3.append(len(inhmedium))
                         teminh.append(lista3[3])
                         inhmedium.append(lista3)
+                    # if "_" in c and 'inhibited' in c and 'perc' in c:
+                    #     lista3[3] += "_" + c.split("_")[-1]
+                    #     if correcpositiinhib == 1:
+                    #         posit += 1
+                    #         lista3.append(positinh)
+                    #     else:
+                    #         lista3.append(len(inhmediumperc))
+                    #     teminhperc.append(lista3[3])
+                    #     inhmediumperc.append(lista3)
                     if lista2[3] not in temmed:
                         temmed.append(lista2[3])
                         if correcpositi == 1:
@@ -457,11 +534,11 @@ class Hdf5functions:
             self.fieldsmediuminhibited.append(inhmedium)
 
     # function only for genetic-chemical perturbagem
-    def get_genetcombmain(self, f, level, mediumword, possiblecombination, possiblecombinationsize):
-        self.f = f
-        self.mediumword = mediumword
-        self.possiblecombination = possiblecombination
-        self.possiblecombinationsize = possiblecombinationsize
+    def get_genetcombmain(self, savehdf5file, file, level):
+        self.f = file
+        self.mediumword = savehdf5file.mediumword
+        self.possiblecombination = savehdf5file.possiblecombination
+        self.possiblecombinationsize = savehdf5file.possiblecombinationsize
         level = level
         self.get_genetcomb(self.f, level)
 
@@ -500,15 +577,18 @@ class Hdf5functions:
                             if len(temp) <= 3:
                                 combination.append(temp)
                                 combinsize.append(temsize)
+                        # elif "Control" in k:
+                        #     self.compoundalone.append(k)
                     self.possiblecombination.append(combination)
                     self.possiblecombinationsize.append(combinsize)
 
-    def get_branch(self, br, file, branch, compoundalone):
+    def get_branch(self, savehdf5file, file, br):
         self.file = file
-        self.branch = branch
-        self.compoundalone = compoundalone
+        self.branch = savehdf5file.branch
+        self.compoundalone = savehdf5file.compoundalone
         self.compoundalonearranged = []
         self.br = br
+
         # cellpath, seedingpath, conditionpath, compound = self.hdf5walk(self.file, cell)
         # skip always 0Elapse; 000Date and 00Date_info
         if self.br == 1:
@@ -532,7 +612,7 @@ class Hdf5functions:
         co = 0
         count = 2
         for n in range(len(newlist)):
-            newlist[n] = compoundalone[co:count]
+            newlist[n] = self.compoundalone[co:count]
             co = count
             count += 2
         self.compoundalonearranged = newlist

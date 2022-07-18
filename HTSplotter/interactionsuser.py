@@ -2,33 +2,36 @@ import os
 import time
 
 class Outputfile:
-    def __init__(self, file, biologicalreplicate, information, error, concentration, stdinfo, diccompoundgroup,
-                 diccontrolgroup, dicmediumgroup, experimentype, control, compound, combination, medium,
-                 elapsed, condition, outputheaders, errorheader):
+    def __init__(self, file, biologicalreplicate, file_names, catego, header_info, elapsed ):
 
-        self.filename = information
         self.biologicalreplicate = biologicalreplicate
-        self.errorfile = error
         self.file = file
-        self.stdinfo = stdinfo
-        self.outputheader = outputheaders
-        self.errorheader = errorheader
+        #  from file_names object in main
+        self.filename = file_names.information_extractedfile
+        self.errorfile = file_names.errorfile
 
-        self.diccompoundgroup = diccompoundgroup
-        self.diccontrolgroup = diccontrolgroup
-        self.dicmediumgroup = dicmediumgroup
-        self.experimentype = experimentype
-        self.control = control
-        self.condition = condition
-        self.compound = compound
-        self.combination = combination
-        self.concentration = concentration
-        self.medium = medium
+        #  from header object in main
+        self.stdinfo = header_info.stdinfo
+        self.outputheader = header_info.outputheader
+        self.errorheader = header_info.errorheader
+
+        #  from catego object in main
+        self.diccompoundgroup = catego.diccompoundgroupkey
+        self.diccontrolgroup = catego.diccontrolgroupkey
+        self.dicmediumgroup = catego.dicmediumgroupkey
+        self.experimentype = catego.experimentype
+        self.control = catego.control
+        self.condition = catego.condition
+        self.compound = catego.compound
+        self.combination = catego.combination
+        self.concentration = catego.concentration
+        self.medium = catego.medium
+
         self.elapsed = elapsed
         self.controlnameerror = None
         self.error = []
         self.readout = None # indicates the readout for the axis
-
+        # self.errorheader = []
         self.keylistmaingroups = ["Cell", "Seeding", "Condition", "Compound", "Concentration", "Unit", "Position"]
 
         self.get_check()
@@ -37,6 +40,7 @@ class Outputfile:
         self.closefile()
 
     def get_check(self):
+        # self.error.append("check experiment conditions information")
         for i in range(len(self.outputheader)):
             for j in range(len(self.outputheader[i])):
                 if len(self.outputheader[i][j]) == 0:
@@ -53,7 +57,9 @@ class Outputfile:
             self.controlnameerror = "Control unidentified"
         if self.error == 1:
             self.error = "check error file, please"
-
+        # if len(self.errorheader) != 0:
+        #     for k in self.errorheader:
+        #         self.errorheader.append(k)
 
     def setfile(self):
         self.outputfile = open(self.filename, 'w')
@@ -126,7 +132,18 @@ class Outputfile:
             error.write("Error was not identified" + '\n' + '\n')
             error.write("cellline, seeding, condition, compound, concentration, units, position from the input file" +
                         '\n' + '\n')
-
+            # error.write("'unidentified', means the information is missing" + '\n' + '\n')
+            # for j in self.outputheader:
+            #     j[-1] = str(j[-1])
+            #     for i in range(len(j)):
+            #         try:
+            #             if len(j[i]) == 0:
+            #                 j[i] = "unidentified"
+            #         except TypeError:
+            #             j[i] = str(j[i])
+            #
+            #     error.write(", ".join(j) + '\n')
+            # error.write('\n')
         if info == 1:
             error.write("You have an error from your header, please check bellow " + '\n' + '\n')
             error.write("Information order: cellline, seeding, condition, compound, "
@@ -170,7 +187,7 @@ class Outputfile:
                 file.write("\n")
                 file.write("\t Number of Units tested: " + str(len(name[i]["Unit"])) + '\n')
             except TypeError:
-                file.write(name[i])
+                print(name[i])
 
 
 class Inputfile:
@@ -200,6 +217,7 @@ class Inputfile:
 
     def get_experimenttype(self):
         readout = self.information[-2].split(' ')
+        print(readout)
         if len(readout[-1]) == 0:
             self.readout = 'confluency'
         else:

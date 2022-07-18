@@ -125,3 +125,170 @@ class Grouppingpertub:
                 aux.view(fmt[:-2]).sort(order=orde, axis=0)
 
             self.concentration = aux
+
+
+class Grouppingzip:
+    def __init__(self, cab, header, cellin, seeding, condition):
+        self.headergroupping = []
+        self.name = cab
+        self.cell_name = cellin
+        self.condition = condition[0]
+        self.seeding = seeding[0]
+        self.concentration = None
+        self.unidade = None
+        aux = []
+        for h in header:
+            if h[0] == self.cell_name:
+                if h[1] == self.seeding:
+                    if h[2] == self.condition:
+                        if h[3] == self.name:
+                            self.headergroupping.append(h)
+                            a = h[4].split(" ")
+                            print(h)
+                            if "_" in a[0]:
+                                b = a[0].split("_")
+                                self.unidade = a[-1]
+
+                                aux.append([float(b[i]) for i in range(len(b))])
+                                aux[-1].append(h[-1])
+                            else:
+                                self.unidade = a[-1]
+                                aux.append([float(a[2 * i]) for i in range(int(len(a) / 2))])
+                                aux[-1].append(h[-1])
+                            # concen = i[-1].split('_')
+        if len(aux) > 0:
+            aux = np.asarray(aux)
+
+            fmt = ""
+            orde = ["f" + str(i) for i in range(aux.shape[1] - 1)]
+
+            for i in range(aux.shape[1]):
+                fmt += "float, "
+
+            if aux.shape[1] > 1:
+                aux.view(fmt[:-2]).sort(order=orde, axis=0)
+
+            self.concentration = aux
+
+        #
+        # aux = []
+        # for c in cab:
+        #
+        #     if cellin == c[0]:
+        #         self.cell_name = c[0]
+        #         a = c[4].split(" ")
+        #         if "_" in a[0]:
+        #             b = a[0].split("_")
+        #             self.unidade = a[-1]
+        #
+        #             aux.append([float(b[i]) for i in range(len(b))])
+        #             aux[-1].append(c[-1])
+        #         else:
+        #             self.unidade = a[-1]
+        #             aux.append([float(a[2 * i]) for i in range(int(len(a) / 2))])
+        #             aux[-1].append(c[-1])
+        #
+        # if len(aux) > 0:
+        #     aux = np.asarray(aux)
+        #
+        #     fmt = ""
+        #     orde = ["f" + str(i) for i in range(aux.shape[1] - 1)]
+        #
+        #     for i in range(aux.shape[1]):
+        #         fmt += "float, "
+        #
+        #     if aux.shape[1] > 1:
+        #         aux.view(fmt[:-2]).sort(order=orde, axis=0)
+        #
+        #     self.concentration = aux
+
+
+class GrouppingGrowthRate:
+
+    def __init__(self, conditiondrug, header, cellin, condition, seeding):
+        self.headergroupping = []
+        self.name = conditiondrug
+        self.cell_name = cellin
+        self.condition = condition
+        self.seeding = seeding
+        self.concentration = None
+        self.unidade = None
+        aux = []
+        for h in header:
+            if h[0] == self.cell_name:
+                if h[1] == self.seeding:
+                    if h[2] == self.condition:
+                        if h[3] == self.name:
+                            self.headergroupping.append(h)
+                            a = h[4].split(" ")
+                            print(h)
+                            if "_" in a[0]:
+                                b = a[0].split("_")
+                                self.unidade = a[-1]
+
+                                aux.append([float(b[i]) for i in range(len(b))])
+                                aux[-1].append(h[-1])
+                            else:
+                                self.unidade = a[-1]
+                                aux.append([float(a[2 * i]) for i in range(int(len(a) / 2))])
+                                aux[-1].append(h[-1])
+                            # concen = i[-1].split('_')
+        if len(aux) > 0:
+            aux = np.asarray(aux)
+
+            fmt = ""
+            orde = ["f" + str(i) for i in range(aux.shape[1] - 1)]
+
+            for i in range(aux.shape[1]):
+                fmt += "float, "
+
+            if aux.shape[1] > 1:
+                aux.view(fmt[:-2]).sort(order=orde, axis=0)
+
+            self.concentration = aux
+
+class GrouppingGrowthRateCombination:
+
+    def __init__(self, conditiondrug, header, cellin, seeding):
+        self.headergroupping = []
+        self.name = conditiondrug
+        self.cell_name = cellin
+        self.condition = None
+        self.seeding = seeding
+        self.concentration = None
+        self.unidade = None
+        aux = []
+        for h in header:
+            if h[0] == self.cell_name:
+                if h[1] == self.seeding:
+                    # if h[2] == self.condition:
+                    if h[3] == self.name:
+                        self.headergroupping.append(h)
+                        self.condition = h[2]
+                        a = h[4].split(" ")
+                        print(h)
+                        if "_" in a[0]:
+                            b = a[0].split("_")
+                            self.unidade = a[-1]
+
+                            aux.append([float(b[i]) for i in range(len(b))])
+                            aux[-1].append(h[-1])
+                        else:
+                            self.unidade = a[-1]
+                            aux.append([float(a[2 * i]) for i in range(int(len(a) / 2))])
+                            aux[-1].append(h[-1])
+                            # concen = i[-1].split('_')
+
+        if len(aux) > 0:
+            aux = np.asarray(aux)
+
+            fmt = ""
+            orde = ["f" + str(i) for i in range(aux.shape[1] - 1)]
+
+            for i in range(aux.shape[1]):
+                fmt += "float, "
+
+            if aux.shape[1] > 1:
+                aux.view(fmt[:-2]).sort(order=orde, axis=0)
+
+            self.concentration = aux

@@ -27,5 +27,7 @@ class ColorsHtsplots():
                         test.append((r, b, g))
             test = test[1:-1]
             test = [test[-(1+i)] for i in range(len(test))]
-
+        # file = open("C:/Users/cdcarval/OneDrive - UGent/Bureaublad/colorList.txt", "w")
+        # file.write(str(test))
+        # file.close()
         self.map = test

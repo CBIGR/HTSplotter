@@ -69,8 +69,10 @@ class Readfile:
         for line in iter(self.f.readline, ''):
             line_aux = line[:-1].split('\t')
             dt.append(line_aux[0])
-
+            # try:
             elap[j] = int(float(line_aux[1]))
+            # except ValueError:
+            #     pass
 
             try:
                 data[j, :] = np.asarray(list(map(float, line_aux[2:])))
@@ -78,7 +80,6 @@ class Readfile:
                 for sear in line_aux[2:]:
                     if len(sear) == 0:
                         sear = 0
-
             j += 1
 
         self.elapsed = elap
@@ -86,15 +87,13 @@ class Readfile:
         self.date_info = [dt[0], dt[-1]]
         self.data_std = data
 
-
     def close_file(self):
         self.f.close()
         return
-
     # to be called after output file and error files
     def get_split_data_std(self, split):
         num_rows, num_cols = self.data_std.shape
-
+        # split = int(num_cols/2)
         self.data = self.data_std[:, :split]
         self.std = self.data_std[:, split:]
 

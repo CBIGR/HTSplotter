@@ -73,7 +73,8 @@ class Headers:
         # split in half
         self.headersinfo = self.headersinitial[:(len(self.headersinitial) - len(self.stdheader))]
         if len(self.headersinfo) != len(self.stdheader):
-
+            print("the number of STD headers is different from the experimental condition! "
+                  "Please, check your inputfile")
             self.errorheader.append("the number of STD headers is different from the experimental condition! "
                                     "Please, check your inputfile")
         # get split each condition by compound and cell line
@@ -85,7 +86,12 @@ class Headers:
         self.replacesybol()
         # crucial step to have the final headers structure!
         self.get_maininfo()
-
+        # self.get_header_lend()
+        # try:
+        #     self.get_branch()
+        # except:
+        #     pass
+        # self.get_experimenttype()
 
     def headersnostd(self):
         self.headersinfo = self.headersinitial
@@ -98,7 +104,13 @@ class Headers:
         self.replacesybol()
         # crucial step to have the final headers structure!
         self.get_maininfo()
-
+        # self.get_header_lend()
+        # try:
+        #     self.get_branch()
+        # except:
+        #     pass
+        #
+        # self.get_experimenttype()
 
     # ##methods to be used by the headers
     def getsplit_compound_cell(self):
@@ -137,6 +149,7 @@ class Headers:
                 count += 1
         if count != len(self.headersinfo):
             # save to txterror file
+            print('Not all headers have cell line information separated from compound information')
             b = 'Not all headers have cell line information separated from compound information'
             self.errorheader.append(b)
             # sys.exit()  # stops the program
@@ -181,7 +194,7 @@ class Headers:
             for j in self.intermediaryheader:
                 if k[:-1] == j[:-1]:
                     j[-1].append(k[-1])
-
+            # self.intermediaryheader.append(i[:-1])
 
     def get_maininfo(self):
         # the intermediary header has the followin structure:
@@ -205,7 +218,9 @@ class Headers:
             self.get_celllineinfo(i[0], i[1])
 
             comp, conc_unit, condition, control, units, concentration = self.get_compoundinfo(i[2:-1], control)
-
+            # if comp not in self.compound and "Control" not in comp:
+            #     print(">>>>",comp)
+            #     self.compound.append(comp)
             if condition not in self.conditions:
                 self.conditions.append(condition)
             newheader.append(i[0])
@@ -341,9 +356,13 @@ class Headers:
                   "onlyCells", "XXOnlyCells", "CellsOnly", "cellsonly", 'OnlyCells_', 'CellsOnly_']
 
         if name[0] in medium:
+            # name = "zzzOnlyCells"
+            # name[0] = "OnlyCells"
+            print(name[0])
             self.medium.append(name[0])  #name
+            # name[0] = "zzzOnlyCells"
         if '_' in name[0]:
             a = name[0].split("_")
             if a[0] in medium:
-                name[0] = "CellsOnly" + "_" + a[1]
+                name[0] = "OnlyCells" + "_" + a[1]
                 self.medium.append(name[0])

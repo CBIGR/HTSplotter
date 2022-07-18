@@ -14,6 +14,7 @@ class Timepointselection:
 
         if len(self.elapse) > 1:
             main_time = math.ceil(24 / self.elapse[1])
+            # scans_per_day = 24 / x_main_times
             if main_time == 1:  # each 24h interval time points
                 x_main_times = len(self.elapse) - 1
             else:

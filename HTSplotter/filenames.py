@@ -15,10 +15,24 @@ class Filenames:
         self.filepdfresultspath = None
         self.filehdf5resultspath = None
         self.fileictxtresultspath = None
+        self.fileicgrtxtresultspath = None
         self.fileblisscorpath = None
         self.filepredictedblisscorpath = None
         self.fileioriginaldatapath = None
         self.fileinhibiteddatapath = None
+
+        self.filegrowthrateresults = None
+
+        self.fileyloewetxtpath = None
+        self.fileyloewedifferencetxtpath = None
+        self.fileloeweCItxtpath = None
+
+        self.fileyZiptxtpath = None
+        self.fileyZipdifferencetxtpath = None
+        self.fileZipCItxtpath = None
+
+        self.fileHsascorepath = None
+        self.fileHsamaximumpath = None
 
         self.get_txt_name()
         self.get_informationextracted()
@@ -26,12 +40,26 @@ class Filenames:
         self.get_inhibiteddatatxt_name()
         self.get_normalizedatatxt_name()
         self.get_originaldatatxt_name()
-        self.get_blispredictscpretxt_name()
         self.get_ictxt_name()
-        self.get_blisscpretxt_name()
+        self.get_icgrtxt_name()
         self.get_pdf_name()
         self.get_png_name()
         self.get_hdf5_name()
+
+        self.get_blispredictscpretxt_name()
+        self.get_blisscpretxt_name()
+
+        self.get_Hsascoretxt_name()
+        self.get_Hsamaximumtxt_name()
+
+        self.get_yloewedifference_name()
+        self.get_loeweCItxt_name()
+        self.get_fileyloewetxt_name()
+
+        self.get_yZipdifference_name()
+        self.get_ZipCItxt_name()
+        self.get_fileyZiptxt_name()
+        self.get_growthratedatatxt_name()
 
     def get_informationextracted(self):
         termimnation = "_information.txt"
@@ -53,6 +81,11 @@ class Filenames:
         name = self.file_name + termimnation
         self.fileictxtresultspath = os.path.join(self.folderresults, name)
 
+    def get_icgrtxt_name(self):
+        termimnation = "_IC_GrowthRate.txt"
+        name = self.file_name + termimnation
+        self.fileicgrtxtresultspath = os.path.join(self.folderresults, name)
+
     def get_blisscpretxt_name(self):
         termimnation = "_Blisscor.txt"
         name = self.file_name + termimnation
@@ -62,6 +95,46 @@ class Filenames:
         termimnation = "_Predicted.txt"
         name = self.file_name + termimnation
         self.filepredictedblisscorpath = os.path.join(self.folderresults, name)
+
+    def get_Hsascoretxt_name(self):
+        termimnation = "_HSAscore.txt"
+        name = self.file_name + termimnation
+        self.fileHsascorepath = os.path.join(self.folderresults, name)
+
+    def get_Hsamaximumtxt_name(self):
+        termimnation = "_'HSAmaximum'.txt"
+        name = self.file_name + termimnation
+        self.fileHsamaximumpath = os.path.join(self.folderresults, name)
+
+    def get_fileyloewetxt_name(self):
+        termimnation = "_yloewe.txt"
+        name = self.file_name + termimnation
+        self.fileyloewetxtpath = os.path.join(self.folderresults, name)
+
+    def get_yloewedifference_name(self):
+        termimnation = "_yloewedifference.txt"
+        name = self.file_name + termimnation
+        self.fileyloewedifferencetxtpath = os.path.join(self.folderresults, name)
+
+    def get_loeweCItxt_name(self):
+        termimnation = "_loeweCI.txt"
+        name = self.file_name + termimnation
+        self.fileloeweCItxtpath = os.path.join(self.folderresults, name)
+
+    def get_fileyZiptxt_name(self):
+        termimnation = "_yZip.txt"
+        name = self.file_name + termimnation
+        self.fileyZiptxtpath = os.path.join(self.folderresults, name)
+
+    def get_yZipdifference_name(self):
+        termimnation = "_yZipdifference.txt"
+        name = self.file_name + termimnation
+        self.fileyZipdifferencetxtpath = os.path.join(self.folderresults, name)
+
+    def get_ZipCItxt_name(self):
+        termimnation = "_ZipCI.txt"
+        name = self.file_name + termimnation
+        self.fileZipCItxtpath = os.path.join(self.folderresults, name)
 
     def get_originaldatatxt_name(self):
         termimnation = "_Originaldata.txt"
@@ -92,3 +165,8 @@ class Filenames:
         termimnation = ".hdf5"
         name = self.file_name + termimnation
         self.filehdf5resultspath = os.path.join(self.folderresults, name)
+
+    def get_growthratedatatxt_name(self):
+        termimnation = "filegrowthrateresults.txt"
+        name = self.file_name + termimnation
+        self.filegrowthrateresults = os.path.join(self.folderresults, name)

@@ -4,12 +4,13 @@ import os
 
 
 class Categorisation:
-    def __init__(self, headers, medium, control, stdinfo):
+    def __init__(self, header_info):
 
-        self.headers = headers
-        self.medium = medium
-        self.control = control
-        self.stdinfo = stdinfo
+        # from header object in main
+        self.headers = header_info.newheader
+        self.medium = header_info.medium
+        self.control = header_info.controlname
+        self.stdinfo = header_info.stdinfo
 
         self.keylistmaingroups = ["Cell", "Seeding", "Condition", "Compound", "Concentration", "Unit", "Position"]
         self.diccompoundgroupkey = {}  # contains compound tested
@@ -125,6 +126,7 @@ class Categorisation:
         compoundscreen = 0  # not
         geneticpertur = 0  # not
         self.get_concentration()
+
         if len(self.condition) == 1 and len(self.combination) == 0:
             for i in self.diccompoundgroupkey:
                 if len(self.diccompoundgroupkey[i]["Concentration"]) >= 2:
@@ -135,16 +137,18 @@ class Categorisation:
             self.compoundscreen.append(len(self.diccompoundgroupkey[i]["Concentration"]))
             if compoundscreen == 1:
                 self.experimentype = "drug_screen"
-
+                print(self.experimentype, len(self.compound), len(self.control), self.stdinfo[0])
             if geneticpertur == 1 and compoundscreen == 0:
                 self.experimentype = "Genetic_perturbagen"
-
+                print(self.experimentype, len(self.control), len(self.compound))
         if len(self.combination) > 0 and len(self.condition) == 1 and len(self.condition) == len(self.cellline):
             self.experimentype = "drug_combination"
-
+            print(self.experimentype, len(self.combination), len(self.control), self.stdinfo[0])
         if len(self.condition) > 1 and len(self.combination) > 0:
             self.experimentype = "genetic-chemical_perturbagen"
-
+            print(self.experimentype, len(self.control), len(self.compound), self.stdinfo[0])
+        if len(self.experimentype) == 0:
+            self.experimentype = 'something went wrong'
 
     @staticmethod
     def get_dictionary(templist):

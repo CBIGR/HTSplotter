@@ -2,7 +2,7 @@ import h5py
 import os
 import numpy as np
 from scipy import stats
-from HTSplotter.hdf5functions import Hdf5functions
+from hdf5functions import Hdf5functions
 from scipy.stats import norm
 
 file_name_each = []
@@ -20,31 +20,40 @@ compound_control_list = []
 
 class BRHdf5database:
 
-    def __init__(self, count, file_name_br, experiment_type, branch,
-                 file_name, header, elapse, date_info, date, data, std, medium):
+    def __init__(self, count, file_name_br, file_name, header_info, catego, file_info):
 
         self.file_path = file_name_br
+        self.file = None
         self.experiment_name = file_name
         self.individual_file_name = file_name
         self.count_br = count
-        self.header = header
-        self.branch = branch
-        self.elapse = np.asarray(elapse)
-        self.date_info = np.asarray(date_info)
-        self.date = np.asarray(date)
+        # self.file_path = os.path.join(folder, self.experiment_name)
+        #  from header info object in main
+        self.header = header_info.newheader
+        self.medium = header_info.medium
 
-        self.medium = medium
-        self.mediumword = medium[0].split("_")[0]
+        #  from catego object in main
+        self.branch = catego.branch
+        self.experiment_type = catego.experimentype
+
+        #  from file_info object in main
+        self.elapse = np.asarray(file_info.elapsed)
+        self.date_info = np.asarray(file_info.date_info)
+        self.date = np.asarray(file_info.date)
+        # ### Important information to generate the Data_base
+        self.data_ini = file_info.data
+        self.std_ini = file_info.std
+
+        self.mediumword = ''
+        # self.mediumword = medium[0].split("_")[0]
 
         self.f = None
         self.main_grup = None
 
+        # self.control_information = []
+        # self.compound_information = []
+        # self.control_name = None  # control name for Combination
         self.control_stru_level = 3
-        self.experiment_type = experiment_type
-
-        # ### Important information to generate the Data_base
-        self.data_ini = data
-        self.std_ini = std
 
         self.brpath = None
         self.eachpath = []  # path to compute technical replicates avarage
@@ -53,8 +62,11 @@ class BRHdf5database:
         self.fields = []
         self.data = []
         self.normalized = []
+        self.normtozero = []
+        self.normtozeromedium = []
         self.normalized_perc = []
         self.inhibited = []
+        self.inhibitedperc = []
         self.std = []
         self.std_inh = []
         self.std_perc = []
@@ -79,6 +91,7 @@ class BRHdf5database:
         self.normalized_percmedium = []
         self.stdmedium = []
         self.std_inhmedium = []
+        self.mediuminhibitedperc = []
 
         # combination information
         self.possiblecombination = []
@@ -92,8 +105,12 @@ class BRHdf5database:
         self.seeding = []  # in case the seeding is different
         self.condition = []
         self.conditionpath = []# in case condition is more than 1
+        if len(self.medium) != 0:
+            self.get_medium()
 
-
+    def get_medium(self):
+        if len(self.medium[0]) > 0:
+            self.mediumword = self.medium[0].split("_")[0]
 
     # ##comomn functions!!!
     def open_file(self):
@@ -232,7 +249,7 @@ class BRHdf5database:
         subpath = "/".join(name_path_split[2:])
         name2 = name.split(" ")
         add = "_BR"
-        path1 = "/" + add + "/" + subpath
+        path1 = "/" + add + "/" + subpath  # name2[0] + "_" +
         path.append(path1)
 
         return path
@@ -313,9 +330,8 @@ class BRHdf5database:
                 self.brpath = self.f[exp]
                 cell = list(self.f[exp].keys())
                 for k in cell:
-                    self.hdfnorm.get_normalizeseveralcontrol(self.f, level, exp, k, self.celline, self.seeding,
-                                                             self.condition, self.controlpath, self.controlpathdata,
-                                                             self.medium, self.mediumword)
+                    self.hdfnorm.get_normalizeseveralcontrol(self, self.f, level, exp, k)
+
     def normalizeonecontrol(self):
         experiments = list(self.f.keys())
         self.hdfnorm = Hdf5functions()
@@ -326,9 +342,7 @@ class BRHdf5database:
                 self.brpath = self.f[exp]
                 cell = list(self.f[exp].keys())
                 for k in cell:
-                    self.hdfnorm.get_normalizeonecontrol(self.f, exp, k, self.celline, self.seeding,
-                                                         self.condition, self.conditionpath, self.controlpath,
-                                                         self.controlpathdata, self.medium, self.mediumword)
+                    self.hdfnorm.get_normalizeonecontrol(self, self.f, exp, k)
 
     def get_combination(self, f, level):
         self.hdfnorm = Hdf5functions()
@@ -341,8 +355,7 @@ class BRHdf5database:
             except AttributeError:
                 pass
         else:
-            self.hdfnorm.get_combination(f, self.compoundalone, self.possiblecombination,
-                                         self.possiblecombinationsize)
+            self.hdfnorm.get_combination(self, f)
 
     def get_medium_control(self, f, level):
         if level > 0:
@@ -354,8 +367,7 @@ class BRHdf5database:
             except AttributeError:
                 pass
         else:
-            self.hdfnorm.medium_control(f, 1, self.mediumword, self.control, self.compoundalone,
-                                        self.fieldsmedium, self.fieldsmediuminhibited)
+            self.hdfnorm.medium_control(self, f, 1)
 
     def get_compoundalone(self, f, level):
         if level > 0:
@@ -377,23 +389,19 @@ class BRHdf5database:
 
     # ## ADD predicted and bliss score to the HDF5 file, method called by main
 
-    def add_predictedbiscore(self, groupname, biscore, predicted):
+    def add_predictedbiscore(self, groupname, biscore, predicted, synergymethod):
         self.file = h5py.File(self.file_path, "r+")
         br = list(self.file.keys())
         for i in br:
             if "_BR" == i:
                 self.brpath = self.file[i]
 
-        self.hdfnorm.add_comboinformation(groupname, biscore, predicted, self.file,
-                                          self.possiblecombination, self.conditionpath,
-                                          self.possiblecombinationsize)
+        self.hdfnorm.add_comboinformation(self, groupname, biscore, predicted, synergymethod)
         self.file.close()
 
 class Individualcombinationstructure(BRHdf5database):
-    def __init__(self, count, file_name_br, experiment_type, branch, file_name,
-                 header, elapse, date_info, date, data, std, medium):
-        super().__init__(count, file_name_br, experiment_type, branch, file_name,
-                         header, elapse, date_info, date, data, std, medium)
+    def __init__(self, count, file_name_br, file_name, header_info, catego, file_info):
+        super().__init__(count, file_name_br, file_name, header_info, catego, file_info)
         # ## once it is none the type of experiment we can save the raw information on Data base
 
         cell_line_BR.append([])
@@ -427,12 +435,9 @@ class Individualcombinationstructure(BRHdf5database):
             self.computaverage()
         self.close_file()
 
-
 class Individualgeneticperturbagen(BRHdf5database):
-    def __init__(self, count, file_name_br, experiment_type, branch, file_name,
-                 header, elapse, date_info, date, data, std, medium):
-        super().__init__(count, file_name_br, experiment_type, branch, file_name,
-                         header, elapse, date_info, date, data, std, medium)
+    def __init__(self, count, file_name_br, file_name, header_info, catego, file_info):
+        super().__init__(count, file_name_br, file_name, header_info, catego, file_info)
         # ## once it is none the type of experiment we can save the raw information on Data base
 
         cell_line_BR.append([])
@@ -509,11 +514,10 @@ class Individualgeneticperturbagen(BRHdf5database):
 
 
 class BRcompoundscreenseveralcontrol(BRHdf5database):
-    def __init__(self, count, file_name_br, experiment_type, branch, file_name,
-                 header, elapse, date_info, date, data, std, medium):
-        super().__init__(count, file_name_br, experiment_type, branch, file_name,
-                         header, elapse, date_info, date, data, std, medium)
+    def __init__(self, count, file_name_br, file_name, header_info, catego, file_info):
+        super().__init__(count, file_name_br, file_name, header_info, catego, file_info)
 
+        # self.control_name = []
         self.std_info = ["STD_BR"]
         self.control_data_single = None
 
@@ -523,21 +527,15 @@ class BRcompoundscreenseveralcontrol(BRHdf5database):
         # ##
         # normalize only the mean
         self.normalizeseveralcontrol()
-        self.hdfnorm.get_fieldsseveralcontrolmain(self.brpath, 5, 1, self.fields, self.data, self.inhibited,
-                                                  self.normalized_perc, self.normalized, self.std_inh, self.std,
-                                                  self.normalizedtranslation, self.datamedium, self.inhibitedmedium,
-                                                  self.normalized_percmedium, self.normalizedmedium, self.std_inhmedium,
-                                                  self.stdmedium, self.confinterval, self.normalizedtranslationmedium)
+        self.hdfnorm.get_fieldsseveralcontrolmain(self, self.brpath, 1, 5)
         self.get_medium_control(self.brpath, 3)
         self.close_file()
 
-
 class BRcompoundscreenonecontrol(BRHdf5database):
-    def __init__(self, count, file_name_br, experiment_type, branch, file_name,
-                 header, elapse, date_info, date, data, std, medium):
-        super().__init__(count, file_name_br, experiment_type, branch, file_name,
-                         header, elapse, date_info, date, data, std, medium)
+    def __init__(self, count, file_name_br, file_name, header_info, catego, file_info):
+        super().__init__(count, file_name_br, file_name, header_info, catego, file_info)
 
+        # self.control_name = []
         self.std_info = ["STD_BR"]
         self.control_data_single = None
 
@@ -547,26 +545,21 @@ class BRcompoundscreenonecontrol(BRHdf5database):
         # ##
         # normalize only the mean
         self.normalizeonecontrol()
-        self.hdfnorm.get_fieldsonecontrolmain(self.brpath, 5, 1, self.fields, self.control, self.data,
-                                              self.inhibited, self.normalized_perc, self.normalized,
-                                              self.std_inh, self.std, self.normalizedtranslation,
-                                              self.datamedium, self.inhibitedmedium, self.normalized_percmedium,
-                                              self.normalizedmedium, self.std_inhmedium, self.stdmedium,
-                                              self.confinterval, self.normalizedtranslationmedium)
+        self.hdfnorm.get_fieldsonecontrolmain(self, self.brpath, 1, 5)
+
         self.get_compoundalone(self.brpath, 3)
 
         self.close_file()
 
 
 class BRcombinationstructure(BRHdf5database):
-    def __init__(self, count, file_name_br, experiment_type, branch, file_name,
-                 header, elapse, date_info, date, data, std, medium):
-        super().__init__(count, file_name_br, experiment_type, branch, file_name,
-                         header, elapse, date_info, date, data, std, medium)
+    def __init__(self, count, file_name_br, file_name, header_info, catego, file_info):
+        super().__init__(count, file_name_br, file_name, header_info, catego, file_info)
 
         self.celline = []
         self.seeding = []
         self.condition = []
+        # self.control_name = []
         self.std_info = ["STD_BR"]
         self.control_data_single = None
 
@@ -577,26 +570,28 @@ class BRcombinationstructure(BRHdf5database):
         # normalize only the mean
         self.normalizeonecontrol()
         # self.get_fieldsonecontrol(self.brpath, 5)
-        self.hdfnorm.get_fieldsonecontrolmain(self.brpath, 5, 1, self.fields, self.control, self.data, self.inhibited,
-                                              self.normalized_perc, self.normalized, self.std_inh, self.std,
-                                              self.normalizedtranslation, self.datamedium, self.inhibitedmedium,
-                                              self.normalized_percmedium, self.normalizedmedium, self.std_inhmedium,
-                                              self.stdmedium, self.confinterval, self.normalizedtranslationmedium)
+        self.hdfnorm.get_fieldsonecontrolmain(self, self.brpath, 1, 5)
+
+        # self.brpath, 5, 1, self.fields, self.control, self.data, self.inhibited,
+        # self.normalized_perc, self.normalized, self.std_inh, self.std,
+        # self.normalizedtranslation, self.datamedium, self.inhibitedmedium,
+        # self.normalized_percmedium, self.normalizedmedium, self.std_inhmedium,
+        # self.stdmedium, self.confinterval, self.normalizedtranslationmedium
         self.get_combination(self.brpath, 3)
+        # self.get_medium_control(self.file, 3)
 
         self.close_file()
 
 
 class BRgeneticchemicalperturbagem(BRHdf5database):
-    def __init__(self, count, file_name_br, experiment_type, branch, file_name,
-                 header, elapse, date_info, date, data, std, medium):
-        super().__init__(count, file_name_br, experiment_type, branch, file_name,
-                         header, elapse, date_info, date, data, std, medium)
+    def __init__(self, count, file_name_br, file_name, header_info, catego, file_info):
+        super().__init__(count, file_name_br, file_name, header_info, catego, file_info)
 
         self.celline = []
         self.seeding = []
         self.branch = []
         self.condition = []
+        # self.control_name = []
         self.std_info = ["STD_BR"]
         self.control_data_single = None
 
@@ -605,29 +600,27 @@ class BRgeneticchemicalperturbagem(BRHdf5database):
         self.get_pathways()
         # normalize only the mean
         self.normalizeseveralcontrol()
-        self.hdfnorm.get_fieldsseveralcontrolmain(self.brpath, 5, 1, self.fields, self.data, self.inhibited,
-                                                  self.normalized_perc, self.normalized, self.std_inh, self.std,
-                                                  self.normalizedtranslation, self.datamedium, self.inhibitedmedium,
-                                                  self.normalized_percmedium, self.normalizedmedium, self.std_inhmedium,
-                                                  self.stdmedium, self.confinterval, self.normalizedtranslationmedium)
 
-        self.hdfnorm.get_genetcombmain(self.brpath, 2, self.mediumword, self.possiblecombination,
-                                       self.possiblecombinationsize)
+        self.hdfnorm.get_fieldsseveralcontrolmain(self, self.brpath, 1, 5)
+
+        self.hdfnorm.get_genetcombmain(self, self.brpath, 2)
+
         self.get_medium_control(self.brpath, 3)
 
-        self.compoundalonearranged = self.hdfnorm.get_branch(1, self.brpath, self.branch,
-                                                             self.compoundalone)
+        self.compoundalonearranged = self.hdfnorm.get_branch(self, self.brpath, 1)
+
         self.compoundalone = self.compoundalonearranged
+
         self.close_file()
 
 class BRgeneticperturbagem(BRHdf5database):
-    def __init__(self, count, file_name_br, experiment_type, branch, file_name,
-                 header, elapse, date_info, date, data, std, medium):
-        super().__init__(count, file_name_br, experiment_type, branch, file_name,
-                         header, elapse, date_info, date, data, std, medium)
+    def __init__(self, count, file_name_br, file_name, header_info, catego, file_info):
+        super().__init__(count, file_name_br, file_name, header_info, catego, file_info)
+
         self.celline = []
         self.seeding = []
         self.condition = []
+        # self.control_name = []
         self.std_info = ["STD_BR"]
         # this is the only experimental condition that accepts more than 1 control
         self.open_file()
@@ -636,11 +629,8 @@ class BRgeneticperturbagem(BRHdf5database):
 
         self.normalizeonecontrol()
 
-        self.hdfnorm.get_fieldsonecontrolmain(self.brpath, 5, 1, self.fields, self.control, self.data, self.inhibited,
-                                              self.normalized_perc, self.normalized, self.std_inh, self.std,
-                                              self.normalizedtranslation, self.datamedium, self.inhibitedmedium,
-                                              self.normalized_percmedium, self.normalizedmedium, self.std_inhmedium,
-                                              self.stdmedium, self.confinterval, self.normalizedtranslationmedium)
+        self.hdfnorm.get_fieldsonecontrolmain(self, self.brpath, 1, 5)
+        # self.get_fieldsonecontrol(self.brpath, 5)
         self.get_compoundalone(self.brpath, 3)
 
         self.close_file()

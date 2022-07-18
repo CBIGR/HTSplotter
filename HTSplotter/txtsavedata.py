@@ -4,17 +4,18 @@ import numpy as np
 
 class Savetxt:
 
-    def __init__(self, filename, date_info, header, data, enlaspse):
-
-        self.header = header
-        self.date_info = date_info
+    def __init__(self, commonfunctions):
+        # self.txt_path, self.date_info, self.fields, self.data, self.elapsed
+        # filename, date_info, header, data, enlaspse
+        self.header = commonfunctions.fields
+        self.date_info = commonfunctions.date_info
 
         self.data_down = []
         self.data_up =[]
 
-        self.data = np.asarray(data)
-        self.enlapse = np.asarray(enlaspse)
-        self.file_path = filename
+        self.data = np.asarray(commonfunctions.data)
+        self.enlapse = np.asarray(commonfunctions.elapsed)
+        self.file_path = commonfunctions.txt_path
 
         # ##atribut from this class
 
@@ -24,7 +25,7 @@ class Savetxt:
         self.enlap_complete = None
         self.datatype = None
 
-        if len(data[0]) == 2:
+        if len(self.data[0]) == 2:
             self.get_data()
             self.datatype = 1
 
@@ -43,7 +44,10 @@ class Savetxt:
 
     def get_txt_path(self):
 
+        # f = open(self.file_path, 'w')
         np.savetxt(self.file_path, self.complete, delimiter='\t', fmt="%s")
+
+        # f.close()
 
     def get_header_format(self):
         head1 = []
@@ -53,7 +57,12 @@ class Savetxt:
         head5 = []
         head6 = []
         if self.datatype == 1:
-
+            # head1 = [[] for i in range(0, 2)]
+            # head2 = [[] for i in range(0, 2)]
+            # head3 = [[] for i in range(0, 2)]
+            # head4 = [[] for i in range(0, 2)]
+            # head5 = [[] for i in range(0, 2)]
+            # head6 = [[] for i in range(0, 2)]
             for j in self.header:
                 head1.append(j[0])
                 head1.append(j[0])

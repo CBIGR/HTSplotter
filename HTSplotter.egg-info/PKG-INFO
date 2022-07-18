@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: HTSplotter
-Version: 0.14
+Version: 0.15
 Summary: An end-to-end data processing, analysis and visualisation tool for chemical and genetic in vitro perturbation screens
 Home-page: https://github.com/CBIGR/HTSplotter
 Author: CarolinadCNunes
 Author-email: carolina.decarvalhonunes@ugent.be
 License: GNU General Public License v3 or later (GPLv3+)
-Download-URL: https://github.com/CBIGR/HTSplotter/archive/refs/tags/HTSplotter_v0.14.tar.gz
+Download-URL: https://github.com/CBIGR/HTSplotter/archive/refs/tags/HTSplotter_v0.15.tar.gz
 Description: # HTSplotter
         
         HTSplotter allows an end-to-end data processing and analysis of chemical and genetic in vitro perturbation screens. It also available as a [web tool](https://htsplotter.cmgg.be/). 
@@ -146,7 +146,7 @@ Description: # HTSplotter
         
         
          
-Keywords: High-throughput screening,drug combination,genetic-chemical perturbation,dose-response
+Keywords: High-throughput screening,drug combination,genetic-chemical perturbation,dose-response,HTS,Bliss,synergism,antagonism
 Platform: UNKNOWN
 Classifier: Development Status :: 4 - Beta
 Classifier: Intended Audience :: Developers
