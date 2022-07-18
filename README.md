@@ -131,7 +131,7 @@ To run all the analysis blocks, use the execute_from_file() routine:
 ```
 hts.execute_from_file('path/to/input/file/filename.txt')
 ```
-![](https://github.com/CBIGR/HTSplotter/blob/main/images/fig1_Rebuttal.png)
+![](https://github.com/CBIGR/HTSplotter/blob/main/images/HTSplotter_GITHUB.png)
 
 
 
