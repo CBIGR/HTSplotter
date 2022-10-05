@@ -3190,3 +3190,17 @@ io_counters, read_count = 	677048
 io_counters, write_count = 	1540
 io_counters, read_bytes = 	5550542724
 io_counters, write_bytes = 	3788069
+
+file name: 20220816_SRA737_3AP_CLBGA
+2022-10-05 11:05:01
+cpu_times, user= 	91.5
+cpu_times, system = 	4.6875
+cpu_percent= 	0.0
+ppid= 	32472
+status =	running
+memory_info, rss= 	2454499328
+memory_info, vms = 	2978594816
+io_counters, read_count = 	775506
+io_counters, write_count = 	1884
+io_counters, read_bytes = 	6357105050
+io_counters, write_bytes = 	2814325

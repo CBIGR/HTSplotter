@@ -474,7 +474,7 @@ if __name__ == '__main__':
 
                 # # over time data:
                 if len(hdfcompoundcomb.elapse) > 1:
-                    comb.inhibition(hdfcompoundcomb.data, hdfcompoundcomb.std, 1)
+                    comb.inhibition(hdfcompoundcomb.data, hdfcompoundcomb.std)
                     if expected_effect == 0:
                         comb.inhibition(hdfcompoundcomb.inhibited, hdfcompoundcomb.std_inh, 2, 1)
                     elif expected_effect == 1:
