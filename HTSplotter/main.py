@@ -31,13 +31,15 @@ if __name__ == '__main__':
     # main folder where csv files are
     # main_folder = "HTSplotter_master_ugent/" \
     #               "experiment_type/drug_combination/"
-    main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/HTSplotter_master_ugent/" \
-                  "experiment_type/"
+    # main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/HTSplotter_master_ugent/" \
+    #               "experiment_type/Drug_combination/"
     # main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/Carol personal Lab/wet lab/siRNA/siTPX2/" \
     #               "Incucyte-rawdata/"
+    main_folder = 'C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/HTSplotter_20210727/' \
+                  'ExperimentType/Drug_combination/'
     # main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/Carol personal Lab/wet lab/Drugging/Drug/" \
     #               "CR-31-B/CR-31-B_IC50/HTSplotter_data/"
-    input_path = main_folder + 'drug_combination/'   # + "Incucyte_RawData"
+    input_path = main_folder # + 'drug_combination/'   # + "Incucyte_RawData"
     information_extracted = main_folder #+ "HTSplotter_results/" #+ 'HTSplotter_results/' #+ 'resultsHTSplotter/' # + "Information_extracted_files/"
     results_path = main_folder #+ "HTSplotter_results/"#+ 'HTSplotter_results/'  #+ 'resultsHTSplotter/'  # + "Output_results/"
 
@@ -62,10 +64,10 @@ if __name__ == '__main__':
     #               '20211203_SKNBE2c CR31B dosage range_BR3', '20211203_SKNBE2c CR31B dosage range_BR4']
     # files_list = ['20211203_CLBGA CR31B dosage range_BR2', '20211203_CLBGA CR31B dosage range_BR3',
     #               '20211203_CLBGA CR31B dosage range_BR4']
-    files_list = ['20220707_SRA737_CLBGA_IC', '20220707_SRA737_IMR32_IC']
+    # files_list = ['CDK12 sy5y Navitoclax BSJ Correcte2 280922ZOOM']
     # files_list = ['20211203_SKNBE2c CR31B dosage range_BR2',
     #               '20211203_SKNBE2c CR31B dosage range_BR3', '20211203_SKNBE2c CR31B dosage range_BR4']
-    # files_list = ['gene_perturbagen_severaltimepoints']
+    files_list = ['20220816_SRA737_3AP_CLBGA']
     # files_list = [ '20191125_siTPX2_IMR32', '20200228_CLBGA_siTPX2',
                   # '20200228_IMR32_siTPX2', '20200228_SHSY5Y_siTPX2', '20200228_SKNBE2c_siTPX2',
     #               '20200306_CLBGA_siTPX2', '20200306_IMR32_siTPX2', '20200306_SHSY5Y_siTPX2',
@@ -472,12 +474,12 @@ if __name__ == '__main__':
 
                 # # over time data:
                 if len(hdfcompoundcomb.elapse) > 1:
-                    comb.inhibition(hdfcompoundcomb.data, hdfcompoundcomb.std)
+                    comb.inhibition(hdfcompoundcomb.data, hdfcompoundcomb.std, 1)
                     if expected_effect == 0:
                         comb.inhibition(hdfcompoundcomb.inhibited, hdfcompoundcomb.std_inh, 2, 1)
                     elif expected_effect == 1:
                         comb.inhibition(hdfcompoundcomb.normalizedtranslation, hdfcompoundcomb.std_inh, 1, 1)
-                    comb.doseresponse()
+                    comb.doseresponse(1)
 
                 else:
                     print("1 time point for combo")

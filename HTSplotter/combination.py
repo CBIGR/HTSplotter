@@ -163,33 +163,33 @@ class ExperimentCombination:
         self.synergy_score_per_yzipfit = [[] for i in range(0, len(self.com_list_group))]
         self.combinationzipname = [[] for i in range(0, len(self.com_list_group))]
 
-        # compute dose-response curve for synergy
-        if len(self.elapse) > 1:
-            gr = GrowthRateCombination(self, 1)
-            self.grresults = gr.grresults
-
-            for eac in self.time_selected:
-                self.position_gr.append(np.searchsorted(gr.xs, eac))
-            for eac in self.elapse[1:-1]:
-                self.position_elapsegr.append(np.searchsorted(gr.xs, eac))
-            self.position_elapsegr.append(np.searchsorted(gr.xs, self.elapse[-2]))
-            for eac in self.extremepoints:
-                self.extremepointspositions.append(np.searchsorted(gr.xs, eac))
-            if self.position_gr[-1] == self.position_gr[-1]:
-                self.position_gr[-1] = np.searchsorted(gr.xs, gr.xs[-2])
-            self.time_selectedgr = self.time_selected
-            self.grheader = gr.grheader
-            self.grresultscombination = gr.grresultscombination
-            self.grheadercombination = gr.grheadercombination
-            txtgr = GrwothRateSaveTXT(self)
-            txtgr.TXTcombination(self.grresultscombination, self.grheadercombination)
+        # # compute dose-response curve for synergy
+        # if len(self.elapse) > 1:
+        #     gr = GrowthRateCombination(self, 1)
+        #     self.grresults = gr.grresults
+        #
+        #     for eac in self.time_selected:
+        #         self.position_gr.append(np.searchsorted(gr.xs, eac))
+        #     for eac in self.elapse[1:-1]:
+        #         self.position_elapsegr.append(np.searchsorted(gr.xs, eac))
+        #     self.position_elapsegr.append(np.searchsorted(gr.xs, self.elapse[-2]))
+        #     for eac in self.extremepoints:
+        #         self.extremepointspositions.append(np.searchsorted(gr.xs, eac))
+        #     if self.position_gr[-1] == self.position_gr[-1]:
+        #         self.position_gr[-1] = np.searchsorted(gr.xs, gr.xs[-2])
+        #     self.time_selectedgr = self.time_selected
+        #     self.grheader = gr.grheader
+        #     self.grresultscombination = gr.grresultscombination
+        #     self.grheadercombination = gr.grheadercombination
+        #     txtgr = GrwothRateSaveTXT(self)
+        #     txtgr.TXTcombination(self.grresultscombination, self.grheadercombination)
 
         self.doseresponsecurve = DoseResponse(self)
 
         for i in range(len(self.com_list_group)):
             for j in range(len(self.com_list_group[i])):
                 # cell combination
-                if self.synergy_method !=2:
+                if self.synergy_method != 2:
                     self.adjusteddata = AdjustData(self)
                     self.normalized_perc = self.adjusteddata.normalized_perc
                     self.inhib_data = self.adjusteddata.inhib_data
@@ -326,12 +326,12 @@ class ExperimentCombination:
                     self.curves = self.doseresponsecurve.curves
                     DoseResponseSinglePlotting(self, grup[0], datanormperce, std)
 
-                    # Growth rate
-                    if growthrate ==0:
-                        datagr, stdgr = self.doseresponsecurve.get_confluency_rangeGR(self, grup[0], i, j)
-                        self.doseresponsecurve.get_curve_specifictimepointsGR(self, datagr, grup[0])
-                        self.curvesgr = self.doseresponsecurve.curves
-                        DoseResponseGrowthRate(self, grup[0], i, j, datagr, stdgr)
+                    # # Growth rate
+                    # if growthrate ==0:
+                    #     datagr, stdgr = self.doseresponsecurve.get_confluency_rangeGR(self, grup[0], i, j)
+                    #     self.doseresponsecurve.get_curve_specifictimepointsGR(self, datagr, grup[0])
+                    #     self.curvesgr = self.doseresponsecurve.curves
+                    #     DoseResponseGrowthRate(self, grup[0], i, j, datagr, stdgr)
 
     def inhibition(self, data, std, info1=0, info2=0):
         self.data_plot = data
@@ -352,7 +352,7 @@ class ExperimentCombination:
                                   self.condition) for c in self.com_list_group[i][k][0]]
 
                 grup_orig = grup.copy()
-                grup_grwt = grup_orig.copy()
+                # grup_grwt = grup_orig.copy()
                 grup_bar = grup.copy()
                 data_grup = [Data_group(self.data_plot, m.concentration) for m in grup]
                 data_orig = data_grup.copy()
@@ -374,15 +374,17 @@ class ExperimentCombination:
                 else:
                     # self.plotting.plot_combin_inhibition_recursive(self, grup, data_grup, std_data_grup, i, k,
                     #                                                info1, info2)
-                    if info1 == 0:
-                        self.plotting.plot_grwothratecombination(self, grup_grwt, i, k)
+                    # if info1 == 0:
+                        # self.plotting.plot_grwothratecombination(self, grup_grwt, i, k)
                     if info1 != 0:
                         self.plotting.plot_combin_inhibition_recursive(self, grup, data_grup, std_data_grup, i, k,
                                                                        info1, info2)
-                        self.plotting.barplot_comb_inhibition_recursive(self, grup_bar, data_bar, std_bar, info1,
-                                                                        info2, i, k)
                         self.plotting.heat_map_overtime_bi(self, i, k, grup_orig)
                         self.plotting.heat_map_selec_time_bi_biDim(self, grup_orig, i, k)
+                        if info2 != 0:
+                            self.plotting.barplot_comb_inhibition_recursive(self, grup_bar, data_bar, std_bar, info1,
+                                                                            info2, i, k)
+
 
     def endpointinhibition(self, data, std, info1, info2):
         self.data_plot = data
