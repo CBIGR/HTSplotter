@@ -3162,3 +3162,31 @@ io_counters, read_count = 	677041
 io_counters, write_count = 	1335
 io_counters, read_bytes = 	5550491776
 io_counters, write_bytes = 	3674898
+
+file name: 20220816_SRA737_3AP_CLBGA
+2022-10-05 10:45:31
+cpu_times, user= 	79.78125
+cpu_times, system = 	4.171875
+cpu_percent= 	0.0
+ppid= 	27980
+status =	running
+memory_info, rss= 	1487749120
+memory_info, vms = 	2009071616
+io_counters, read_count = 	677048
+io_counters, write_count = 	1540
+io_counters, read_bytes = 	5550542132
+io_counters, write_bytes = 	3787893
+
+file name: 20220816_SRA737_3AP_CLBGA
+2022-10-05 11:02:54
+cpu_times, user= 	72.90625
+cpu_times, system = 	3.625
+cpu_percent= 	0.0
+ppid= 	29332
+status =	running
+memory_info, rss= 	1488363520
+memory_info, vms = 	2009567232
+io_counters, read_count = 	677048
+io_counters, write_count = 	1540
+io_counters, read_bytes = 	5550542724
+io_counters, write_bytes = 	3788069

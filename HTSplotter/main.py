@@ -29,16 +29,16 @@ if __name__ == '__main__':
     p = psutil.Process()
     # print("psutil.cpu_count() = {0}".format(psutil.cpu_count()))
     # main folder where csv files are
-    # main_folder = "HTSplotter_master_ugent/" \
-    #               "experiment_type/drug_combination/"
-    # main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/HTSplotter_master_ugent/" \
-    #               "experiment_type/Drug_combination/"
+    main_folder = "HTSplotter_master_ugent/" \
+                  "experiment_type/drug_combination/"
+    # # main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/HTSplotter_master_ugent/" \
+    # #               "experiment_type/Drug_combination/"
     # main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/Carol personal Lab/wet lab/siRNA/siTPX2/" \
     #               "Incucyte-rawdata/"
     main_folder = 'C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/HTSplotter_20210727/' \
                   'ExperimentType/Drug_combination/'
-    # main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/Carol personal Lab/wet lab/Drugging/Drug/" \
-    #               "CR-31-B/CR-31-B_IC50/HTSplotter_data/"
+    # # main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/Carol personal Lab/wet lab/Drugging/Drug/" \
+    # #               "CR-31-B/CR-31-B_IC50/HTSplotter_data/"
     input_path = main_folder # + 'drug_combination/'   # + "Incucyte_RawData"
     information_extracted = main_folder #+ "HTSplotter_results/" #+ 'HTSplotter_results/' #+ 'resultsHTSplotter/' # + "Information_extracted_files/"
     results_path = main_folder #+ "HTSplotter_results/"#+ 'HTSplotter_results/'  #+ 'resultsHTSplotter/'  # + "Output_results/"
