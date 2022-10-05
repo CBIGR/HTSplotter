@@ -31,14 +31,7 @@ if __name__ == '__main__':
     # main folder where csv files are
     main_folder = "HTSplotter_master_ugent/" \
                   "experiment_type/drug_combination/"
-    # # main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/HTSplotter_master_ugent/" \
-    # #               "experiment_type/Drug_combination/"
-    # main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/Carol personal Lab/wet lab/siRNA/siTPX2/" \
-    #               "Incucyte-rawdata/"
-    main_folder = 'C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/HTSplotter_20210727/' \
-                  'ExperimentType/Drug_combination/'
-    # # main_folder = "C:/Users/cdcarval/Dropbox (speleman lab)/Personal Lab/Carol personal Lab/wet lab/Drugging/Drug/" \
-    # #               "CR-31-B/CR-31-B_IC50/HTSplotter_data/"
+
     input_path = main_folder # + 'drug_combination/'   # + "Incucyte_RawData"
     information_extracted = main_folder #+ "HTSplotter_results/" #+ 'HTSplotter_results/' #+ 'resultsHTSplotter/' # + "Information_extracted_files/"
     results_path = main_folder #+ "HTSplotter_results/"#+ 'HTSplotter_results/'  #+ 'resultsHTSplotter/'  # + "Output_results/"
@@ -49,37 +42,12 @@ if __name__ == '__main__':
     readout_units = "(%)"
     expected_effect = 0  # 0 = "inhibition"; 1 = enhanced
 
-    # files_list = ['drug_combination_several_time_pointsZIP']
-    # #### files to test drug screen analysis
-    # files_list = ['drugscreen_1timepoint']
-    # files_list = ['drugscreen_severaltimepoint_severalcontrol']
-    # files_list = ['Rep3 (1)'] #, 'Rep2 (1)', 'Rep3 (1)', 'Rep1 (1)/
-    # files_list = ['drugscreen_severaltimepoint_1control']
-    # files_list = ['20191125_siTPX2_CLBGA']
-    # files_list = ['20191125_siTPX2_IMR32']
+    files_list = ['drug_combination_several_time_pointsZIP']
+    
 
-    # files_list = ['20191125_siTPX2_CLBGA_after24hseeding', '20191125_siTPX2_IMR32_after24hseeding']
-    # files_list = ['20211203_CLBGA CR31B dosage range_BR2', '20211203_CLBGA CR31B dosage range_BR3',
-    #               '20211203_CLBGA CR31B dosage range_BR4', '20211203_SKNBE2c CR31B dosage range_BR2',
-    #               '20211203_SKNBE2c CR31B dosage range_BR3', '20211203_SKNBE2c CR31B dosage range_BR4']
-    # files_list = ['20211203_CLBGA CR31B dosage range_BR2', '20211203_CLBGA CR31B dosage range_BR3',
-    #               '20211203_CLBGA CR31B dosage range_BR4']
-    # files_list = ['CDK12 sy5y Navitoclax BSJ Correcte2 280922ZOOM']
-    # files_list = ['20211203_SKNBE2c CR31B dosage range_BR2',
-    #               '20211203_SKNBE2c CR31B dosage range_BR3', '20211203_SKNBE2c CR31B dosage range_BR4']
-    files_list = ['20220816_SRA737_3AP_CLBGA']
-    # files_list = [ '20191125_siTPX2_IMR32', '20200228_CLBGA_siTPX2',
-                  # '20200228_IMR32_siTPX2', '20200228_SHSY5Y_siTPX2', '20200228_SKNBE2c_siTPX2',
-    #               '20200306_CLBGA_siTPX2', '20200306_IMR32_siTPX2', '20200306_SHSY5Y_siTPX2',
-    #               '20200306_SKNBE2c_siTPX2']
-    # ### files to teste genetic-chemical perturbagem
-    # files_list = ['202202_IMR32_siNTC_vs_si47']
-    # files_list = ['genetic-chemical_perturbagen_several-time_points']
-    # SOX11 data
-    # files_list = ['SHEP_SOX11_OE_G2_Celst14-02-2019']
     # file_name_br = "BR_"
     synergy_method = 0  # 0-->Bliss; 1-->HSA; 2--> ZIP
-    file_name_br = 'CLBGA CR31B dosage range_BR'
+    file_name_br = 'Dosage range_BR'
     print("main folder=>", main_folder)
     print("files path", input_path)
     print("results path", results_path)
