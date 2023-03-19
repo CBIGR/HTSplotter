@@ -5,6 +5,7 @@ kiwisolver
 matplotlib
 minio
 numpy
+pandas
 Pillow
 psutil
 pyparsing

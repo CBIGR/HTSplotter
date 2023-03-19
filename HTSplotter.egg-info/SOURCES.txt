@@ -5,11 +5,15 @@ HTSplotter/__init__.py
 HTSplotter/arrayRGB.py
 HTSplotter/categorisation.py
 HTSplotter/combination.py
+HTSplotter/commonfunctions.py
 HTSplotter/compoundscreen.py
 HTSplotter/doseresponse.py
+HTSplotter/doseresponsecurvefunctionscommon.py
+HTSplotter/doseresponseplots.py
 HTSplotter/filenames.py
 HTSplotter/geneticchemicalperturbagem.py
 HTSplotter/geneticperturbagem.py
+HTSplotter/growthrate.py
 HTSplotter/grupping.py
 HTSplotter/hdf5functions.py
 HTSplotter/headers.py
@@ -20,6 +24,7 @@ HTSplotter/readfiles.py
 HTSplotter/save_hdf5brfiles.py
 HTSplotter/save_hdf5file.py
 HTSplotter/synergism.py
+HTSplotter/synergyprocessing.py
 HTSplotter/timepointselection.py
 HTSplotter/txtsavedata.py
 HTSplotter/web.py
