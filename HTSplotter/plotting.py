@@ -9,10 +9,10 @@ from arrayRGB import ColorsHtsplots
 import random
 # from matplotlib.backends.backend_pdf import PdfPages
 import math
-from interactionsuser import Outputfile
+# from interactionsuser import Outputfile
 import scipy.interpolate as inter
-from scipy.interpolate import UnivariateSpline
-from interactionsuser import Outputfile
+# from scipy.interpolate import UnivariateSpline
+# from interactionsuser import Outputfile
 
 
 # from doseresponse import DoseResponseSingle

@@ -1,23 +1,23 @@
 import numpy as np
 import os
-from grupping import Groupping, Data_group, GrouppingGrowthRate, Grouppingpertub
-from synergism import Blissmethod, Hsamethod
-from plotting import Overtime
-from timepointselection import Timepointselection
-from commonfunctions import CommonFunctions, OpenPdf, SaveTXTinfo, AdjustData, SynergyScoreSaveTXT, GrwothRateSaveTXT
-from doseresponse import DoseResponse
+from HTSplotter.grupping import Groupping, Data_group, GrouppingGrowthRate, Grouppingpertub
+from HTSplotter.synergism import Blissmethod, Hsamethod
+from HTSplotter.plotting import Overtime
+from HTSplotter.timepointselection import Timepointselection
+from HTSplotter.commonfunctions import CommonFunctions, OpenPdf, SaveTXTinfo, AdjustData, SynergyScoreSaveTXT, GrwothRateSaveTXT
+from HTSplotter.doseresponse import DoseResponse
 from copy import deepcopy
-from doseresponseplots import DoseResponseConditionPlotting, DoseResponseGrowthRate
-from growthrate import GrowthRate, GrowthRateGeneticChemical
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import cm
-from matplotlib.backends.backend_pdf import PdfPages
-import math
-import scipy.interpolate as inter
-
-import time
-
-import time as ti
+from HTSplotter.doseresponseplots import DoseResponseConditionPlotting, DoseResponseGrowthRate
+from HTSplotter.growthrate import GrowthRate, GrowthRateGeneticChemical
+# import matplotlib.pyplot as plt
+# from matplotlib.pyplot import cm
+# from matplotlib.backends.backend_pdf import PdfPages
+# import math
+# import scipy.interpolate as inter
+#
+# import time
+#
+# import time as ti
 
 
 class GeneticChemicalPerturbagem:

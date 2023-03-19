@@ -1,20 +1,20 @@
-from txtsavedata import Savetxt
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import cm
-from matplotlib import ticker
-from matplotlib.backends.backend_pdf import PdfPages
-import math
-import scipy.interpolate as inter
-from mpl_toolkits.mplot3d import Axes3D
-from scipy.optimize import curve_fit
+# from txtsavedata import Savetxt
+# import matplotlib.pyplot as plt
+# from matplotlib.pyplot import cm
+# from matplotlib import ticker
+# from matplotlib.backends.backend_pdf import PdfPages
+# import math
+# import scipy.interpolate as inter
+# from mpl_toolkits.mplot3d import Axes3D
+# from scipy.optimize import curve_fit
 import numpy as np
-from grupping import GrouppingGrowthRate, GrouppingGrowthRateCombination
+from HTSplotter.grupping import GrouppingGrowthRate, GrouppingGrowthRateCombination
 from scipy.interpolate import UnivariateSpline, PchipInterpolator, LSQUnivariateSpline, splrep, splev, make_lsq_spline,\
 make_interp_spline
-from scipy.special import erfinv
+# from scipy.special import erfinv
 from scipy.ndimage import gaussian_filter
 
-from plotting import Overtime
+# from plotting import Overtime
 
 class GrowthRate:
 

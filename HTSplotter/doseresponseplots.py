@@ -1,16 +1,16 @@
 import numpy as np
 import os
-from grupping import Groupping
+# from HTSplotter.grupping import Groupping
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
 from matplotlib import ticker
-from matplotlib.backends.backend_pdf import PdfPages
+# from matplotlib.backends.backend_pdf import PdfPages
 import math
-from doseresponse import DoseResponse
-from commonfunctions import StartTXTic
-import scipy.interpolate as inter
-from mpl_toolkits.mplot3d import Axes3D
-from scipy.optimize import curve_fit
+from HTSplotter.doseresponse import DoseResponse
+from HTSplotter.commonfunctions import StartTXTic
+# import scipy.interpolate as inter
+# from mpl_toolkits.mplot3d import Axes3D
+# from scipy.optimize import curve_fit
 opentxtic = []
 
 class DoseResponsePlot:
