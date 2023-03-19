@@ -199,9 +199,9 @@ class Analyser:
 
 
         if len(self.information_readout) == 0:
-            information_readout = "no information"
+            self.information_readout = "no information"
         if len(self.readout_units) == 0:
-            readout_units = 'no information'
+            self.readout_units = 'no information'
 
         if self.biological_replicate == 1:
             print("Processing Bioloical replicate")
@@ -295,7 +295,7 @@ class Analyser:
                     print(brcombdata.possiblecombinationsize[g], brcombdata.possiblecombination[g])
 
                 comb = ExperimentCombination(self.synergy_method, brcombdata, file_info, catego.branch,
-                                             information_readout, readout_units, file_br_names,
+                                             self.information_readout, self.readout_units, file_br_names,
                                              self.biological_replicate, self.file_name_br)
                 # ###
                 # add predicted and bliss score to the HDF5 file
@@ -334,7 +334,7 @@ class Analyser:
                         print(brcomscreendata.compoundalone[g])
                     print(brcomscreendata.medium)
                     singlecompond = SingleCompound(header_info.branch, file_info,
-                                                   information_readout, readout_units,
+                                                   self.information_readout, self.readout_units,
                                                    self.biological_replicate, brcomscreendata,
                                                    file_br_names, self.file_name_br)
 
@@ -364,7 +364,7 @@ class Analyser:
                     print(brcomscreenonecontrol.medium)
 
                     singlecomponecontrol = SingleCompoundonecontrol(header_info.branch, file_info,
-                                                                    information_readout, readout_units,
+                                                                    self.information_readout, self.readout_units,
                                                                     self.biological_replicate, brcomscreenonecontrol,
                                                                     file_br_names, self.file_name_br)
 
@@ -395,7 +395,7 @@ class Analyser:
                 print(BRhdf5genetic.compoundalone)
 
                 geneticpert = ExperimentGeneticPerturbagem(header_info, BRhdf5genetic, file_info, catego, file_br_names,
-                                                           information_readout, readout_units, self.file_name_br,
+                                                           self.information_readout, self.readout_units, self.file_name_br,
                                                            self.biological_replicate)
 
                 if len(BRhdf5genetic.elapse) > 1:
@@ -429,7 +429,7 @@ class Analyser:
                 print(brhdfgeneticchemical.possiblecombination)
 
                 geneticchemical = GeneticChemicalPerturbagem(self.synergy_method, brhdfgeneticchemical, file_info,
-                                                             file_br_names, information_readout, readout_units,
+                                                             file_br_names, self.information_readout, self.readout_units,
                                                              self.file_name_br, self.biological_replicate)
 
                 if len(brhdfgeneticchemical.elapse) > 1:
@@ -521,7 +521,7 @@ class Analyser:
                               len(hdfcompound.normalized_percmedium), len(hdfcompound.normalizedmedium))
 
                         singlecompond = SingleCompound(header_info.branch, file_info,
-                                                       information_readout, readout_units, self.biological_replicate,
+                                                       self.information_readout, self.readout_units, self.biological_replicate,
                                                        hdfcompound, file_names, i)
 
                         if len(hdfcompound.elapse) > 1:
@@ -547,7 +547,7 @@ class Analyser:
                               len(hdfcompoundonecontrol.std), len(hdfcompoundonecontrol.std_inh),
                               len(hdfcompoundonecontrol.normalized_perc), len(hdfcompoundonecontrol.normalized))
                         singlecomponecontrol = SingleCompoundonecontrol(header_info.branch, file_info,
-                                                                        information_readout, readout_units,
+                                                                        self.information_readout, self.readout_units,
                                                                         self.biological_replicate,
                                                                         hdfcompoundonecontrol, file_names, i)
 
@@ -577,7 +577,7 @@ class Analyser:
                           len(hdfcompoundcomb.normalized))
 
                     comb = ExperimentCombination(self.synergy_method, hdfcompoundcomb, file_info, catego.branch,
-                                                 information_readout, readout_units, file_names,
+                                                 self.information_readout, self.readout_units, file_names,
                                                  self.biological_replicate, i)
 
                     # add predicted and bliss score to the HDF5 file
@@ -617,7 +617,7 @@ class Analyser:
                     print(hdfgenetic.compoundalone)
 
                     geneticpert = ExperimentGeneticPerturbagem(header_info, hdfgenetic, file_info, catego, file_names,
-                                                               information_readout, readout_units, i,
+                                                               self.information_readout, self.readout_units, i,
                                                                self.biological_replicate)
 
                     if len(hdfgenetic.elapse) > 1:
@@ -651,7 +651,7 @@ class Analyser:
                     #
                     geneticchemical = GeneticChemicalPerturbagem(self.synergy_method, hdfgeneticchemical, file_info,
                                                                  file_names,
-                                                                 information_readout, readout_units,
+                                                                 self.information_readout, self.readout_units,
                                                                  i, self.biological_replicate)
 
                     if len(hdfgeneticchemical.elapse) > 1:
