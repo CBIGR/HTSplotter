@@ -3204,3 +3204,17 @@ io_counters, read_count = 	775506
 io_counters, write_count = 	1884
 io_counters, read_bytes = 	6357105050
 io_counters, write_bytes = 	2814325
+
+file name: 20230130_SRA737_3AP_CLBGA
+2023-03-19 14:28:25
+cpu_times, user= 	98.0
+cpu_times, system = 	6.6875
+cpu_percent= 	0.0
+ppid= 	18812
+status =	running
+memory_info, rss= 	2326495232
+memory_info, vms = 	2849136640
+io_counters, read_count = 	694000
+io_counters, write_count = 	1843
+io_counters, read_bytes = 	5689379488
+io_counters, write_bytes = 	2521192

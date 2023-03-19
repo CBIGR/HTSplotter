@@ -29,8 +29,9 @@ if __name__ == '__main__':
     p = psutil.Process()
     # print("psutil.cpu_count() = {0}".format(psutil.cpu_count()))
     # main folder where csv files are
-    main_folder = "HTSplotter_master_ugent/" \
-                  "experiment_type/drug_combination/"
+    # main_folder = "HTSplotter_master_ugent/" \
+    #               "experiment_type/drug_combination/"
+    main_folder = 'C:/Users/cdcarval/Downloads/'
 
     input_path = main_folder # + 'drug_combination/'   # + "Incucyte_RawData"
     information_extracted = main_folder #+ "HTSplotter_results/" #+ 'HTSplotter_results/' #+ 'resultsHTSplotter/' # + "Information_extracted_files/"
@@ -42,7 +43,8 @@ if __name__ == '__main__':
     readout_units = "(%)"
     expected_effect = 0  # 0 = "inhibition"; 1 = enhanced
 
-    files_list = ['drug_combination_several_time_pointsZIP']
+    # files_list = ['drug_combination_several_time_pointsZIP']
+    files_list = ['20230130_SRA737_3AP_CLBGA']
     
 
     # file_name_br = "BR_"

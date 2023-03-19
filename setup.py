@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
   name = 'HTSplotter',         # How you named your package folder (MyLib)
   packages = ['HTSplotter'],   # Chose the same as "name"
-  version = '0.15',      # Start with a small number and increase it with every change you make
+  version = '2.3',      # Start with a small number and increase it with every change you make
   license='GNU General Public License v3 or later (GPLv3+)',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'An end-to-end data processing, '
                 'analysis and visualisation tool for chemical and genetic in '
@@ -28,6 +28,7 @@ setup(
                     'matplotlib',
                     'minio',
                     'numpy',
+                    'pandas',
                     'Pillow',
                     'psutil',
                     'pyparsing',
@@ -41,7 +42,7 @@ setup(
                     'six',
                     'tqdm',
                     'urllib3',
-                    'xlrd',
+                    'xlrd'
       ],
   classifiers=[
     'Development Status :: 4 - Beta',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
