@@ -168,7 +168,10 @@ class Analyser:
                 elif counter == 8:
                     self.expected_effect = int(line.split()[0])
                 elif counter == 9:
+                    self.synergy_method = line.split()[0]
+                elif counter == 10:
                     self.file_name_br = line.split()[0]
+
                 else:
                     aux = line.split()
                     if aux[0] != 'end':
