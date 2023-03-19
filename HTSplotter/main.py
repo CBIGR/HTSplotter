@@ -108,7 +108,7 @@ class Analyser:
         else:
             raise AttributeError
 
-    def _set_files_list_(self, value):
+    def _set_synergymethod_(self, value):
         if isinstance(value, list):
             self.synergy_method = value
         else:

@@ -5,7 +5,7 @@ import os
 os.environ['MPLCONFIGDIR'] = '/opt/HTSplotter/.config/matplotlib'
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import cm
-from arrayRGB import ColorsHtsplots
+from HTSplotter.arrayRGB import ColorsHtsplots
 import random
 # from matplotlib.backends.backend_pdf import PdfPages
 import math
