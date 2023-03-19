@@ -1,9 +1,9 @@
 import h5py
-import os
+# import os
 import numpy as np
 from scipy import stats
-from hdf5functions import Hdf5functions
-from scipy.stats import norm
+from HTSplotter.hdf5functions import Hdf5functions
+# from scipy.stats import norm
 
 file_name_each = []
 branch_BR = []

@@ -1,10 +1,10 @@
 import numpy as np
 import os
 import math
-from save_hdf5file import Hdf5database
-from synergyprocessing import Commonprocessing
+# from save_hdf5file import Hdf5database
+from HTSplotter.synergyprocessing import Commonprocessing
 from scipy.optimize import fsolve, least_squares, curve_fit
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import itertools
 
 

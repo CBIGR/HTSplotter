@@ -1,21 +1,21 @@
 import numpy as np
-import os
-from grupping import Groupping, Data_group, Grouppingzip
-from synergism import Blissmethod, Hsamethod, LoeweMethod, ZipMethod, ZipMethomultidimen
-from plotting import Overtime
-from timepointselection import Timepointselection
+# import os
+from HTSplotter.grupping import Groupping, Data_group, Grouppingzip
+from HTSplotter.synergism import Blissmethod, Hsamethod, LoeweMethod, ZipMethod, ZipMethomultidimen
+from HTSplotter.plotting import Overtime
+from HTSplotter.timepointselection import Timepointselection
 from itertools import combinations
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import cm
-from matplotlib.backends.backend_pdf import PdfPages
-import math
-import scipy.interpolate as inter
-from doseresponse import DoseResponse
-from synergyprocessing import Commonprocessing
-from commonfunctions import CommonFunctions, OpenPdf, SaveTXTinfo, AdjustData, SynergyScoreSaveTXT, GrwothRateSaveTXT
-from doseresponseplots import DoseResponsePlot, DoseResponseSinglePlotting, DoseResponseGrowthRate
-from growthrate import GrowthRate, GrowthRateCompoundscreenSeveral, GrowthRateCombination
-import time
+# import matplotlib.pyplot as plt
+# from matplotlib.pyplot import cm
+# from matplotlib.backends.backend_pdf import PdfPages
+# import math
+# import scipy.interpolate as inter
+from HTSplotter.doseresponse import DoseResponse
+# from synergyprocessing import Commonprocessing
+from HTSplotter.commonfunctions import CommonFunctions, OpenPdf, SaveTXTinfo, AdjustData, SynergyScoreSaveTXT, GrwothRateSaveTXT
+from HTSplotter.doseresponseplots import DoseResponsePlot, DoseResponseSinglePlotting, DoseResponseGrowthRate
+from HTSplotter.growthrate import GrowthRate, GrowthRateCompoundscreenSeveral, GrowthRateCombination
+# import time
 
 import time as ti
 class ExperimentCombination:

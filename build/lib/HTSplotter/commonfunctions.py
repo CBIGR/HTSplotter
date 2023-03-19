@@ -1,17 +1,17 @@
 import numpy as np
-import os
-from grupping import Groupping
-from txtsavedata import Savetxt
-import matplotlib.pyplot as plt
-from matplotlib.pyplot import cm
-from matplotlib import ticker
+# import os
+# from grupping import Groupping
+from HTSplotter.txtsavedata import Savetxt
+# import matplotlib.pyplot as plt
+# from matplotlib.pyplot import cm
+# from matplotlib import ticker
 from matplotlib.backends.backend_pdf import PdfPages
 import math
-import scipy.interpolate as inter
-from mpl_toolkits.mplot3d import Axes3D
-from scipy.optimize import curve_fit
-
-from plotting import Overtime
+# import scipy.interpolate as inter
+# from mpl_toolkits.mplot3d import Axes3D
+# from scipy.optimize import curve_fit
+#
+# from plotting import Overtime
 
 class CommonFunctions:
 
