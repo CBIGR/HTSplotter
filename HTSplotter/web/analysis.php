@@ -109,6 +109,16 @@
 							</div>
 						</div>
 						<div class="form-group row">
+							<label for="syn_ana" class="col-sm-6 col-form-label">Calculate synergism/antagonism</label>
+							<div class="col-sm-6">
+								<select class="form-control" name="syn_ana" id="syn_ana">
+									<option>Bliss</option>
+									<option>HSA</option>
+									<option>ZIP</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group row">
 							<div class="col-sm-12 hidden">
 								<input type="text" class="form-control" name="user_input" id="user_input" value=0>
 							</div>
@@ -129,6 +139,8 @@
 						</div>
 						<div class="form-group row" id="submitanalysis">
 							Your analysis has been submitted. Thank you!
+						</div>
+						<div class="form-group row" id="analysis_html">
 						</div>
 						<div class="form-group row">
 							&nbsp;
