@@ -91,8 +91,23 @@ $( document ).ready(function() {
 										// var path = results.user_input+"results/";
 										// var user_string = results.user_input.split("/")[1];
 										var zipfile = results.zip
-										$("#submitanalysis").html("Analysis finished successfully. Download your results <a href='"+zipfile+"' target='_blank'>here</a>."); 
+										$("#submitanalysis").html("Analysis finished successfully. Download your results <a href='" + zipfile + "' target='_blank'>here</a>."); 
 										$("#submitanalysis").addClass("show");
+										var html_result = '<h3>Show result plots</h3>';
+										$.each(results.html, function(index, value){
+											html_result += '<div class="form-check">';
+											// USE OTHER TOKEN THAN - FOR REPLACE
+											html_result += '<input class="form-check-input html-check" type="checkbox" value="' + value.replace(/ /g, '---') + '" id="check_' + index + '">';
+											html_result += '<label class="form++check-label" for="check_' + index + '">';
+											html_result += value.replace(results.user_input + 'Output_html/', '').replace('.html', '');
+											html_result += '</label>';
+											html_result += '</div>';
+										});
+										$.each(results.html, function(index, value){
+											html_result += '<div class="html_result" id="result_' + index + '"></div>';
+										});
+										$("#analysis_html").html(html_result);
+										$("#analysis_html").addClass("show");
 									},
 									complete:function(data){
 										$("#loader2").css('display', 'none');
@@ -101,7 +116,7 @@ $( document ).ready(function() {
 							} else {
 								var infopath = obj.infofile;
 								$('#confirm_modal').modal('hide');
-								$("#submitanalysis").html("Experiment type(s) do not match. <a href='"+infopath+"' target='_blank'>Click here</a> to see the error.<br>Please fix this issue and resubmit.");
+								$("#submitanalysis").html("Experiment type(s) do not match. <a href='" + infopath + "' target='_blank'>Click here</a> to see the error.<br>Please fix this issue and resubmit.");
 								$("#submitanalysis").addClass("show");
 							}
 						});
@@ -117,10 +132,24 @@ $( document ).ready(function() {
 		}
 	});
 
+	$('body').on('change', '.html-check', function(){
+		var html_file = $(this).val().replace(/---/g, ' ');
+		var html_selector = $(this).attr('id').replace('check_', 'result_');
+		if ($("#"+html_selector).hasClass('show')){
+			$('#'+html_selector).html(''); 
+			$('#'+html_selector).removeClass('show');
+		} else {
+			$('#'+html_selector).load(encodeURI(html_file)); 
+			$('#'+html_selector).addClass('show');
+		}
+		
+	});
+
 	$('body').on('click', '#reset_analysis', function(){
-		$("#submitanalysis").removeClass("show");
+		$('#submitanalysis').removeClass('show');
+		$('#analysis_html').removeClass('show');
 		$('#analysisform')[0].reset();
-		$("#submit_analysis").removeAttr('disabled','disabled');
+		$('#submit_analysis').removeAttr('disabled','disabled');
 	});
 
 
@@ -136,13 +165,13 @@ $( document ).ready(function() {
 			url: "contact_response.php",
 			data: str,
 			success: function(msg){
-				$("#sendmessage").addClass("show");
-				$("#send_message").attr('disabled','disabled');
-				$("#errormessage").ajaxComplete(function(event, request, settings){
+				$('#sendmessage').addClass('show');
+				$('#send_message').attr('disabled','disabled');
+				$('#errormessage').ajaxComplete(function(event, request, settings){
 					if(msg == 'OK') {
-						$("#sendmessage").addClass("show");
+						$('#sendmessage').addClass('show');
 					} else {
-						$("#sendmessage").removeClass("show");
+						$('#sendmessage').removeClass('show');
 						result = msg;
 					}
 					$(this).html(result);
