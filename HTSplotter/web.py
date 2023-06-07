@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import os
 import time
+import psutil
 import datetime
 import sys
 import numpy as np
@@ -56,15 +57,17 @@ parser.add_argument('-ss', nargs=1, required=True, help='S3 key', metavar='s3_ke
 
 if __name__ == '__main__':
 	start = time.time()
+	# Number of logical CPUs in the system
+	p = psutil.Process()
 
 	# Parse arguments
 	args = parser.parse_args()
 	# print(args)
 
-	input_path = args.f[0]
-	results_path = input_path + "results/"
+	input_path = args.f[0] + "Inputfile/"
+	results_path = args.f[0] + "Output_html/"
 	# information_extracted = input_path + "Information_extracted_files/"
-	information_extracted = results_path
+	information_extracted = args.f[0]
 
 	biological_replicate = 1 if args.b[0] == 'yes' else 0 # 0 if not, 1 if it is
 	# experiment_type_arrayed = 0  # 0 = no, 1= yes
@@ -157,7 +160,7 @@ if __name__ == '__main__':
 															header_info, catego, file_info)
 				
 
-				print("Output PDF: ",file_name_br)
+				# print("Output PDF: ",file_name_br)
 				if catego.experimentype != exp_types[count]:
 					print("=====>check error file", exp_types[count], catego.experimentype)
 					break
@@ -336,9 +339,8 @@ if __name__ == '__main__':
 
 			# zip all files
 			print('Zip all output files')
-			output_filename = input_path+input_path[input_path.rfind('/', 0, input_path.rfind('/'))+1:-1]
-			shutil.make_archive(output_filename, 'zip', input_path, 'results')
-			print(output_filename)
+			output_filename = args.f[0]+results_path.replace("/var/www/html/user_files/", "").replace("/Output_html/", "")
+			shutil.make_archive(output_filename, 'zip', input_path, 'Output_html')
 
 			# Minio file upload
 			upload_fn = output_filename+'.zip'
@@ -399,7 +401,7 @@ if __name__ == '__main__':
 
 			# check user confirmation
 			elif userinput == 1:
-				print("Output PDF: ",file_pdf_name[:-4]) # remove .pdf extension
+				print("Output file: ",file_pdf_name[:-4]) # remove .pdf extension
 				if catego.experimentype != exp_types[0]:
 					print("=====>check error file", exp_types[0], catego.experimentype)
 					break
@@ -491,7 +493,7 @@ if __name__ == '__main__':
 
 					# # over time data:
 					if len(hdfcompoundcomb.elapse) > 1:
-						comb.inhibition(hdfcompoundcomb.data, hdfcompoundcomb.std)
+						comb.inhibition(hdfcompoundcomb.data, hdfcompoundcomb.std, 1)
 						if expected_effect == 0:
 							comb.inhibition(hdfcompoundcomb.inhibited, hdfcompoundcomb.std_inh, 2, 1)
 						elif expected_effect == 1:
@@ -579,8 +581,8 @@ if __name__ == '__main__':
 
 				# zip all files
 				print('Zip all output files')
-				output_filename = input_path+input_path[input_path.rfind('/', 0, input_path.rfind('/'))+1:-1]
-				shutil.make_archive(output_filename, 'zip', input_path, 'results')
+				output_filename = args.f[0]+results_path.replace("/var/www/html/user_files/", "").replace("/Output_html/", "")
+				shutil.make_archive(output_filename, 'zip', results_path)
 
 				# Minio file upload
 				upload_fn = output_filename+'.zip'
@@ -598,4 +600,36 @@ if __name__ == '__main__':
 				# 	print("Bucket",args.sb[0],"already exists")
 
 				result = client.fput_object(args.sb[0], upload_alias, upload_fn)
-				shutil.rmtree(input_path)
+				# shutil.rmtree(input_path)
+	with p.oneshot():
+		print(i)
+		report = open(information_extracted+"information_CPU_time.txt", "a")
+		report.write("\n")
+		report.write("file name: " + i + '\n')
+		report.write(datetime.datetime.fromtimestamp(p.create_time()).strftime("%Y-%m-%d %H:%M:%S") + '\n')
+		report.write("cpu_times, user= " + '\t' + str(p.cpu_times()[0]) + '\n')
+		report.write("cpu_times, system = " + '\t'+str(p.cpu_times()[1]) + '\n')
+		report.write('cpu_percent= ' + '\t'+ str(p.cpu_percent()) + '\n')
+		report.write("ppid= " + '\t'+ str(p.ppid()) + '\n')
+		report.write("status =" + '\t'+ str(p.status()) + '\n')
+		report.write("memory_info, rss= " +  '\t'+ str(p.memory_info()[0]) + '\n')
+		report.write("memory_info, vms = " +  '\t'+ str(p.memory_info()[1]) + '\n')
+		report.write("io_counters, read_count = " + '\t'+ str(p.io_counters()[0]) + '\n')
+		report.write("io_counters, write_count = " + '\t'+ str(p.io_counters()[1]) + '\n')
+		report.write("io_counters, read_bytes = " + '\t' + str(p.io_counters()[2]) + '\n')
+		report.write("io_counters, write_bytes = " + '\t'+ str(p.io_counters()[3]) + '\n')
+		report.close()
+		# print("name= ", p.name()) # execute internal routine once collecting multiple info
+		print("cpu times= ", p.cpu_times())  # return cached value seconds
+		print('cpu_percent= ', p.cpu_percent())  # return cached value
+		# print("creat_time= ", p.create_time())  # return cached value
+		print(datetime.datetime.fromtimestamp(p.create_time()).strftime("%Y-%m-%d %H:%M:%S"))
+		print("ppid= ", p.ppid())  # return cached value
+		print("status =", p.status())  # return cached value
+		# print("threads= ", p.threads())
+		print("memory_info = ", p.memory_info())
+		# print("memory maps =", p.memory_maps())
+		print("io_counters = ", p.io_counters())
+		print("check====", psutil.cpu_freq())
+	# Number of logical CPUs in the system
+	print("end=psutil.cpu_count() = {0}".format(psutil.cpu_count()))
