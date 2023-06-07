@@ -11,10 +11,11 @@ RUN apt-get install -y wget nano vim git zip unzip zlib1g-dev libzip-dev libpng-
 # Install python3 and modules
 RUN apt-get install -y python3 python3-pip
 RUN pip3 install numpy
-RUN pip3 install matplotlib
+RUN pip3 install matplotlib 
 RUN pip3 install scipy
 RUN pip3 install h5py
 RUN pip3 install minio
+RUN pip3 install psutil
 
 # Install PHP extensions needed
 RUN docker-php-ext-install -j$(nproc) gd zip pcntl exif
