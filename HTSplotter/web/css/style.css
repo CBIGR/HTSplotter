@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* OWN STYLING */
 body { 
     padding-top: 65px; 
@@ -73,7 +75,15 @@ main > .container {
   font-weight:600;
   margin-bottom:30px;
 }
-#sendmessage.show, #submitanalysis.show{
+#analysis_html {
+  display:none;
+  text-align:center;
+  padding:15px 12px 15px 65px;
+  margin:10px 0;
+  font-weight:600;
+  margin-bottom:30px;
+}
+#sendmessage.show, #submitanalysis.show, #analysis_html.show {
   display:block;
 }
 
@@ -102,7 +112,7 @@ main > .container {
  * Copyright (c) 2018 nzbin
  * Released under MIT License
  */
-@charset "UTF-8";
+
 /**
  * ==============================================
  * Dot Elastic
